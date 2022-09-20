@@ -17,7 +17,7 @@ class CreateRefeicaosTable extends Migration
             $table->bigIncrements('id');
             $table->string('titulo',100);
             $table->string('descricao',100);
-            $table->date('dataHora');
+            $table->dateTime('dataHora');
             $table->integer('pessoa');
             $table->timestamps();
         });

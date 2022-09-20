@@ -13,6 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('pessoas',[App\Http\Controllers\PessoaController::class,'index']);
+
+Route::get('alimentos',[App\Http\Controllers\AlimentoController::class,'index']);
+
+Route::get('refeicoes',[App\Http\Controllers\RefeicaoController::class,'index']);
+
+Route::get('itens',[App\Http\Controllers\ItemController::class,'index']);
+
+Route::get('informacoesNutricionais',[App\Http\Controllers\InformacaoNutricionalController::class,'index']);
+
 Route::get('/', function () {
     return view('welcome');
 });

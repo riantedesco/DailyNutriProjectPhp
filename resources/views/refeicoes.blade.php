@@ -8,6 +8,9 @@
     <ul>
         @foreach($refeicoes as $refeicao)
         <li>{{ $refeicao->titulo }}</li>
+        <li>{{ $refeicao->descricao }}</li>
+        <li>{{ $refeicao->dataHora }}</li>
+        <li>{{ $refeicao->pessoa }}</li>
         <br>
         @endforeach
     </ul>

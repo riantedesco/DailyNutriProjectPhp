@@ -8,6 +8,8 @@
     <ul>
         @foreach($alimentos as $alimento)
         <li>{{ $alimento->nome }}</li>
+        <li>{{ $alimento->unidadeMedida }}</li>
+        <li>{{ $alimento->quantidadePorcao }}</li>
         <br>
         @endforeach
     </ul>

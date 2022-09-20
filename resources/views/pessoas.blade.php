@@ -8,6 +8,14 @@
     <ul>
         @foreach($pessoas as $pessoa)
         <li>{{ $pessoa->nome }}</li>
+        <li>{{ $pessoa->cpf }}</li>
+        <li>{{ $pessoa->dataNascimento }}</li>
+        <li>{{ $pessoa->genero }}</li>
+        <li>{{ $pessoa->peso }}</li>
+        <li>{{ $pessoa->altura }}</li>
+        <li>{{ $pessoa->tipoCadastro }}</li>
+        <li>{{ $pessoa->usuario }}</li>
+        <li>{{ $pessoa->senha }}</li>
         <br>
         @endforeach
     </ul>
