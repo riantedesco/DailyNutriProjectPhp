@@ -1,0 +1,10 @@
+> Adicionar validação de campos estrangeiros
+> Definir controle de sessão
+> Estilizar a tela inicial
+> Adicionar validações de dados em todas as tabelas (required, max, min, etc)
+> Alterar ícones da listagem
+> Adicionar create e list de itens dentro de refeições
+> Mudar formato de "Data e Hora" de refeição para datetime (está em date)
+> Incluir lógica de relatórios
+> Incluir lógica de gráficos
+> Criar acesso separado para administrador e usuário e definir quais telas ambos tem acesso
