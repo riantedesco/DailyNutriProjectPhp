@@ -11,3 +11,7 @@ Banco de dados:
 
 IDE de desenvolvimento:
 > VSCode
+
+Comandos auxiliares de desenvolvimento:
+> "php artisan migrate" para atualizar as migrations
+> "php artisan migrate:fresh" para atualizar as migrations, excluindo e refazendo as tabelas
