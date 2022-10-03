@@ -50,4 +50,8 @@
             @endforeach
         </tbody>
     </table>
+
+    <div>
+        <a class="btn btn-outline-primary" href="{{ route('informacoesNutricionais.criar') }}">Nova Informação Nutricional</a>
+    </div>
 @stop

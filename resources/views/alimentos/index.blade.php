@@ -18,4 +18,8 @@
             @endforeach
         </tbody>
     </table>
+
+    <div>
+        <a class="btn btn-outline-primary" href="{{ route('alimentos.criar') }}">Novo Alimento</a>
+    </div>
 @stop

@@ -290,27 +290,10 @@ return [
     */
 
     'menu' => [
-        ['header' => 'PESSOAS'],
-        [
-            'text' => 'Listagem',
-            'url' => 'pessoas',
-            'icon' => 'fas fa-fw fa-users',
-        ],
-        [
-            'text' => 'Criação',
-            'url' => 'pessoas/create',
-            'icon' => 'fas fa-fw fa-users',
-        ],
-
         ['header' => 'REFEIÇÕES'],
         [
             'text' => 'Listagem',
             'url' => 'refeicoes',
-            'icon' => 'fas fa-fw fa-users',
-        ],
-        [
-            'text' => 'Criação',
-            'url' => 'refeicoes/create',
             'icon' => 'fas fa-fw fa-users',
         ],
 
@@ -320,11 +303,6 @@ return [
             'url' => 'alimentos',
             'icon' => 'fas fa-fw fa-users',
         ],
-        [
-            'text' => 'Criação',
-            'url' => 'alimentos/create',
-            'icon' => 'fas fa-fw fa-users',
-        ],
 
         ['header' => 'INFORMAÇÕES NUTRICIONAIS'],
         [
@@ -332,21 +310,11 @@ return [
             'url' => 'informacoesNutricionais',
             'icon' => 'fas fa-fw fa-users',
         ],
-        [
-            'text' => 'Criação',
-            'url' => 'informacoesNutricionais/create',
-            'icon' => 'fas fa-fw fa-users',
-        ],
 
         ['header' => 'ITENS'],
         [
             'text' => 'Listagem',
             'url' => 'itens',
-            'icon' => 'fas fa-fw fa-users',
-        ],
-        [
-            'text' => 'Criação',
-            'url' => 'itens/create',
             'icon' => 'fas fa-fw fa-users',
         ],
 

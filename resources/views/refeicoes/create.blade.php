@@ -36,6 +36,7 @@
         <div class="form-group">
             {!! Form::submit('Criar Refeição', ['class'=>'btn btn-primary']) !!}
             {!! Form::reset('Limpar', ['class'=>'btn btn-default']) !!}
+            <a class="btn btn-outline-danger" href="{{ route('refeicoes.listar') }}">Voltar</a>
         </div>
 
     {!! Form::close() !!}

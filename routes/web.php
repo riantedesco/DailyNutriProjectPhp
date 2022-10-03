@@ -13,24 +13,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('pessoas',[App\Http\Controllers\PessoaController::class,'index']);
-Route::get('pessoas/create',[App\Http\Controllers\PessoaController::class,'create']);
-Route::post('pessoas/store',[App\Http\Controllers\PessoaController::class,'store']);
-
-Route::get('alimentos',[App\Http\Controllers\AlimentoController::class,'index']);
-Route::get('alimentos/create',[App\Http\Controllers\AlimentoController::class,'create']);
+Route::get('alimentos',[App\Http\Controllers\AlimentoController::class,'index'])->name('alimentos.listar');
+Route::get('alimentos/create',[App\Http\Controllers\AlimentoController::class,'create'])->name('alimentos.criar');
 Route::post('alimentos/store',[App\Http\Controllers\AlimentoController::class,'store']);
 
-Route::get('refeicoes',[App\Http\Controllers\RefeicaoController::class,'index']);
-Route::get('refeicoes/create',[App\Http\Controllers\RefeicaoController::class,'create']);
+Route::get('refeicoes',[App\Http\Controllers\RefeicaoController::class,'index'])->name('refeicoes.listar');
+Route::get('refeicoes/create',[App\Http\Controllers\RefeicaoController::class,'create'])->name('refeicoes.criar');
 Route::post('refeicoes/store',[App\Http\Controllers\RefeicaoController::class,'store']);
 
-Route::get('itens',[App\Http\Controllers\ItemController::class,'index']);
-Route::get('itens/create',[App\Http\Controllers\ItemController::class,'create']);
+Route::get('itens',[App\Http\Controllers\ItemController::class,'index'])->name('itens.listar');
+Route::get('itens/create',[App\Http\Controllers\ItemController::class,'create'])->name('itens.criar');
 Route::post('itens/store',[App\Http\Controllers\ItemController::class,'store']);
 
-Route::get('informacoesNutricionais',[App\Http\Controllers\InformacaoNutricionalController::class,'index']);
-Route::get('informacoesNutricionais/create',[App\Http\Controllers\InformacaoNutricionalController::class,'create']);
+Route::get('informacoesNutricionais',[App\Http\Controllers\InformacaoNutricionalController::class,'index'])->name('informacoesNutricionais.listar');
+Route::get('informacoesNutricionais/create',[App\Http\Controllers\InformacaoNutricionalController::class,'create'])->name('informacoesNutricionais.criar');
 Route::post('informacoesNutricionais/store',[App\Http\Controllers\InformacaoNutricionalController::class,'store']);
 
 Route::get('/', function () {
