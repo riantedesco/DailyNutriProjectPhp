@@ -29,8 +29,8 @@
         </div>
 
         <div class="form-group">
-            {!! Form::submit('Criar Item', ['class'=>'btn btn-primary']) !!}
-            {!! Form::reset('Limpar', ['class'=>'btn btn-default']) !!}
+            {!! Form::submit('Criar Item', ['class'=>'btn btn-outline-success']) !!}
+            {!! Form::reset('Limpar', ['class'=>'btn btn-outline-secondary']) !!}
             <a class="btn btn-outline-danger" href="{{ route('itens.listar') }}">Voltar</a>
         </div>
 

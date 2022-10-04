@@ -294,28 +294,28 @@ return [
         [
             'text' => 'Listagem',
             'url' => 'refeicoes',
-            'icon' => 'fas fa-fw fa-users',
+            'icon' => 'fas fa-fw fa-birthday-cake',
         ],
 
         ['header' => 'ALIMENTOS'],
         [
             'text' => 'Listagem',
             'url' => 'alimentos',
-            'icon' => 'fas fa-fw fa-users',
+            'icon' => 'fas fa-fw fa-shopping-cart',
         ],
 
         ['header' => 'INFORMAÇÕES NUTRICIONAIS'],
         [
             'text' => 'Listagem',
             'url' => 'informacoesNutricionais',
-            'icon' => 'fas fa-fw fa-users',
+            'icon' => 'fas fa-fw fa-tasks',
         ],
 
         ['header' => 'ITENS'],
         [
             'text' => 'Listagem',
             'url' => 'itens',
-            'icon' => 'fas fa-fw fa-users',
+            'icon' => 'fas fa-fw fa-list',
         ],
 
         // // Navbar items:
