@@ -2,7 +2,7 @@ Como executar projeto:
 > Abrir o prompt de comando na pasta raíz do projeto (/DailyNutriProjectPhp)
 > Executar comando "php artisan serve"
 > Acessar "http://127.0.0.1:8000"
-> "Ctrl + C" para a execução
+> "Ctrl + C" para parar a execução
 
 Banco de dados:
 > PostgreSQL
