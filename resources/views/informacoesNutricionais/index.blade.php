@@ -1,4 +1,4 @@
-@extends('adminlte::page')
+@extends('layouts.default')
 
 @section('content')
     <h1>Informações Nutricionais</h1>
@@ -49,7 +49,7 @@
                     <td>{{ $informacaoNutricional->vitaminaD }}</td>
                     <td>
                         <a href="{{ route('informacoesNutricionais.edit', ['id'=>$informacaoNutricional->id]) }}" class="btn-sm btn-success">Editar</a>
-                        <a href="{{ route('informacoesNutricionais.destroy', ['id'=>$informacaoNutricional->id]) }}" class="btn-sm btn-danger">Remover</a>
+                        <a href="#" onclick="return ConfirmaExclusao({{$informacaoNutricional->id}})" class="btn-sm btn-danger">Remover</a>
                     </td>
                 </tr>
             @endforeach
@@ -57,6 +57,10 @@
     </table>
 
     <div>
-        <a class="btn btn-outline-primary" href="{{ route('informacoesNutricionais.create') }}">Nova Informação Nutricional</a>
+        <a class="btn btn-outline-primary" href="{{ route('informacoesNutricionais.create', []) }}">Nova Informação Nutricional</a>
     </div>
 @stop
+
+@section('table-delete')
+"informacoesNutricionais"
+@endsection

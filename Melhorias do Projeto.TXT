@@ -7,5 +7,4 @@
 > Adicionar informativo de unidade de medida nas listagens e cadastros necessários
 > Incluir lógica de relatórios
 > Incluir lógica de gráficos
-> Incluir lógica de uptade e delete nas cruds
 > Criar acesso separado para administrador e usuário e definir quais telas ambos tem acesso

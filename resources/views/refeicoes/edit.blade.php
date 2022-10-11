@@ -11,7 +11,7 @@
         </ul>
     @endif
 
-    {!! Form::open(['url'=>"refeicoes/$refeicao->id/update", 'method'=>'put']) !!}
+    {!! Form::open(['route'=> ["refeicoes.update", 'id'=>$refeicao->id], 'method'=>'put']) !!}
 
         <div class="form-group">
             {!! Form::label('titulo', 'Título:') !!}
