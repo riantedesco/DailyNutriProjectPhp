@@ -13,21 +13,41 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('alimentos',[App\Http\Controllers\AlimentoController::class,'index'])->name('alimentos.listar');
-Route::get('alimentos/create',[App\Http\Controllers\AlimentoController::class,'create'])->name('alimentos.criar');
-Route::post('alimentos/store',[App\Http\Controllers\AlimentoController::class,'store']);
+Route::group(['prefix'=>'alimentos', 'where'=>['id'=>'[0-9]+']], function() {
+    Route::get('',             ['as'=>'alimentos',         'uses'=>'App\Http\Controllers\AlimentoController@index']);
+    Route::get('create',       ['as'=>'alimentos.create',  'uses'=>'App\Http\Controllers\AlimentoController@create']);
+    Route::get('{id}/destroy', ['as'=>'alimentos.destroy', 'uses'=>'App\Http\Controllers\AlimentoController@destroy']);
+    Route::get('{id}/edit',    ['as'=>'alimentos.edit',    'uses'=>'App\Http\Controllers\AlimentoController@edit']);
+    Route::put('{id}/update',  ['as'=>'alimentos.update',  'uses'=>'App\Http\Controllers\AlimentoController@update']);
+    Route::post('store',       ['as'=>'alimentos.store',   'uses'=>'App\Http\Controllers\AlimentoController@store']);
+});
 
-Route::get('refeicoes',[App\Http\Controllers\RefeicaoController::class,'index'])->name('refeicoes.listar');
-Route::get('refeicoes/create',[App\Http\Controllers\RefeicaoController::class,'create'])->name('refeicoes.criar');
-Route::post('refeicoes/store',[App\Http\Controllers\RefeicaoController::class,'store']);
+Route::group(['prefix'=>'refeicoes', 'where'=>['id'=>'[0-9]+']], function() {
+    Route::get('',             ['as'=>'refeicoes',         'uses'=>'App\Http\Controllers\RefeicaoController@index']);
+    Route::get('create',       ['as'=>'refeicoes.create',  'uses'=>'App\Http\Controllers\RefeicaoController@create']);
+    Route::get('{id}/destroy', ['as'=>'refeicoes.destroy', 'uses'=>'App\Http\Controllers\RefeicaoController@destroy']);
+    Route::get('{id}/edit',    ['as'=>'refeicoes.edit',    'uses'=>'App\Http\Controllers\RefeicaoController@edit']);
+    Route::put('{id}/update',  ['as'=>'refeicoes.update',  'uses'=>'App\Http\Controllers\RefeicaoController@update']);
+    Route::post('store',       ['as'=>'refeicoes.store',   'uses'=>'App\Http\Controllers\RefeicaoController@store']);
+});
 
-Route::get('itens',[App\Http\Controllers\ItemController::class,'index'])->name('itens.listar');
-Route::get('itens/create',[App\Http\Controllers\ItemController::class,'create'])->name('itens.criar');
-Route::post('itens/store',[App\Http\Controllers\ItemController::class,'store']);
+Route::group(['prefix'=>'itens', 'where'=>['id'=>'[0-9]+']], function() {
+    Route::get('',             ['as'=>'itens',         'uses'=>'App\Http\Controllers\ItemController@index']);
+    Route::get('create',       ['as'=>'itens.create',  'uses'=>'App\Http\Controllers\ItemController@create']);
+    Route::get('{id}/destroy', ['as'=>'itens.destroy', 'uses'=>'App\Http\Controllers\ItemController@destroy']);
+    Route::get('{id}/edit',    ['as'=>'itens.edit',    'uses'=>'App\Http\Controllers\ItemController@edit']);
+    Route::put('{id}/update',  ['as'=>'itens.update',  'uses'=>'App\Http\Controllers\ItemController@update']);
+    Route::post('store',       ['as'=>'itens.store',   'uses'=>'App\Http\Controllers\ItemController@store']);
+});
 
-Route::get('informacoesNutricionais',[App\Http\Controllers\InformacaoNutricionalController::class,'index'])->name('informacoesNutricionais.listar');
-Route::get('informacoesNutricionais/create',[App\Http\Controllers\InformacaoNutricionalController::class,'create'])->name('informacoesNutricionais.criar');
-Route::post('informacoesNutricionais/store',[App\Http\Controllers\InformacaoNutricionalController::class,'store']);
+Route::group(['prefix'=>'informacoesNutricionais', 'where'=>['id'=>'[0-9]+']], function() {
+    Route::get('',             ['as'=>'informacoesNutricionais',         'uses'=>'App\Http\Controllers\InformacaoNutricionalController@index']);
+    Route::get('create',       ['as'=>'informacoesNutricionais.create',  'uses'=>'App\Http\Controllers\InformacaoNutricionalController@create']);
+    Route::get('{id}/destroy', ['as'=>'informacoesNutricionais.destroy', 'uses'=>'App\Http\Controllers\InformacaoNutricionalController@destroy']);
+    Route::get('{id}/edit',    ['as'=>'informacoesNutricionais.edit',    'uses'=>'App\Http\Controllers\InformacaoNutricionalController@edit']);
+    Route::put('{id}/update',  ['as'=>'informacoesNutricionais.update',  'uses'=>'App\Http\Controllers\InformacaoNutricionalController@update']);
+    Route::post('store',       ['as'=>'informacoesNutricionais.store',   'uses'=>'App\Http\Controllers\InformacaoNutricionalController@store']);
+});
 
 Route::get('/', function () {
     return view('welcome');

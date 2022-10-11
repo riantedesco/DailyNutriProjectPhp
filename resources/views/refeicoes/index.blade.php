@@ -14,7 +14,7 @@
                 <tr>
                     <td>{{ $refeicao->titulo }}</td>
                     <td>{{ $refeicao->descricao }}</td>
-                    <td>{{ $refeicao->dataHora }}</td>
+                    <td>{{ Carbon\Carbon::parse($refeicao->dataHora)->format('d/m/Y h:i') }}</td>
                     <td>{{ $refeicao->pessoa }}</td>
                 </tr>
             @endforeach
@@ -22,6 +22,6 @@
     </table>
     
     <div>
-        <a class="btn btn-outline-primary" href="{{ route('refeicoes.criar') }}">Nova Refeição</a>
+        <a class="btn btn-outline-primary" href="{{ route('refeicoes.create') }}">Nova Refeição</a>
     </div>
 @stop

@@ -15,3 +15,4 @@ IDE de desenvolvimento:
 Comandos auxiliares de desenvolvimento:
 > "php artisan migrate" para atualizar as migrations
 > "php artisan migrate:fresh" para atualizar as migrations, excluindo e refazendo as tabelas
+> "php artisan optimize" pra limpar o cache do banco de dados

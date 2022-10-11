@@ -23,6 +23,7 @@
             <th>Vitamina C</th>
             <th>Vitamina K</th>
             <th>Vitamina D</th>
+            <th>Ações</th>
         </thead>
         <tbody>
             @foreach($informacoesNutricionais as $informacaoNutricional)
@@ -46,12 +47,16 @@
                     <td>{{ $informacaoNutricional->vitaminaC }}</td>
                     <td>{{ $informacaoNutricional->vitaminaK }}</td>
                     <td>{{ $informacaoNutricional->vitaminaD }}</td>
+                    <td>
+                        <a href="{{ route('informacoesNutricionais.edit', ['id'=>$informacaoNutricional->id]) }}" class="btn-sm btn-success">Editar</a>
+                        <a href="{{ route('informacoesNutricionais.destroy', ['id'=>$informacaoNutricional->id]) }}" class="btn-sm btn-danger">Remover</a>
+                    </td>
                 </tr>
             @endforeach
         </tbody>
     </table>
 
     <div>
-        <a class="btn btn-outline-primary" href="{{ route('informacoesNutricionais.criar') }}">Nova Informação Nutricional</a>
+        <a class="btn btn-outline-primary" href="{{ route('informacoesNutricionais.create') }}">Nova Informação Nutricional</a>
     </div>
 @stop

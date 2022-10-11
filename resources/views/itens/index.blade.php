@@ -20,6 +20,6 @@
     </table>
     
     <div>
-        <a class="btn btn-outline-primary" href="{{ route('itens.criar') }}">Novo Item</a>
+        <a class="btn btn-outline-primary" href="{{ route('itens.create') }}">Novo Item</a>
     </div>
 @stop

@@ -20,6 +20,21 @@ class ItemController extends Controller
         $novo_item = $request->all();
         Item::create($novo_item);
 
-        return redirect('itens');
+        return redirect()->route('itens');
+    }
+
+    public function destroy($id) {
+        Item::find($id)->delete();
+        return redirect()->route('itens');
+    }
+
+    public function edit($id) {
+        $item = Item::find($id);
+        return view('itens.edit', compact('item'));
+    }
+
+    public function update(ItemRequest $request, $id) {
+        Item::find($id)->update($request->all());
+        return redirect()->route('itens');
     }
 }

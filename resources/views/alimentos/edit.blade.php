@@ -1,7 +1,7 @@
 @extends('adminlte::page')
 
 @section('content')
-    <h3>Novo Alimento</h3>
+    <h3>Editando Alimento: {{ $alimento->nome }} </h3>
 
     @if($errors->any())
         <ul class="alert alert-danger">
@@ -11,25 +11,25 @@
         </ul>
     @endif
     
-    {!! Form::open(['route'=>'alimentos.store']) !!}
+    {!! Form::open(['route'=> ["alimentos.update", 'id'=>$alimento->id], 'method'=>'put']) !!}
 
         <div class="form-group">
             {!! Form::label('nome', 'Nome:') !!}
-            {!! Form::text('nome', null, ['class'=>'form-control', 'required']) !!}
+            {!! Form::text('nome', $alimento->nome, ['class'=>'form-control', 'required']) !!}
         </div>
 
         <div class="form-group">
             {!! Form::label('unidadeMedida', 'Unidade de Medida:') !!}
-            {!! Form::text('unidadeMedida', null, ['class'=>'form-control', 'required']) !!}
+            {!! Form::text('unidadeMedida', $alimento->unidadeMedida, ['class'=>'form-control', 'required']) !!}
         </div>
 
         <div class="form-group">
             {!! Form::label('quantidadePorcao', 'Quantidade por Porção:') !!}
-            {!! Form::number('quantidadePorcao', null, ['class'=>'form-control', 'required']) !!}
+            {!! Form::number('quantidadePorcao', $alimento->quantidadePorcao, ['class'=>'form-control', 'required']) !!}
         </div>
 
         <div class="form-group">
-            {!! Form::submit('Criar Alimento', ['class'=>'btn btn-outline-success']) !!}
+            {!! Form::submit('Editar Ator', ['class'=>'btn btn-outline-success']) !!}
             {!! Form::reset('Limpar', ['class'=>'btn btn-outline-secondary']) !!}
             <a class="btn btn-outline-danger" href="{{ route('alimentos') }}">Voltar</a>
         </div>

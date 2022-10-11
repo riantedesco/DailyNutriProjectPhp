@@ -20,6 +20,21 @@ class RefeicaoController extends Controller
         $nova_refeicao = $request->all();
         Refeicao::create($nova_refeicao);
 
-        return redirect('refeicoes');
+        return redirect()->route('refeicoes');
+    }
+
+    public function destroy($id) {
+        Refeicao::find($id)->delete();
+        return redirect()->route('refeicoes');
+    }
+
+    public function edit($id) {
+        $refeicao = Refeicao::find($id);
+        return view('refeicoes.edit', compact('refeicao'));
+    }
+
+    public function update(RefeicaoRequest $request, $id) {
+        Refeicao::find($id)->update($request->all());
+        return redirect()->route('refeicoes');
     }
 }
