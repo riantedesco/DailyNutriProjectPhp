@@ -12,8 +12,8 @@
         <tbody>
             @foreach($itens as $item)
                 <tr>
-                    <td>{{ $item->refeicao }}</td>
-                    <td>{{ $item->alimento }}</td>
+                    <td>{{ isset($item->alimento->nome) ? $item->alimento->nome :"Alimento não informado" }}</td>
+                    <td>{{ isset($item->refeicao->titulo) ? $item->refeicao->titulo :"Refeição não informada" }}</td>
                     <td>{{ $item->quantidade }}</td>
                     <td>
                         <a href="{{ route('itens.edit', ['id'=>$item->id]) }}" class="btn-sm btn-success">Editar</a>
@@ -23,6 +23,8 @@
             @endforeach
         </tbody>
     </table>
+
+    {{ $itens->links("pagination::bootstrap-4") }}
     
     <div>
         <a class="btn btn-outline-primary" href="{{ route('itens.create', []) }}">Novo Item</a>

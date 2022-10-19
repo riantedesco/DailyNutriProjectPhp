@@ -8,7 +8,7 @@ use App\Http\Requests\RefeicaoRequest;
 class RefeicaoController extends Controller
 {
     public function index(){
-        $refeicoes = Refeicao::All();
+        $refeicoes = Refeicao::orderBy('titulo')->paginate(5);
         return view('refeicoes.index', ['refeicoes'=>$refeicoes]);
     }
 

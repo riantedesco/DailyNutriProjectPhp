@@ -7,7 +7,7 @@
             <th>Título</th>
             <th>Descrição</th>
             <th>Data e Hora</th>
-            <th>Pessoa</th>
+            <th>User</th>
             <th>Ações</th>
         </thead>
         <tbody>
@@ -16,7 +16,7 @@
                     <td>{{ $refeicao->titulo }}</td>
                     <td>{{ $refeicao->descricao }}</td>
                     <td>{{ Carbon\Carbon::parse($refeicao->dataHora)->format('d/m/Y h:i') }}</td>
-                    <td>{{ $refeicao->pessoa }}</td>
+                    <td>{{ isset($refeicao->user->name) ? $refeicao->user->name :"User não informado" }}</td>
                     <td>
                         <a href="{{ route('refeicoes.edit', ['id'=>$refeicao->id]) }}" class="btn-sm btn-success">Editar</a>
                         <a href="#" onclick="return ConfirmaExclusao({{$refeicao->id}})" class="btn-sm btn-danger">Remover</a>
@@ -25,6 +25,8 @@
             @endforeach
         </tbody>
     </table>
+
+    {{ $refeicoes->links("pagination::bootstrap-4") }}
     
     <div>
         <a class="btn btn-outline-primary" href="{{ route('refeicoes.create', []) }}">Nova Refeição</a>

@@ -29,8 +29,8 @@
         </div>
 
         <div class="form-group">
-            {!! Form::label('pessoa', 'Pessoa:') !!}
-            {!! Form::text('pessoa', null, ['class'=>'form-control', 'required']) !!}
+            {!! Form::label('user_id', 'User:') !!}
+            {!! Form::select('user_id', \App\Models\User::orderBy('name')->pluck('name', 'id')->toArray(), null, ['class'=>'form-control', 'required']) !!}
         </div>
 
         <div class="form-group">

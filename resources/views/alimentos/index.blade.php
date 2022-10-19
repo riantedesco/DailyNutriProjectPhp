@@ -24,6 +24,8 @@
         </tbody>
     </table>
 
+    {{ $alimentos->links("pagination::bootstrap-4") }}
+
     <div>
         <a class="btn btn-outline-primary" href="{{ route('alimentos.create', []) }}">Novo Alimento</a>
     </div>

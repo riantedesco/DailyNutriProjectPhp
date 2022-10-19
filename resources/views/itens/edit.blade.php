@@ -14,13 +14,13 @@
     {!! Form::open(['route'=> ["itens.update", 'id'=>$item->id], 'method'=>'put']) !!}
 
         <div class="form-group">
-            {!! Form::label('refeicao', 'Refeição:') !!}
-            {!! Form::text('refeicao', $item->refeicao, ['class'=>'form-control', 'required']) !!}
+            {!! Form::label('refeicao_id', 'Refeição:') !!}
+            {!! Form::select('refeicao_id', \App\Models\Refeicao::orderBy('titulo')->pluck('titulo', 'id')->toArray(), $item->refeicao_id, ['class'=>'form-control', 'required']) !!}
         </div>
 
         <div class="form-group">
-            {!! Form::label('alimento', 'Alimento:') !!}
-            {!! Form::text('alimento', $item->alimento, ['class'=>'form-control', 'required']) !!}
+            {!! Form::label('alimento_id', 'Alimento:') !!}
+            {!! Form::select('alimento_id', \App\Models\Alimento::orderBy('nome')->pluck('nome', 'id')->toArray(), $item->alimento_id, ['class'=>'form-control', 'required']) !!}
         </div>
 
         <div class="form-group">

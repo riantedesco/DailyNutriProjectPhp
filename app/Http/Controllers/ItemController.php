@@ -8,7 +8,7 @@ use App\Http\Requests\ItemRequest;
 class ItemController extends Controller
 {
     public function index(){
-        $itens = Item::All();
+        $itens = Item::orderBy('id')->paginate(5);
         return view('itens.index', ['itens'=>$itens]);
     }
 

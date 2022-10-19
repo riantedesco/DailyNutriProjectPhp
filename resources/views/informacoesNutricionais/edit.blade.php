@@ -14,8 +14,8 @@
     {!! Form::open(['route'=> ["informacoesNutricionais.update", 'id'=>$informacaoNutricional->id], 'method'=>'put']) !!}
 
         <div class="form-group">
-            {!! Form::label('alimento', 'Alimento:') !!}
-            {!! Form::text('alimento', $informacaoNutricional->alimento, ['class'=>'form-control', 'required']) !!}
+            {!! Form::label('alimento_id', 'Alimento:') !!}
+            {!! Form::select('alimento_id', \App\Models\Alimento::orderBy('nome')->pluck('nome', 'id')->toArray(), $informacaoNutricional->alimento_id, ['class'=>'form-control', 'required']) !!}
         </div>
 
         <div class="form-group">

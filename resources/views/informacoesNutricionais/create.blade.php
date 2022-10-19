@@ -14,8 +14,8 @@
     {!! Form::open(['route'=>'informacoesNutricionais.store']) !!}
 
         <div class="form-group">
-            {!! Form::label('alimento', 'Alimento:') !!}
-            {!! Form::text('alimento', null, ['class'=>'form-control', 'required']) !!}
+            {!! Form::label('alimento_id', 'Alimento:') !!}
+            {!! Form::select('alimento_id', \App\Models\Alimento::orderBy('nome')->pluck('nome', 'id')->toArray(), null, ['class'=>'form-control', 'required']) !!}
         </div>
 
         <div class="form-group">

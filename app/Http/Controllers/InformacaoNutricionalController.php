@@ -8,7 +8,7 @@ use App\Http\Requests\InformacaoNutricionalRequest;
 class InformacaoNutricionalController extends Controller
 {
     public function index(){
-        $informacoesNutricionais = InformacaoNutricional::All();
+        $informacoesNutricionais = InformacaoNutricional::orderBy('id')->paginate(5);
         return view('informacoesNutricionais.index', ['informacoesNutricionais'=>$informacoesNutricionais]);
     }
 

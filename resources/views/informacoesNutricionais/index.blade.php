@@ -28,7 +28,7 @@
         <tbody>
             @foreach($informacoesNutricionais as $informacaoNutricional)
                 <tr>
-                    <td>{{ $informacaoNutricional->alimento }}</td>
+                    <td>{{ isset($informacaoNutricional->alimento->nome) ? $informacaoNutricional->alimento->nome :"Alimento não informado" }}</td>
                     <td>{{ $informacaoNutricional->valorEnergetico }}</td>
                     <td>{{ $informacaoNutricional->carboidratos }}</td>
                     <td>{{ $informacaoNutricional->proteinas }}</td>
@@ -55,6 +55,8 @@
             @endforeach
         </tbody>
     </table>
+
+    {{ $informacoesNutricionais->links("pagination::bootstrap-4") }}
 
     <div>
         <a class="btn btn-outline-primary" href="{{ route('informacoesNutricionais.create', []) }}">Nova Informação Nutricional</a>

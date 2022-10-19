@@ -8,7 +8,7 @@ use App\Http\Requests\AlimentoRequest;
 class AlimentoController extends Controller
 {
     public function index(){
-        $alimentos = Alimento::All();
+        $alimentos = Alimento::orderBy('nome')->paginate(5);
         return view('alimentos.index', ['alimentos'=>$alimentos]);
     }
 
