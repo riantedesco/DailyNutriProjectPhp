@@ -20,7 +20,7 @@
 
         <div class="form-group">
             {!! Form::label('descricao', 'Descrição:') !!}
-            {!! Form::text('descricao', null, ['class'=>'form-control', 'required']) !!}
+            {!! Form::textarea('descricao', null, ['class'=>'form-control', 'required', 'rows'=> '3']) !!}
         </div>
 
         <div class="form-group">
@@ -29,7 +29,7 @@
         </div>
 
         <div class="form-group">
-            {!! Form::label('user_id', 'User:') !!}
+            {!! Form::label('user_id', 'Usuário:') !!}
             {!! Form::select('user_id', \App\Models\User::orderBy('name')->pluck('name', 'id')->toArray(), null, ['class'=>'form-control', 'required']) !!}
         </div>
 

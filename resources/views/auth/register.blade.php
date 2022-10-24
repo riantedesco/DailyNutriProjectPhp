@@ -74,8 +74,11 @@
                             <label for="genero" class="col-md-4 col-form-label text-md-end">{{ __('Gênero') }}</label>
 
                             <div class="col-md-6">
-                                <input id="genero" type="text" class="form-control @error('genero') is-invalid @enderror" name="genero" value="{{ old('genero') }}" required autocomplete="genero" autofocus>
-
+                                <input id="genero" list="datalistOptions" type="text" class="form-control @error('genero') is-invalid @enderror" name="genero" value="{{ old('genero') }}" required autocomplete="genero" placeholder="Selecione o gênero">
+                                <datalist id="datalistOptions">
+                                    <option value="Masculino">
+                                    <option value="Feminino">
+                                </datalist>
                                 @error('genero')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -112,7 +115,7 @@
                             </div>
                         </div>
 
-                        <div class="row mb-3">
+                        {{-- <div class="row mb-3">
                             <label for="tipoCadastro" class="col-md-4 col-form-label text-md-end">{{ __('Tipo de Cadastro') }}</label>
 
                             <div class="col-md-6">
@@ -124,7 +127,7 @@
                                     </span>
                                 @enderror
                             </div>
-                        </div>
+                        </div> --}}
 
                         <div class="row mb-3">
                             <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('E-mail') }}</label>
@@ -164,7 +167,7 @@
 
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" data-cy="submit" class="btn btn-primary">
                                     {{ __('Cadastrar') }}
                                 </button>
                             </div>

@@ -18,10 +18,10 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('cpf');
             $table->date('dataNascimento');
-            $table->enum('genero', ["Masculino", "Feminino"]);
+            $table->enum('genero', ['Masculino', 'Feminino']);
             $table->double('peso');
             $table->double('altura');
-            $table->enum('tipoCadastro', ["Usuario", "Administrador"]);
+            $table->enum('tipoCadastro', ['Usuario', 'Administrador'])->default('Usuario');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');

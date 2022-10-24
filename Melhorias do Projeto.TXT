@@ -1,4 +1,3 @@
-> Adicionar validação de campos estrangeiros
 > Definir controle de sessão
 > Estilizar a tela inicial
 > Adicionar validações de dados em todas as tabelas (required, max, min, etc)
