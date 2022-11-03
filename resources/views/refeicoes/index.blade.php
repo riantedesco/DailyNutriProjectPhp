@@ -27,10 +27,6 @@
     </table>
 
     {{ $refeicoes->links("pagination::bootstrap-4") }}
-    
-    <div>
-        <a class="btn btn-outline-primary" href="{{ route('refeicoes.create', []) }}">Nova Refeição</a>
-    </div>
 @stop
 
 @section('table-delete')

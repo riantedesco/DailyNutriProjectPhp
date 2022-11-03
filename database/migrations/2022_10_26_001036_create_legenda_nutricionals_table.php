@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateInformacaoNutricionalsTable extends Migration
+class CreateLegendaNutricionalsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreateInformacaoNutricionalsTable extends Migration
      */
     public function up()
     {
-        Schema::create('informacoesNutricionais', function (Blueprint $table) {
+        Schema::create('legendasNutricionais', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('alimento');
-            $table->double('quantidade');
-            $table->double('valorDiario');
+            $table->string('descricao', 30);
+            $table->string('unidadeMedida', 30);
             $table->timestamps();
         });
     }
@@ -29,6 +28,6 @@ class CreateInformacaoNutricionalsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('informacoesNutricionais');
+        Schema::dropIfExists('legendasNutricionais');
     }
 }

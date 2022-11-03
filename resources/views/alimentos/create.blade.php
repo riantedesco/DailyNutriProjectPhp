@@ -19,19 +19,24 @@
         </div>
 
         <div class="form-group">
+            {!! Form::label('quantidadePorcao', 'Quantidade por Porção:') !!}
+            {!! Form::number('quantidadePorcao', null, ['class'=>'form-control', 'required', 'step'=>'any']) !!}
+        </div>
+
+        <div class="form-group">
             {!! Form::label('unidadeMedida', 'Unidade de Medida:') !!}
             {!! Form::text('unidadeMedida', null, ['class'=>'form-control', 'required']) !!}
         </div>
 
         <div class="form-group">
-            {!! Form::label('quantidadePorcao', 'Quantidade por Porção:') !!}
-            {!! Form::number('quantidadePorcao', null, ['class'=>'form-control', 'required']) !!}
+            {!! Form::label('referencialMedida', 'Referencial de Medida:') !!}
+            {!! Form::text('referencialMedida', null, ['class'=>'form-control', 'required']) !!}
         </div>
 
         <div class="form-group">
             {!! Form::submit('Criar Alimento', ['class'=>'btn btn-outline-success']) !!}
             {!! Form::reset('Limpar', ['class'=>'btn btn-outline-secondary']) !!}
-            <a class="btn btn-outline-danger" href="{{ route('alimentos') }}">Voltar</a>
+            <a class="btn btn-outline-danger" href="{{ route('alimentos') }}">Voltar para alimentos</a>
         </div>
 
     {!! Form::close() !!}

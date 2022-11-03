@@ -24,7 +24,8 @@ class InformacaoNutricionalRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'quantidade' => 'required|numeric',
+            'valorDiario' => 'required|numeric',
         ];
     }
 }

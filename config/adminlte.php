@@ -290,33 +290,71 @@ return [
     */
 
     'menu' => [
-        ['header' => 'REFEIÇÕES'],
-        [
-            'text' => 'Listagem',
-            'url' => 'refeicoes',
-            'icon' => 'fas fa-fw fa-birthday-cake',
-        ],
+        ['header' => 'TELAS GERAIS'],
 
-        ['header' => 'ALIMENTOS'],
-        [
-            'text' => 'Listagem',
-            'url' => 'alimentos',
-            'icon' => 'fas fa-fw fa-shopping-cart',
-        ],
+            [
+                'text' => 'Home',
+                'url' => 'home',
+                'icon' => 'fas fa-fw fa-home',
+            ],
 
-        ['header' => 'INFORMAÇÕES NUTRICIONAIS'],
-        [
-            'text' => 'Listagem',
-            'url' => 'informacoesNutricionais',
-            'icon' => 'fas fa-fw fa-tasks',
-        ],
+            [
+                'text' => 'Criar refeição',
+                'url' => 'refeicoes/create',
+                'icon' => 'fas fa-fw fa-plus',
+            ],
 
-        ['header' => 'ITENS'],
-        [
-            'text' => 'Listagem',
-            'url' => 'itens',
-            'icon' => 'fas fa-fw fa-list',
-        ],
+            [
+                'text' => 'Suas refeições',
+                'url' => 'refeicoes',
+                'icon' => 'fas fa-fw fa-list',
+            ],
+
+            [
+                'text' => 'Alimentos cadastrados',
+                'url' => 'alimentos',
+                'icon' => 'fas fa-fw fa-list-alt',
+            ],
+
+        ['header' => 'TELAS DO ADMINISTRADOR'],
+
+            [
+                'text' => 'Criar alimento',
+                'url' => 'alimentos/create',
+                'icon' => 'fas fa-fw fa-shopping-cart',
+            ],
+
+            [
+                'text' => 'Legendas nutricionais',
+                'url' => 'legendasNutricionais',
+                'icon' => 'fas fa-fw fa-th',
+            ],
+
+            [
+                'text' => 'Relatório de alimentos',
+                'url' => '#',
+                'icon' => 'fas fa-fw fa-clipboard',
+            ],
+
+            [
+                'text' => 'Relatório de legendas nutricionais',
+                'url' => '#',
+                'icon' => 'fas fa-fw fa-clipboard',
+            ],
+
+        ['header' => 'TELAS A SEREM REMOVIDAS'],
+
+            [
+                'text' => 'CRUD de itens',
+                'url' => 'itens',
+                'icon' => 'fas fa-fw fa-times',
+            ],
+
+            [
+                'text' => 'CRUD de informações nutricionais',
+                'url' => 'informacoesNutricionais',
+                'icon' => 'fas fa-fw fa-times',
+            ],
 
         // // Navbar items:
         // [

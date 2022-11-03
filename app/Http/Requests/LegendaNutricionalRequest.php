@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class RefeicaoRequest extends FormRequest
+class LegendaNutricionalRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,9 +24,8 @@ class RefeicaoRequest extends FormRequest
     public function rules()
     {
         return [
-            'titulo' => 'required|min:3|max:50',
-            'descricao' => 'required|min:3|max:100',
-            'dataHora' => 'required|date',
+            'descricao' => 'required|min:3|max:30',
+            'descricao' => 'required|min:3|max:30',
         ];
     }
 }

@@ -24,8 +24,10 @@ class AlimentoRequest extends FormRequest
     public function rules()
     {
         return [
-            'nome' => 'required|min:5|max:100',
-            'unidadeMedida' => 'required|min:5|max:100',
+            'nome' => 'required|min:3|max:50',
+            'quantidadePorcao' => 'required|numeric',
+            'unidadeMedida' => 'required|min:3|max:30',
+            'referencialMedida' => 'required|min:3|max:30',
         ];
     }
 }

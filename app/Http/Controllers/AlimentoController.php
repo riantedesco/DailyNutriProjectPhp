@@ -4,11 +4,19 @@ namespace App\Http\Controllers;
 
 use App\Models\Alimento;
 use App\Http\Requests\AlimentoRequest;
+use Illuminate\Http\Request;
 
 class AlimentoController extends Controller
 {
-    public function index(){
-        $alimentos = Alimento::orderBy('nome')->paginate(5);
+    public function index(Request $filtro){
+        $filtragem = $filtro->get('desc_filtro');
+        if ($filtragem == null)
+            $alimentos = Alimento::orderBy('nome')->paginate(5);
+        else
+            $alimentos = Alimento::where('nome', 'like', '%'.$filtragem.'%')
+                                    ->orderBy('nome')
+                                    ->paginate(5)
+                                    ->setpath('alimentos?desc_filtro='.$filtragem);
         return view('alimentos.index', ['alimentos'=>$alimentos]);
     }
 
@@ -24,8 +32,15 @@ class AlimentoController extends Controller
     }
 
     public function destroy($id) {
-        Alimento::find($id)->delete();
-        return redirect()->route('alimentos');
+        try {
+            Alimento::find($id)->delete();
+            $ret = array('status'=>200, 'msg'=>"null");
+        } catch (\Illuminate\Database\QueryException $e) {
+            $ret = array('status'=>500, 'msg'=>$e->getMessage());
+        } catch (\PDOException $e) {
+            $ret = array('status'=>500, 'msg'=>$e->getMessage());
+        }
+        return $ret;
     }
 
     public function edit($id) {

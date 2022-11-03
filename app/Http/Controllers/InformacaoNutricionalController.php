@@ -24,8 +24,15 @@ class InformacaoNutricionalController extends Controller
     }
 
     public function destroy($id) {
-        InformacaoNutricional::find($id)->delete();
-        return redirect()->route('informacoesNutricionais');
+        try {
+            InformacaoNutricional::find($id)->delete();
+            $ret = array('status'=>200, 'msg'=>"null");
+        } catch (\Illuminate\Database\QueryException $e) {
+            $ret = array('status'=>500, 'msg'=>$e->getMessage());
+        } catch (\PDOException $e) {
+            $ret = array('status'=>500, 'msg'=>$e->getMessage());
+        }
+        return $ret;
     }
 
     public function edit($id) {

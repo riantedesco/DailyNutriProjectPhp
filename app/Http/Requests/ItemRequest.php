@@ -24,7 +24,7 @@ class ItemRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'quantidade' => 'required|numeric',
         ];
     }
 }

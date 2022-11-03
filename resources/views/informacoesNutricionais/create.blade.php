@@ -19,93 +19,18 @@
         </div>
 
         <div class="form-group">
-            {!! Form::label('valorEnergetico', 'Valor Energético:') !!}
-            {!! Form::text('valorEnergetico', null, ['class'=>'form-control', 'required']) !!}
+            {!! Form::label('legendaNutricional_id', 'Legenda:') !!}
+            {!! Form::select('legendaNutricional_id', \App\Models\LegendaNutricional::orderBy('descricao')->pluck('descricao', 'id')->toArray(), null, ['class'=>'form-control', 'required']) !!}
         </div>
 
         <div class="form-group">
-            {!! Form::label('carboidratos', 'Carboidratos:') !!}
-            {!! Form::text('carboidratos', null, ['class'=>'form-control', 'required']) !!}
+            {!! Form::label('quantidade', 'Quantidade:') !!}
+            {!! Form::number('quantidade', null, ['class'=>'form-control', 'required', 'step'=>'any']) !!}
         </div>
 
         <div class="form-group">
-            {!! Form::label('proteinas', 'Proteínas:') !!}
-            {!! Form::text('proteinas', null, ['class'=>'form-control', 'required']) !!}
-        </div>
-
-        <div class="form-group">
-            {!! Form::label('gordurasTotais', 'Gorduras Totais:') !!}
-            {!! Form::text('gordurasTotais', null, ['class'=>'form-control', 'required']) !!}
-        </div>
-
-        <div class="form-group">
-            {!! Form::label('gordurasSaturadas', 'Gorduras Saturadas:') !!}
-            {!! Form::text('gordurasSaturadas', null, ['class'=>'form-control', 'required']) !!}
-        </div>
-
-        <div class="form-group">
-            {!! Form::label('gordurasTrans', 'Gorduras Trans:') !!}
-            {!! Form::text('gordurasTrans', null, ['class'=>'form-control', 'required']) !!}
-        </div>
-
-        <div class="form-group">
-            {!! Form::label('gordurasInstauradas', 'Gorduras Instauradas:') !!}
-            {!! Form::text('gordurasInstauradas', null, ['class'=>'form-control', 'required']) !!}
-        </div>
-
-        <div class="form-group">
-            {!! Form::label('colesterol', 'Colesterol:') !!}
-            {!! Form::text('colesterol', null, ['class'=>'form-control', 'required']) !!}
-        </div>
-
-        <div class="form-group">
-            {!! Form::label('fibraAlimentar', 'Fibra Alimentar:') !!}
-            {!! Form::text('fibraAlimentar', null, ['class'=>'form-control', 'required']) !!}
-        </div>
-
-        <div class="form-group">
-            {!! Form::label('sodio', 'Sódio:') !!}
-            {!! Form::text('sodio', null, ['class'=>'form-control', 'required']) !!}
-        </div>
-
-        <div class="form-group">
-            {!! Form::label('calcio', 'Cálcio:') !!}
-            {!! Form::text('calcio', null, ['class'=>'form-control', 'required']) !!}
-        </div>
-
-        <div class="form-group">
-            {!! Form::label('ferro', 'Ferro:') !!}
-            {!! Form::text('ferro', null, ['class'=>'form-control', 'required']) !!}
-        </div>
-
-        <div class="form-group">
-            {!! Form::label('zinco', 'Zinco:') !!}
-            {!! Form::text('zinco', null, ['class'=>'form-control', 'required']) !!}
-        </div>
-
-        <div class="form-group">
-            {!! Form::label('vitaminaA', 'Vitamina A:') !!}
-            {!! Form::text('vitaminaA', null, ['class'=>'form-control', 'required']) !!}
-        </div>
-
-        <div class="form-group">
-            {!! Form::label('vitaminaB', 'Vitamina B:') !!}
-            {!! Form::text('vitaminaB', null, ['class'=>'form-control', 'required']) !!}
-        </div>
-
-        <div class="form-group">
-            {!! Form::label('vitaminaC', 'Vitamina C:') !!}
-            {!! Form::text('vitaminaC', null, ['class'=>'form-control', 'required']) !!}
-        </div>
-
-        <div class="form-group">
-            {!! Form::label('vitaminaK', 'Vitamina K:') !!}
-            {!! Form::text('vitaminaK', null, ['class'=>'form-control', 'required']) !!}
-        </div>
-
-        <div class="form-group">
-            {!! Form::label('vitaminaD', 'Vitamina D:') !!}
-            {!! Form::text('vitaminaD', null, ['class'=>'form-control', 'required']) !!}
+            {!! Form::label('valorDiario', 'Valor diário (%):') !!}
+            {!! Form::number('valorDiario', null, ['class'=>'form-control', 'required', 'step'=>'any']) !!}
         </div>
 
         <div class="form-group">

@@ -1,9 +1,22 @@
+GERAL:
 > Definir controle de sessão
-> Estilizar a tela inicial
-> Adicionar validações de dados em todas as tabelas (required, max, min, etc)
-> Alterar ícones da listagem
-> Adicionar create e list de itens dentro de refeições
-> Adicionar informativo de unidade de medida nas listagens e cadastros necessários
-> Incluir lógica de relatórios
-> Incluir lógica de gráficos
-> Criar acesso separado para administrador e usuário e definir quais telas ambos tem acesso
+> Estilizar a tela index
+> Estilizar a tela home
+> Estilizar o ícone do sistema
+> Estilizar a tela de list de refeições
+> Incluir lógica de gráficos na tela home (gráficos para cada refeição, gráfico para refeição diária, gráfico para refeição semanal, gráfico para refeição mensal)
+
+
+ADMINISTRADOR:
+> Adicionar CRUD de informacaoNutricional dentro da CRUD de alimento
+> Inserir informativo da unidadeMedida da legendaNutricional dentro da CRUD de informaçãoNutricional (que estará dentro da CRUD de alimento, inserir próximo ao campo quantidadePorcao)
+> Inserir informativo do valorDiario dentro listagem de informaçãoNutricional (que estará dentro da CRUD de alimento, mensagem: valor diário com base em uma dieta de 2000kcal...)
+> Inserir emissão de relatório de alimento (que terá suas informações nutricionais)
+> Inserir emissão de relatório de legendaNutricional
+> Liberar create de alimento (que terá a CRUD de informacaoNutricional), CRUD de legendaNutricional, relatório de alimentos e relatório de informações nutricionais apenas para administrador
+> Problema na listagem de "descricao" da legendaNutricional dentro de informacaoNutricional
+
+
+USUARIO:
+> Adicionar CRUD de itens dentro da CRUD de refeição
+> Tirar a seleção de usuário na tela de refeição e adaptar para puxar o usuário logado por default

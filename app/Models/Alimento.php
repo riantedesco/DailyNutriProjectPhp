@@ -7,10 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 class Alimento extends Model
 {
     protected $table = "alimentos";
-    protected $fillable = ['nome', 'unidadeMedida', 'quantidadePorcao'];
+    protected $fillable = ['nome', 'quantidadePorcao', 'unidadeMedida', 'referencialMedida'];
 
     public function informacoesNutricionais() {
-        return $this->hasOne("App\Models\InformacaoNutricional");
+        return $this->hasMany("App\Models\InformacaoNutricional");
     }
 
     public function itens() {

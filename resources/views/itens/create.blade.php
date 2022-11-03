@@ -25,7 +25,7 @@
 
         <div class="form-group">
             {!! Form::label('quantidade', 'Quantidade:') !!}
-            {!! Form::text('quantidade', null, ['class'=>'form-control', 'required']) !!}
+            {!! Form::number('quantidade', null, ['class'=>'form-control', 'required', 'step'='any']) !!}
         </div>
 
         <div class="form-group">
