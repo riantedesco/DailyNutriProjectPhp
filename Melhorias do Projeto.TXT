@@ -1,8 +1,6 @@
 GERAL:
-> Definir controle de sessão
 > Estilizar a tela index
 > Estilizar a tela home
-> Estilizar o ícone do sistema
 > Estilizar a tela de list de refeições
 > Incluir lógica de gráficos na tela home (gráficos para cada refeição, gráfico para refeição diária, gráfico para refeição semanal, gráfico para refeição mensal)
 

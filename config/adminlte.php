@@ -290,56 +290,64 @@ return [
     */
 
     'menu' => [
-        ['header' => 'TELAS GERAIS'],
+        // ['header' => 'TELAS GERAIS'],
 
             [
                 'text' => 'Home',
                 'url' => 'home',
                 'icon' => 'fas fa-fw fa-home',
+                'can' => ['administrador', 'usuario'],
             ],
 
             [
                 'text' => 'Criar refeição',
                 'url' => 'refeicoes/create',
                 'icon' => 'fas fa-fw fa-plus',
+                'can' => ['administrador', 'usuario'],
             ],
 
             [
                 'text' => 'Suas refeições',
                 'url' => 'refeicoes',
                 'icon' => 'fas fa-fw fa-list',
+                'can' => ['administrador', 'usuario'],
             ],
 
             [
                 'text' => 'Alimentos cadastrados',
                 'url' => 'alimentos',
                 'icon' => 'fas fa-fw fa-list-alt',
+                'can' => ['administrador', 'usuario'],
             ],
 
-        ['header' => 'TELAS DO ADMINISTRADOR'],
+        ['header' => 'TELAS DO ADMINISTRADOR', 'can' => 'administrador'],
 
             [
                 'text' => 'Criar alimento',
                 'url' => 'alimentos/create',
                 'icon' => 'fas fa-fw fa-shopping-cart',
+                'can' => 'administrador',
             ],
 
             [
                 'text' => 'Legendas nutricionais',
                 'url' => 'legendasNutricionais',
                 'icon' => 'fas fa-fw fa-th',
+                'can' => 'administrador',
             ],
 
             [
                 'text' => 'Relatório de alimentos',
                 'url' => '#',
                 'icon' => 'fas fa-fw fa-clipboard',
+                'can' => 'administrador',
             ],
 
             [
                 'text' => 'Relatório de legendas nutricionais',
                 'url' => '#',
                 'icon' => 'fas fa-fw fa-clipboard',
+                'can' => 'administrador',
             ],
 
         ['header' => 'TELAS A SEREM REMOVIDAS'],
@@ -348,12 +356,14 @@ return [
                 'text' => 'CRUD de itens',
                 'url' => 'itens',
                 'icon' => 'fas fa-fw fa-times',
+                'can' => ['administrador', 'usuario'],
             ],
 
             [
                 'text' => 'CRUD de informações nutricionais',
                 'url' => 'informacoesNutricionais',
                 'icon' => 'fas fa-fw fa-times',
+                'can' => 'administrador',
             ],
 
         // // Navbar items:
