@@ -338,14 +338,14 @@ return [
 
             [
                 'text' => 'Relatório de alimentos',
-                'url' => '#',
+                'url' => 'relatorios/alimentos',
                 'icon' => 'fas fa-fw fa-clipboard',
                 'can' => 'administrador',
             ],
 
             [
                 'text' => 'Relatório de legendas nutricionais',
-                'url' => '#',
+                'url' => 'relatorios/legendasNutricionais',
                 'icon' => 'fas fa-fw fa-clipboard',
                 'can' => 'administrador',
             ],

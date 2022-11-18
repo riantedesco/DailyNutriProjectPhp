@@ -2,7 +2,11 @@
 
 @section('content')
     @can('administrador')
-        <h1>Alimentos</h1>
+        <div>
+            <br>
+            <h1>Alimentos</h1>
+            <br>
+        </div>
 
         {!! Form::open(['name' => 'form_name', 'route' => 'alimentos']) !!}
         <div class="sidebar-form">
@@ -33,7 +37,8 @@
                         <td>{{ $alimento->unidadeMedida }}</td>
                         <td>{{ $alimento->referencialMedida }}</td>
                         <td>
-                            <a href="{{ route('alimentos.edit', ['id' => $alimento->id]) }}" class="btn-sm btn-success">Editar</a>
+                            <a href="{{ route('alimentos.edit', ['id' => $alimento->id]) }}"
+                                class="btn-sm btn-success">Editar</a>
                             <a href="#" onclick="return ConfirmaExclusao({{ $alimento->id }})"
                                 class="btn-sm btn-danger">Remover</a>
                         </td>
@@ -46,7 +51,11 @@
     @endcan
 
     @can('usuario')
-        <h1>Alimentos</h1>
+        <div>
+            <br>
+            <h1>Alimentos</h1>
+            <br>
+        </div>
 
         {!! Form::open(['name' => 'form_name', 'route' => 'alimentos']) !!}
         <div class="sidebar-form">

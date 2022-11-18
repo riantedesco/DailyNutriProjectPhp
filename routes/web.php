@@ -58,6 +58,11 @@ Route::group(['middleware' => 'auth'], function () {
         Route::put('{id}/update',  ['as' => 'legendasNutricionais.update',  'uses' => 'App\Http\Controllers\LegendaNutricionalController@update']);
         Route::post('store',       ['as' => 'legendasNutricionais.store',   'uses' => 'App\Http\Controllers\LegendaNutricionalController@store']);
     });
+
+    Route::group(['prefix' => 'relatorios', 'where' => ['id' => '[0-9]+']], function () {
+        Route::get('legendasNutricionais', ['as' => 'relatorios.legendasNutricionais',  'uses' => 'App\Http\Controllers\RelatorioController@legendaNutricional']);
+        Route::get('alimentos', ['as' => 'relatorios.alimentos',  'uses' => 'App\Http\Controllers\RelatorioController@alimento']);
+    });
 });
 
 Route::get('/', function () {

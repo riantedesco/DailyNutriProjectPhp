@@ -29,9 +29,14 @@
         </div>
 
         <div class="form-group">
-            {!! Form::label('valorDiario', 'Valor Diário:') !!}
+            {!! Form::label('valorDiario', 'Valor Diário (%):') !!}
             {!! Form::number('valorDiario', $informacaoNutricional->carboidratos, ['class'=>'form-control', 'required']) !!}
         </div>
+
+        <div>
+            <i style="color:#9B111E">% Valores diários com base em uma dieta de 2000kcal. Seus valores diários podem ser maiores ou menores dependendo de suas necessidades energéticas.</i>
+        </div>
+        <br>
 
         <div class="form-group">
             {!! Form::submit('Editar Informação Nutricional', ['class'=>'btn btn-outline-success']) !!}
