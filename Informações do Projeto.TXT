@@ -17,3 +17,8 @@ Comandos auxiliares de desenvolvimento:
 > "php artisan migrate:fresh" para atualizar as migrations, excluindo e refazendo as tabelas
 > "php artisan db:seed" para executar as seeders
 > "php artisan optimize" pra limpar o cache do banco de dados
+> "php install" para reinstalar todas as dependências do projeto
+
+Frameworks auxiliares do projeto:
+> Relatórios com DomPDF: https://blog.especializati.com.br/gerar-pdf-no-laravel-com-dompdf/
+> Recuperação de senha: https://meirimrafael.wixsite.com/meusite/forum/curso-laravel-em-5-min/5-envio-do-e-mail-de-recuperacao-com-gmail

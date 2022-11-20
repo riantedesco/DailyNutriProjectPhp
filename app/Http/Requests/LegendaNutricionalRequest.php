@@ -25,7 +25,6 @@ class LegendaNutricionalRequest extends FormRequest
     {
         return [
             'descricao' => 'required|min:3|max:30',
-            'descricao' => 'required|min:3|max:30',
         ];
     }
 }

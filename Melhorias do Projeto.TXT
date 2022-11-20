@@ -1,11 +1,7 @@
 GERAL:
-> Estilizar a tela index
 > Estilizar a tela home
 > Estilizar a tela de list de refeições
 > Incluir lógica de gráficos na tela home (gráficos para cada refeição, gráfico para refeição diária, gráfico para refeição semanal, gráfico para refeição mensal)
-> Inserir lógica de recuperação de senha pelo email
-> Tirar a seleção de usuário na tela de refeição e adaptar para puxar o usuário logado por default
-> Adaptar a listagem de refeições apenas aquelas que pertencem ao usuário logado
 
 
 ADMINISTRADOR:

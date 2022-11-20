@@ -32,15 +32,10 @@
         {!! Form::datetimelocal('dataHora', null, ['class' => 'form-control', 'required']) !!}
     </div>
 
-    <div class="form-group">
-        {!! Form::label('user_id', 'Usuário:') !!}
-        {!! Form::select(
-            'user_id',
-            \App\Models\User::orderBy('name')->pluck('name', 'id')->toArray(),
-            null,
-            ['class' => 'form-control', 'required'],
-        ) !!}
+    <div>
+        <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
     </div>
+
 
     <div class="form-group">
         {!! Form::submit('Criar Refeição', ['class' => 'btn btn-outline-success']) !!}

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Refeicao;
 use App\Http\Requests\RefeicaoRequest;
+use Illuminate\Support\Facades\Auth;
 
 class RefeicaoController extends Controller
 {
@@ -17,9 +18,12 @@ class RefeicaoController extends Controller
     }
 
     public function store(RefeicaoRequest $request) {
-        $nova_refeicao = $request->all();
-        Refeicao::create($nova_refeicao);
+        // $user = Auth::user();
 
+        $nova_refeicao = $request->all();
+
+        Refeicao::create($nova_refeicao);
+        
         return redirect()->route('refeicoes');
     }
 

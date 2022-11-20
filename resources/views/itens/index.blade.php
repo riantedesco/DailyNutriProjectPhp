@@ -17,8 +17,8 @@
         <tbody>
             @foreach ($itens as $item)
                 <tr>
-                    <td>{{ isset($item->alimento->nome) ? $item->alimento->nome : 'Alimento não informado' }}</td>
                     <td>{{ isset($item->refeicao->titulo) ? $item->refeicao->titulo : 'Refeição não informada' }}</td>
+                    <td>{{ isset($item->alimento->nome) ? $item->alimento->nome : 'Alimento não informado' }}</td>
                     <td>{{ $item->quantidade }}</td>
                     <td>
                         <a href="{{ route('itens.edit', ['id' => $item->id]) }}" class="btn-sm btn-success">Editar</a>

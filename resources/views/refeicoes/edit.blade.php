@@ -20,17 +20,12 @@
 
         <div class="form-group">
             {!! Form::label('descricao', 'Descrição:') !!}
-            {!! Form::text('descricao', $refeicao->descricao, ['class'=>'form-control', 'required']) !!}
+            {!! Form::text('descricao', $refeicao->descricao, ['class'=>'form-control', 'required', 'rows' => '3']) !!}
         </div>
 
         <div class="form-group">
             {!! Form::label('dataHora', 'Data e Hora:') !!}
             {!! Form::datetimelocal('dataHora', $refeicao->dataHora, ['class'=>'form-control', 'required']) !!}
-        </div>
-
-        <div class="form-group">
-            {!! Form::label('user_id', 'User:') !!}
-            {!! Form::select('user_id', \App\Models\User::orderBy('name')->pluck('name', 'id')->toArray(), $refeicao->user_id, ['class'=>'form-control', 'required']) !!}
         </div>
 
         <div class="form-group">

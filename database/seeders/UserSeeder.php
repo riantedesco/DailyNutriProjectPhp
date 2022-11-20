@@ -16,6 +16,6 @@ class UserSeeder extends Seeder
     public function run()
     {
         User::create(['name' => 'Administrador do sistema', 'cpf' => '00000000000', 'dataNascimento' => '2000-01-01', 'genero' => 'Masculino', 'peso' => 0.00, 'altura' => 0.00, 'tipoCadastro' => 'Administrador', 'email' => 'administrador@email.com', 'password' => Hash::make('12345678')]);
-
+        User::create(['name' => 'Rian Tedesco', 'cpf' => '03683956003', 'dataNascimento' => '2002-03-30', 'genero' => 'Masculino', 'peso' => 60.00, 'altura' => 1.72, 'tipoCadastro' => 'Usuario', 'email' => 'rct.tedesco@gmail.com', 'password' => Hash::make('12345678')]);
     }
 }

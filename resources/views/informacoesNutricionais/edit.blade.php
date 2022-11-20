@@ -20,17 +20,17 @@
 
         <div class="form-group">
             {!! Form::label('legendaNutricional_id', 'Legenda Nutricional:') !!}
-            {!! Form::select('legendaNutricional_id', \App\Models\LegendaNutricional::orderBy('descricao')->pluck('descricao', 'id')->toArray(), $informacaoNutricional->alimento_id, ['class'=>'form-control', 'required']) !!}
+            {!! Form::select('legendaNutricional_id', \App\Models\LegendaNutricional::orderBy('descricao')->pluck('descricao', 'id')->toArray(), $informacaoNutricional->legendaNutricional_id, ['class'=>'form-control', 'required']) !!}
         </div>
 
         <div class="form-group">
             {!! Form::label('quantidade', 'Quantidade:') !!}
-            {!! Form::number('quantidade', $informacaoNutricional->valorEnergetico, ['class'=>'form-control', 'required']) !!}
+            {!! Form::number('quantidade', $informacaoNutricional->quantidade, ['class'=>'form-control', 'required', 'step' => 'any']) !!}
         </div>
 
         <div class="form-group">
             {!! Form::label('valorDiario', 'Valor Diário (%):') !!}
-            {!! Form::number('valorDiario', $informacaoNutricional->carboidratos, ['class'=>'form-control', 'required']) !!}
+            {!! Form::number('valorDiario', $informacaoNutricional->valorDiario, ['class'=>'form-control', 'required', 'step' => 'any']) !!}
         </div>
 
         <div>
