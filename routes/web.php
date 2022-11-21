@@ -30,14 +30,27 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('{id}/edit',    ['as' => 'refeicoes.edit',    'uses' => 'App\Http\Controllers\RefeicaoController@edit']);
         Route::put('{id}/update',  ['as' => 'refeicoes.update',  'uses' => 'App\Http\Controllers\RefeicaoController@update']);
         Route::post('store',       ['as' => 'refeicoes.store',   'uses' => 'App\Http\Controllers\RefeicaoController@store']);
+
+        Route::group(['prefix' => '{refeicao_id}/itens', 'where' => ['id' => '[0-9]+']], function () {
+            Route::get('',             ['as' => 'itens',         'uses' => 'App\Http\Controllers\ItemController@index']);
+            Route::get('create',       ['as' => 'itens.create',  'uses' => 'App\Http\Controllers\ItemController@create']);
+            Route::get('{id}/destroy', ['as' => 'itens.destroy', 'uses' => 'App\Http\Controllers\ItemController@destroy']);
+            Route::get('{id}/edit',    ['as' => 'itens.edit',    'uses' => 'App\Http\Controllers\ItemController@edit']);
+            Route::put('{id}/update',  ['as' => 'itens.update',  'uses' => 'App\Http\Controllers\ItemController@update']);
+            // Route::post('store',       ['as' => 'itens.store',   'uses' => 'App\Http\Controllers\ItemController@store']);
+        // Route::post('store',       ['as' => 'itens.store',   'uses' => 'App\Http\Controllers\ItemController@store']);
+        // Route::get('{id}/destroy', ['as' => 'itens.destroy', 'uses' => 'App\Http\Controllers\ItemController@destroy']);
+        // Route::get('{id}/edit',    ['as' => 'itens.edit',    'uses' => 'App\Http\Controllers\ItemController@edit']);
+        // Route::put('{id}/update',  ['as' => 'itens.update',  'uses' => 'App\Http\Controllers\ItemController@update']);
+        });
     });
 
     Route::group(['prefix' => 'itens', 'where' => ['id' => '[0-9]+']], function () {
-        Route::get('',             ['as' => 'itens',         'uses' => 'App\Http\Controllers\ItemController@index']);
-        Route::get('create',       ['as' => 'itens.create',  'uses' => 'App\Http\Controllers\ItemController@create']);
-        Route::get('{id}/destroy', ['as' => 'itens.destroy', 'uses' => 'App\Http\Controllers\ItemController@destroy']);
-        Route::get('{id}/edit',    ['as' => 'itens.edit',    'uses' => 'App\Http\Controllers\ItemController@edit']);
-        Route::put('{id}/update',  ['as' => 'itens.update',  'uses' => 'App\Http\Controllers\ItemController@update']);
+        // Route::get('refeicoes/{refeicao_id}',             ['as' => 'itens',         'uses' => 'App\Http\Controllers\ItemController@index']);
+        // Route::get('create',       ['as' => 'itens.create',  'uses' => 'App\Http\Controllers\ItemController@create']);
+        // Route::get('{id}/destroy', ['as' => 'itens.destroy', 'uses' => 'App\Http\Controllers\ItemController@destroy']);
+        // Route::get('{id}/edit',    ['as' => 'itens.edit',    'uses' => 'App\Http\Controllers\ItemController@edit']);
+        // Route::put('{id}/update',  ['as' => 'itens.update',  'uses' => 'App\Http\Controllers\ItemController@update']);
         Route::post('store',       ['as' => 'itens.store',   'uses' => 'App\Http\Controllers\ItemController@store']);
     });
 

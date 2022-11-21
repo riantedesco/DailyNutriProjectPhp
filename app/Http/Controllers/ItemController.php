@@ -4,23 +4,25 @@ namespace App\Http\Controllers;
 
 use App\Models\Item;
 use App\Http\Requests\ItemRequest;
+use App\Models\Refeicao;
 
 class ItemController extends Controller
 {
-    public function index(){
-        $itens = Item::orderBy('id')->paginate(5);
-        return view('itens.index', ['itens'=>$itens]);
+    public function index($refeicao_id){
+        $itens = Item::where('refeicao_id', $refeicao_id)->orderBy('id')->paginate(5);
+        return view('itens.index', ['itens'=>$itens, 'refeicao_id'=>$refeicao_id]);
     }
 
-    public function create() {
-        return view('itens.create');
+    public function create($refeicao_id) {
+        $refeicao = Refeicao::find($refeicao_id);
+        return view('itens.create', compact('refeicao'));
     }
 
     public function store(ItemRequest $request) {
         $novo_item = $request->all();
-        Item::create($novo_item);
+        $itemCriado = Item::create($novo_item);
 
-        return redirect()->route('itens');
+        return redirect()->route('itens', ['refeicao_id'=>$itemCriado->refeicao_id]);
     }
 
     public function destroy($id) {
@@ -35,13 +37,13 @@ class ItemController extends Controller
         return $ret;
     }
 
-    public function edit($id) {
+    public function edit($id, $refeicao_id) {
         $item = Item::find($id);
-        return view('itens.edit', compact('item'));
+        return view('itens.edit', compact('item'), ['refeicao_id'=>$refeicao_id]);
     }
 
-    public function update(ItemRequest $request, $id) {
+    public function update(ItemRequest $request, $id, $refeicao_id) {
         Item::find($id)->update($request->all());
-        return redirect()->route('itens');
+        return redirect()->route('itens', ['refeicao_id'=>$refeicao_id]);
     }
 }

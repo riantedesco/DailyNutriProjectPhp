@@ -17,7 +17,7 @@
 
     {!! Form::open(['route' => 'itens.store']) !!}
 
-    <div class="form-group">
+    {{-- <div class="form-group">
         {!! Form::label('refeicao_id', 'Refeição:') !!}
         {!! Form::select(
             'refeicao_id',
@@ -25,6 +25,10 @@
             null,
             ['class' => 'form-control', 'required'],
         ) !!}
+    </div> --}}
+
+    <div>
+        <input type="hidden" name="refeicao_id" value="{{$refeicao->id}}">
     </div>
 
     <div class="form-group">
@@ -45,7 +49,7 @@
     <div class="form-group">
         {!! Form::submit('Criar Item', ['class' => 'btn btn-outline-success']) !!}
         {!! Form::reset('Limpar', ['class' => 'btn btn-outline-secondary']) !!}
-        <a class="btn btn-outline-danger" href="{{ route('itens') }}">Voltar</a>
+        <a class="btn btn-outline-danger" href="{{ route('itens', ['refeicao_id' => $refeicao->id]) }}">Voltar</a>
     </div>
 
     {!! Form::close() !!}

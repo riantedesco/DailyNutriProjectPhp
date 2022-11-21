@@ -22,6 +22,7 @@
                     <td>{{ $refeicao->descricao }}</td>
                     <td>{{ Carbon\Carbon::parse($refeicao->dataHora)->format('d/m/Y h:i') }}</td>
                     <td>
+                        <a href="{{ route('itens', ['refeicao_id' => $refeicao->id]) }}" class="btn-sm btn-warning">Ver itens</a>
                         <a href="{{ route('refeicoes.edit', ['id' => $refeicao->id]) }}" class="btn-sm btn-success">Editar</a>
                         <a href="#" onclick="return ConfirmaExclusao({{ $refeicao->id }})"
                             class="btn-sm btn-danger">Remover</a>

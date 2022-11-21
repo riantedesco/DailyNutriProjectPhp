@@ -21,7 +21,7 @@
                     <td>{{ isset($item->alimento->nome) ? $item->alimento->nome : 'Alimento não informado' }}</td>
                     <td>{{ $item->quantidade }}</td>
                     <td>
-                        <a href="{{ route('itens.edit', ['id' => $item->id]) }}" class="btn-sm btn-success">Editar</a>
+                        <a href="{{ route('itens.edit', ['id' => $item->id, 'refeicao_id' => $item->refeicao_id]) }}" class="btn-sm btn-success">Editar</a>
                         <a href="#" onclick="return ConfirmaExclusao({{ $item->id }})"
                             class="btn-sm btn-danger">Remover</a>
                     </td>
@@ -33,7 +33,8 @@
     {{ $itens->links('pagination::bootstrap-4') }}
 
     <div>
-        <a class="btn btn-outline-primary" href="{{ route('itens.create', []) }}">Novo Item</a>
+        <a class="btn btn-outline-primary" href="{{ route('itens.create', ['refeicao_id' => $refeicao_id]) }}">Novo Item</a>
+        <a class="btn btn-outline-danger" href="{{ route('refeicoes') }}">Voltar para refeições</a>
     </div>
 @stop
 

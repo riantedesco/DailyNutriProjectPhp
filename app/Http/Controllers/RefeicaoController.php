@@ -18,12 +18,9 @@ class RefeicaoController extends Controller
     }
 
     public function store(RefeicaoRequest $request) {
-        // $user = Auth::user();
-
         $nova_refeicao = $request->all();
-
         Refeicao::create($nova_refeicao);
-        
+    
         return redirect()->route('refeicoes');
     }
 
