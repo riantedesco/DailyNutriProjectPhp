@@ -37,13 +37,15 @@ class ItemController extends Controller
         return $ret;
     }
 
-    public function edit($id, $refeicao_id) {
+    public function edit($id) {
         $item = Item::find($id);
-        return view('itens.edit', compact('item'), ['refeicao_id'=>$refeicao_id]);
+        return view('itens.edit', compact('item'), ['refeicao_id'=>$item->refeicao_id]);
     }
 
-    public function update(ItemRequest $request, $id, $refeicao_id) {
+    public function update(ItemRequest $request, $id) {
         Item::find($id)->update($request->all());
-        return redirect()->route('itens', ['refeicao_id'=>$refeicao_id]);
+        $item = Item::find($id);
+        return redirect()->route('itens', ['refeicao_id'=>$item->refeicao_id]);
     }
+
 }

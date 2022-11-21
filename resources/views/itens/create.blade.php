@@ -17,16 +17,6 @@
 
     {!! Form::open(['route' => 'itens.store']) !!}
 
-    {{-- <div class="form-group">
-        {!! Form::label('refeicao_id', 'Refeição:') !!}
-        {!! Form::select(
-            'refeicao_id',
-            \App\Models\Refeicao::orderBy('titulo')->pluck('titulo', 'id')->toArray(),
-            null,
-            ['class' => 'form-control', 'required'],
-        ) !!}
-    </div> --}}
-
     <div>
         <input type="hidden" name="refeicao_id" value="{{$refeicao->id}}">
     </div>
