@@ -36,7 +36,6 @@
         <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
     </div>
 
-
     <div class="form-group">
         {!! Form::submit('Criar Refeição', ['class' => 'btn btn-outline-success']) !!}
         {!! Form::reset('Limpar', ['class' => 'btn btn-outline-secondary']) !!}
