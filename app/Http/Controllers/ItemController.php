@@ -39,7 +39,7 @@ class ItemController extends Controller
 
     public function edit($id) {
         $item = Item::find($id);
-        return view('itens.edit', compact('item'), ['refeicao_id'=>$item->refeicao_id]);
+        return view('itens.edit', compact('item'));
     }
 
     public function update(ItemRequest $request, $id) {

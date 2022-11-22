@@ -4,12 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Models\Refeicao;
 use App\Http\Requests\RefeicaoRequest;
-use Illuminate\Support\Facades\Auth;
+use App\Models\Item;
 
 class RefeicaoController extends Controller
 {
     public function index(){
-        $refeicoes = Refeicao::orderBy('titulo')->paginate(5);
+        $refeicoes = Refeicao::orderBy('dataHora', 'DESC')->paginate(4);
         return view('refeicoes.index', ['refeicoes'=>$refeicoes]);
     }
 
@@ -26,6 +26,7 @@ class RefeicaoController extends Controller
 
     public function destroy($id) {
         try {
+            Item::where('refeicao_id', $id)->delete();
             Refeicao::find($id)->delete();
             $ret = array('status'=>200, 'msg'=>"null");
         } catch (\Illuminate\Database\QueryException $e) {

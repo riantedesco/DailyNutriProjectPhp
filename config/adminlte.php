@@ -290,8 +290,6 @@ return [
     */
 
     'menu' => [
-        // ['header' => 'TELAS GERAIS'],
-
             [
                 'text' => 'Home',
                 'url' => 'home',
@@ -347,22 +345,6 @@ return [
                 'text' => 'Relatório de legendas nutricionais',
                 'url' => 'relatorios/legendasNutricionais',
                 'icon' => 'fas fa-fw fa-clipboard',
-                'can' => 'administrador',
-            ],
-
-        ['header' => 'TELAS A SEREM REMOVIDAS'],
-
-            [
-                'text' => 'CRUD de itens',
-                'url' => 'itens',
-                'icon' => 'fas fa-fw fa-times',
-                'can' => ['administrador', 'usuario'],
-            ],
-
-            [
-                'text' => 'CRUD de informações nutricionais',
-                'url' => 'informacoesNutricionais',
-                'icon' => 'fas fa-fw fa-times',
                 'can' => 'administrador',
             ],
 

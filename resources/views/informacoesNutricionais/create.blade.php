@@ -17,14 +17,8 @@
 
     {!! Form::open(['route' => 'informacoesNutricionais.store']) !!}
 
-    <div class="form-group">
-        {!! Form::label('alimento_id', 'Alimento:') !!}
-        {!! Form::select(
-            'alimento_id',
-            \App\Models\Alimento::orderBy('nome')->pluck('nome', 'id')->toArray(),
-            null,
-            ['class' => 'form-control', 'required'],
-        ) !!}
+    <div>
+        <input type="hidden" name="alimento_id" value="{{$alimento->id}}">
     </div>
 
     <div class="form-group">
@@ -56,7 +50,7 @@
     <div class="form-group">
         {!! Form::submit('Criar Informação Nutricional', ['class' => 'btn btn-outline-success']) !!}
         {!! Form::reset('Limpar', ['class' => 'btn btn-outline-secondary']) !!}
-        <a class="btn btn-outline-danger" href="{{ route('informacoesNutricionais') }}">Voltar</a>
+        <a class="btn btn-outline-danger" href="{{ route('informacoesNutricionais', ['alimento_id' => $alimento->id]) }}">Voltar</a>
     </div>
 
     {!! Form::close() !!}

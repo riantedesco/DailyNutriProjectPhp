@@ -41,7 +41,7 @@
         <div class="form-group">
             {!! Form::submit('Editar Informação Nutricional', ['class'=>'btn btn-outline-success']) !!}
             {!! Form::reset('Limpar', ['class'=>'btn btn-outline-secondary']) !!}
-            <a class="btn btn-outline-danger" href="{{ route('informacoesNutricionais') }}">Voltar</a>
+            <a class="btn btn-outline-danger" href="{{ route('informacoesNutricionais', ['alimento_id' => $informacaoNutricional->alimento_id]) }}">Voltar</a>
         </div>
 
     {!! Form::close() !!}

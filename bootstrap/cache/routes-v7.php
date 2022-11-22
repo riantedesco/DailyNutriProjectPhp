@@ -43,7 +43,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::g05dRsxqPVUAcsl1',
+            '_route' => 'generated::RNBua3GAXWRXHZN7',
           ),
           1 => NULL,
           2 => 
@@ -63,7 +63,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::bZudyE3xaaAbxAUY',
+            '_route' => 'generated::pxftNw0gL5t8p2Ux',
           ),
           1 => NULL,
           2 => 
@@ -129,6 +129,25 @@ app('router')->setCompiledRoutes(
           0 => 
           array (
             '_route' => 'alimentos.store',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/informacoesNutricionais/store' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'informacoesNutricionais.store',
           ),
           1 => NULL,
           2 => 
@@ -207,65 +226,6 @@ app('router')->setCompiledRoutes(
           0 => 
           array (
             '_route' => 'itens.store',
-          ),
-          1 => NULL,
-          2 => 
-          array (
-            'POST' => 0,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      '/informacoesNutricionais' => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'informacoesNutricionais',
-          ),
-          1 => NULL,
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      '/informacoesNutricionais/create' => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'informacoesNutricionais.create',
-          ),
-          1 => NULL,
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      '/informacoesNutricionais/store' => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'informacoesNutricionais.store',
           ),
           1 => NULL,
           2 => 
@@ -383,7 +343,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::W2kXIG7O0lAaBNap',
+            '_route' => 'generated::biNfnl36z5FMHaaF',
           ),
           1 => NULL,
           2 => 
@@ -420,7 +380,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::Odq8ZqyXujXBZy9D',
+            '_route' => 'generated::jKNO7upavJcxj7rg',
           ),
           1 => NULL,
           2 => 
@@ -475,7 +435,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::WbLWDm4yJcE9ehMK',
+            '_route' => 'generated::n34vmT66C5EJhbtv',
           ),
           1 => NULL,
           2 => 
@@ -566,7 +526,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::EUwsj2e9eBsCmJAe',
+            '_route' => 'generated::5xfwSZwkis5zqPfP',
           ),
           1 => NULL,
           2 => 
@@ -602,7 +562,7 @@ app('router')->setCompiledRoutes(
     ),
     2 => 
     array (
-      0 => '{^(?|/alimentos/(?|([0-9]+)/destroy(*:37)|([0-9]+)/edit(*:57)|([0-9]+)/update(*:79))|/refeicoes/(?|([0-9]+)/destroy(*:117)|([0-9]+)/edit(*:138)|([0-9]+)/update(*:161)|([^/]++)/itens(?|(*:186)|/create(*:201)))|/i(?|tens/(?|([0-9]+)/destroy(*:240)|([0-9]+)/edit(*:261)|([0-9]+)/update(*:284))|nformacoesNutricionais/(?|([0-9]+)/destroy(*:335)|([0-9]+)/edit(*:356)|([0-9]+)/update(*:379)))|/legendasNutricionais/(?|([0-9]+)/destroy(*:430)|([0-9]+)/edit(*:451)|([0-9]+)/update(*:474))|/password/reset/([^/]++)(*:507))/?$}sDu',
+      0 => '{^(?|/alimentos/(?|([0-9]+)/destroy(*:37)|([0-9]+)/edit(*:57)|([0-9]+)/update(*:79)|([^/]++)/informacoesNutricionais(?|(*:121)|/create(*:136)))|/i(?|nformacoesNutricionais/(?|([0-9]+)/destroy(*:193)|([0-9]+)/edit(*:214)|([0-9]+)/update(*:237))|tens/(?|([0-9]+)/destroy(*:270)|([0-9]+)/edit(*:291)|([0-9]+)/update(*:314)))|/refeicoes/(?|([0-9]+)/destroy(*:354)|([0-9]+)/edit(*:375)|([0-9]+)/update(*:398)|([^/]++)/itens(?|(*:423)|/create(*:438)))|/legendasNutricionais/(?|([0-9]+)/destroy(*:489)|([0-9]+)/edit(*:510)|([0-9]+)/update(*:533))|/password/reset/([^/]++)(*:566))/?$}sDu',
     ),
     3 => 
     array (
@@ -674,17 +634,17 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      117 => 
+      121 => 
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'refeicoes.destroy',
+            '_route' => 'informacoesNutricionais',
           ),
           1 => 
           array (
-            0 => 'id',
+            0 => 'alimento_id',
           ),
           2 => 
           array (
@@ -697,17 +657,17 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      138 => 
+      136 => 
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'refeicoes.edit',
+            '_route' => 'informacoesNutricionais.create',
           ),
           1 => 
           array (
-            0 => 'id',
+            0 => 'alimento_id',
           ),
           2 => 
           array (
@@ -720,143 +680,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      161 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'refeicoes.update',
-          ),
-          1 => 
-          array (
-            0 => 'id',
-          ),
-          2 => 
-          array (
-            'PUT' => 0,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      186 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'itens',
-          ),
-          1 => 
-          array (
-            0 => 'refeicao_id',
-          ),
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      201 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'itens.create',
-          ),
-          1 => 
-          array (
-            0 => 'refeicao_id',
-          ),
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      240 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'itens.destroy',
-          ),
-          1 => 
-          array (
-            0 => 'id',
-          ),
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      261 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'itens.edit',
-          ),
-          1 => 
-          array (
-            0 => 'id',
-          ),
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      284 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'itens.update',
-          ),
-          1 => 
-          array (
-            0 => 'id',
-          ),
-          2 => 
-          array (
-            'PUT' => 0,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      335 => 
+      193 => 
       array (
         0 => 
         array (
@@ -879,7 +703,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      356 => 
+      214 => 
       array (
         0 => 
         array (
@@ -902,7 +726,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      379 => 
+      237 => 
       array (
         0 => 
         array (
@@ -924,7 +748,189 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      430 => 
+      270 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'itens.destroy',
+          ),
+          1 => 
+          array (
+            0 => 'id',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      291 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'itens.edit',
+          ),
+          1 => 
+          array (
+            0 => 'id',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      314 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'itens.update',
+          ),
+          1 => 
+          array (
+            0 => 'id',
+          ),
+          2 => 
+          array (
+            'PUT' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      354 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'refeicoes.destroy',
+          ),
+          1 => 
+          array (
+            0 => 'id',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      375 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'refeicoes.edit',
+          ),
+          1 => 
+          array (
+            0 => 'id',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      398 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'refeicoes.update',
+          ),
+          1 => 
+          array (
+            0 => 'id',
+          ),
+          2 => 
+          array (
+            'PUT' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      423 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'itens',
+          ),
+          1 => 
+          array (
+            0 => 'refeicao_id',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      438 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'itens.create',
+          ),
+          1 => 
+          array (
+            0 => 'refeicao_id',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      489 => 
       array (
         0 => 
         array (
@@ -947,7 +953,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      451 => 
+      510 => 
       array (
         0 => 
         array (
@@ -970,7 +976,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      474 => 
+      533 => 
       array (
         0 => 
         array (
@@ -992,7 +998,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      507 => 
+      566 => 
       array (
         0 => 
         array (
@@ -1066,7 +1072,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::g05dRsxqPVUAcsl1' => 
+    'generated::RNBua3GAXWRXHZN7' => 
     array (
       'methods' => 
       array (
@@ -1087,7 +1093,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 'web',
         ),
-        'as' => 'generated::g05dRsxqPVUAcsl1',
+        'as' => 'generated::RNBua3GAXWRXHZN7',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1103,7 +1109,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::bZudyE3xaaAbxAUY' => 
+    'generated::pxftNw0gL5t8p2Ux' => 
     array (
       'methods' => 
       array (
@@ -1120,13 +1126,13 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:295:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:77:"function (\\Illuminate\\Http\\Request $request) {
     return $request->user();
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000201fc2900000000023bb9432";}";s:4:"hash";s:44:"2eLu+tf6j55S8nsjUpfGrOacpa4qC8Pvtmi7zPMOiJQ=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000000ad4df0f000000000fa05580";}";s:4:"hash";s:44:"9xNBcZYV12kXGuol5cEP+OzMupeE9iso3iwAQi0DjTw=";}}',
         'namespace' => NULL,
         'prefix' => 'api',
         'where' => 
         array (
         ),
-        'as' => 'generated::bZudyE3xaaAbxAUY',
+        'as' => 'generated::pxftNw0gL5t8p2Ux',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1365,6 +1371,244 @@ app('router')->setCompiledRoutes(
         'controller' => 'App\\Http\\Controllers\\AlimentoController@store',
         'namespace' => NULL,
         'prefix' => '/alimentos',
+        'where' => 
+        array (
+          'id' => '[0-9]+',
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+        'id' => '[0-9]+',
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'informacoesNutricionais' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'alimentos/{alimento_id}/informacoesNutricionais',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'as' => 'informacoesNutricionais',
+        'uses' => 'App\\Http\\Controllers\\InformacaoNutricionalController@index',
+        'controller' => 'App\\Http\\Controllers\\InformacaoNutricionalController@index',
+        'namespace' => NULL,
+        'prefix' => 'alimentos/{alimento_id}/informacoesNutricionais',
+        'where' => 
+        array (
+          'id' => '[0-9]+',
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+        'id' => '[0-9]+',
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'informacoesNutricionais.create' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'alimentos/{alimento_id}/informacoesNutricionais/create',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'as' => 'informacoesNutricionais.create',
+        'uses' => 'App\\Http\\Controllers\\InformacaoNutricionalController@create',
+        'controller' => 'App\\Http\\Controllers\\InformacaoNutricionalController@create',
+        'namespace' => NULL,
+        'prefix' => 'alimentos/{alimento_id}/informacoesNutricionais',
+        'where' => 
+        array (
+          'id' => '[0-9]+',
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+        'id' => '[0-9]+',
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'informacoesNutricionais.destroy' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'informacoesNutricionais/{id}/destroy',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'as' => 'informacoesNutricionais.destroy',
+        'uses' => 'App\\Http\\Controllers\\InformacaoNutricionalController@destroy',
+        'controller' => 'App\\Http\\Controllers\\InformacaoNutricionalController@destroy',
+        'namespace' => NULL,
+        'prefix' => '/informacoesNutricionais',
+        'where' => 
+        array (
+          'id' => '[0-9]+',
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+        'id' => '[0-9]+',
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'informacoesNutricionais.edit' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'informacoesNutricionais/{id}/edit',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'as' => 'informacoesNutricionais.edit',
+        'uses' => 'App\\Http\\Controllers\\InformacaoNutricionalController@edit',
+        'controller' => 'App\\Http\\Controllers\\InformacaoNutricionalController@edit',
+        'namespace' => NULL,
+        'prefix' => '/informacoesNutricionais',
+        'where' => 
+        array (
+          'id' => '[0-9]+',
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+        'id' => '[0-9]+',
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'informacoesNutricionais.update' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'PUT',
+      ),
+      'uri' => 'informacoesNutricionais/{id}/update',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'as' => 'informacoesNutricionais.update',
+        'uses' => 'App\\Http\\Controllers\\InformacaoNutricionalController@update',
+        'controller' => 'App\\Http\\Controllers\\InformacaoNutricionalController@update',
+        'namespace' => NULL,
+        'prefix' => '/informacoesNutricionais',
+        'where' => 
+        array (
+          'id' => '[0-9]+',
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+        'id' => '[0-9]+',
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'informacoesNutricionais.store' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'informacoesNutricionais/store',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'as' => 'informacoesNutricionais.store',
+        'uses' => 'App\\Http\\Controllers\\InformacaoNutricionalController@store',
+        'controller' => 'App\\Http\\Controllers\\InformacaoNutricionalController@store',
+        'namespace' => NULL,
+        'prefix' => '/informacoesNutricionais',
         'where' => 
         array (
           'id' => '[0-9]+',
@@ -1861,244 +2105,6 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'informacoesNutricionais' => 
-    array (
-      'methods' => 
-      array (
-        0 => 'GET',
-        1 => 'HEAD',
-      ),
-      'uri' => 'informacoesNutricionais',
-      'action' => 
-      array (
-        'middleware' => 
-        array (
-          0 => 'web',
-          1 => 'auth',
-        ),
-        'as' => 'informacoesNutricionais',
-        'uses' => 'App\\Http\\Controllers\\InformacaoNutricionalController@index',
-        'controller' => 'App\\Http\\Controllers\\InformacaoNutricionalController@index',
-        'namespace' => NULL,
-        'prefix' => '/informacoesNutricionais',
-        'where' => 
-        array (
-          'id' => '[0-9]+',
-        ),
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-        'id' => '[0-9]+',
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-    'informacoesNutricionais.create' => 
-    array (
-      'methods' => 
-      array (
-        0 => 'GET',
-        1 => 'HEAD',
-      ),
-      'uri' => 'informacoesNutricionais/create',
-      'action' => 
-      array (
-        'middleware' => 
-        array (
-          0 => 'web',
-          1 => 'auth',
-        ),
-        'as' => 'informacoesNutricionais.create',
-        'uses' => 'App\\Http\\Controllers\\InformacaoNutricionalController@create',
-        'controller' => 'App\\Http\\Controllers\\InformacaoNutricionalController@create',
-        'namespace' => NULL,
-        'prefix' => '/informacoesNutricionais',
-        'where' => 
-        array (
-          'id' => '[0-9]+',
-        ),
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-        'id' => '[0-9]+',
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-    'informacoesNutricionais.destroy' => 
-    array (
-      'methods' => 
-      array (
-        0 => 'GET',
-        1 => 'HEAD',
-      ),
-      'uri' => 'informacoesNutricionais/{id}/destroy',
-      'action' => 
-      array (
-        'middleware' => 
-        array (
-          0 => 'web',
-          1 => 'auth',
-        ),
-        'as' => 'informacoesNutricionais.destroy',
-        'uses' => 'App\\Http\\Controllers\\InformacaoNutricionalController@destroy',
-        'controller' => 'App\\Http\\Controllers\\InformacaoNutricionalController@destroy',
-        'namespace' => NULL,
-        'prefix' => '/informacoesNutricionais',
-        'where' => 
-        array (
-          'id' => '[0-9]+',
-        ),
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-        'id' => '[0-9]+',
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-    'informacoesNutricionais.edit' => 
-    array (
-      'methods' => 
-      array (
-        0 => 'GET',
-        1 => 'HEAD',
-      ),
-      'uri' => 'informacoesNutricionais/{id}/edit',
-      'action' => 
-      array (
-        'middleware' => 
-        array (
-          0 => 'web',
-          1 => 'auth',
-        ),
-        'as' => 'informacoesNutricionais.edit',
-        'uses' => 'App\\Http\\Controllers\\InformacaoNutricionalController@edit',
-        'controller' => 'App\\Http\\Controllers\\InformacaoNutricionalController@edit',
-        'namespace' => NULL,
-        'prefix' => '/informacoesNutricionais',
-        'where' => 
-        array (
-          'id' => '[0-9]+',
-        ),
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-        'id' => '[0-9]+',
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-    'informacoesNutricionais.update' => 
-    array (
-      'methods' => 
-      array (
-        0 => 'PUT',
-      ),
-      'uri' => 'informacoesNutricionais/{id}/update',
-      'action' => 
-      array (
-        'middleware' => 
-        array (
-          0 => 'web',
-          1 => 'auth',
-        ),
-        'as' => 'informacoesNutricionais.update',
-        'uses' => 'App\\Http\\Controllers\\InformacaoNutricionalController@update',
-        'controller' => 'App\\Http\\Controllers\\InformacaoNutricionalController@update',
-        'namespace' => NULL,
-        'prefix' => '/informacoesNutricionais',
-        'where' => 
-        array (
-          'id' => '[0-9]+',
-        ),
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-        'id' => '[0-9]+',
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-    'informacoesNutricionais.store' => 
-    array (
-      'methods' => 
-      array (
-        0 => 'POST',
-      ),
-      'uri' => 'informacoesNutricionais/store',
-      'action' => 
-      array (
-        'middleware' => 
-        array (
-          0 => 'web',
-          1 => 'auth',
-        ),
-        'as' => 'informacoesNutricionais.store',
-        'uses' => 'App\\Http\\Controllers\\InformacaoNutricionalController@store',
-        'controller' => 'App\\Http\\Controllers\\InformacaoNutricionalController@store',
-        'namespace' => NULL,
-        'prefix' => '/informacoesNutricionais',
-        'where' => 
-        array (
-          'id' => '[0-9]+',
-        ),
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-        'id' => '[0-9]+',
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
     'legendasNutricionais' => 
     array (
       'methods' => 
@@ -2417,7 +2423,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::W2kXIG7O0lAaBNap' => 
+    'generated::biNfnl36z5FMHaaF' => 
     array (
       'methods' => 
       array (
@@ -2433,13 +2439,13 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:262:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:44:"function () {
     return \\view(\'welcome\');
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000201fc2920000000023bb9432";}";s:4:"hash";s:44:"HNOSQqeUJnqQSk1FL+3rHFVZLqpxML7Cp5VWPplu2A4=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000000ad4df0d000000000fa05580";}";s:4:"hash";s:44:"web2hObAWd4XAai2pg+hXGONzbugGewdgykEaPsjxaY=";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
         array (
         ),
-        'as' => 'generated::W2kXIG7O0lAaBNap',
+        'as' => 'generated::biNfnl36z5FMHaaF',
       ),
       'fallback' => false,
       'defaults' => 
@@ -2492,7 +2498,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::Odq8ZqyXujXBZy9D' => 
+    'generated::jKNO7upavJcxj7rg' => 
     array (
       'methods' => 
       array (
@@ -2512,7 +2518,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::Odq8ZqyXujXBZy9D',
+        'as' => 'generated::jKNO7upavJcxj7rg',
       ),
       'fallback' => false,
       'defaults' => 
@@ -2601,7 +2607,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::WbLWDm4yJcE9ehMK' => 
+    'generated::n34vmT66C5EJhbtv' => 
     array (
       'methods' => 
       array (
@@ -2621,7 +2627,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::WbLWDm4yJcE9ehMK',
+        'as' => 'generated::n34vmT66C5EJhbtv',
       ),
       'fallback' => false,
       'defaults' => 
@@ -2820,7 +2826,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::EUwsj2e9eBsCmJAe' => 
+    'generated::5xfwSZwkis5zqPfP' => 
     array (
       'methods' => 
       array (
@@ -2840,7 +2846,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::EUwsj2e9eBsCmJAe',
+        'as' => 'generated::5xfwSZwkis5zqPfP',
       ),
       'fallback' => false,
       'defaults' => 

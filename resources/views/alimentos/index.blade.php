@@ -37,6 +37,7 @@
                         <td>{{ $alimento->unidadeMedida }}</td>
                         <td>{{ $alimento->referencialMedida }}</td>
                         <td>
+                            <a href="{{ route('informacoesNutricionais', ['alimento_id' => $alimento->id]) }}" class="btn-sm btn-warning">Ver inf. nutr.</a>
                             <a href="{{ route('alimentos.edit', ['id' => $alimento->id]) }}"
                                 class="btn-sm btn-success">Editar</a>
                             <a href="#" onclick="return ConfirmaExclusao({{ $alimento->id }})"
@@ -69,6 +70,7 @@
             </div>
         </div>
         {!! Form::close() !!}
+
         <br>
         <table class="table table-stripe table-bordered table-hover">
             <thead>
@@ -76,6 +78,7 @@
                 <th>Quantidade por Porção</th>
                 <th>Unidade de Medida</th>
                 <th>Referencial da Medida</th>
+                <th>Ações</th>
             </thead>
             <tbody>
                 @foreach ($alimentos as $alimento)
@@ -84,6 +87,9 @@
                         <td>{{ $alimento->quantidadePorcao }}</td>
                         <td>{{ $alimento->unidadeMedida }}</td>
                         <td>{{ $alimento->referencialMedida }}</td>
+                        <td>
+                            <a href="{{ route('informacoesNutricionais', ['alimento_id' => $alimento->id]) }}" class="btn-sm btn-warning">Ver inf. nutr.</a>
+                        </td>
                     </tr>
                 @endforeach
             </tbody>

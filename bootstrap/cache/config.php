@@ -175,28 +175,6 @@
         'icon' => 'fas fa-fw fa-clipboard',
         'can' => 'administrador',
       ),
-      9 => 
-      array (
-        'header' => 'TELAS A SEREM REMOVIDAS',
-      ),
-      10 => 
-      array (
-        'text' => 'CRUD de itens',
-        'url' => 'itens',
-        'icon' => 'fas fa-fw fa-times',
-        'can' => 
-        array (
-          0 => 'administrador',
-          1 => 'usuario',
-        ),
-      ),
-      11 => 
-      array (
-        'text' => 'CRUD de informações nutricionais',
-        'url' => 'informacoesNutricionais',
-        'icon' => 'fas fa-fw fa-times',
-        'can' => 'administrador',
-      ),
     ),
     'filters' => 
     array (

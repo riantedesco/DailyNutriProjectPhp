@@ -4,23 +4,25 @@ namespace App\Http\Controllers;
 
 use App\Models\InformacaoNutricional;
 use App\Http\Requests\InformacaoNutricionalRequest;
+use App\Models\Alimento;
 
 class InformacaoNutricionalController extends Controller
 {
-    public function index(){
-        $informacoesNutricionais = InformacaoNutricional::orderBy('id')->paginate(5);
-        return view('informacoesNutricionais.index', ['informacoesNutricionais'=>$informacoesNutricionais]);
+    public function index($alimento_id){
+        $informacoesNutricionais = InformacaoNutricional::where('alimento_id', $alimento_id)->orderBy('id')->paginate(5);
+        return view('informacoesNutricionais.index', ['informacoesNutricionais'=>$informacoesNutricionais, 'alimento_id'=>$alimento_id]);
     }
 
-    public function create() {
-        return view('informacoesNutricionais.create');
+    public function create($alimento_id) {
+        $alimento = Alimento::find($alimento_id);
+        return view('informacoesNutricionais.create', compact('alimento'));
     }
 
     public function store(InformacaoNutricionalRequest $request) {
         $nova_informacaoNutricional = $request->all();
-        InformacaoNutricional::create($nova_informacaoNutricional);
+        $informacaoNutricionalCriada = InformacaoNutricional::create($nova_informacaoNutricional);
 
-        return redirect()->route('informacoesNutricionais');
+        return redirect()->route('informacoesNutricionais', ['alimento_id'=>$informacaoNutricionalCriada->alimento_id]);
     }
 
     public function destroy($id) {
@@ -42,6 +44,7 @@ class InformacaoNutricionalController extends Controller
 
     public function update(InformacaoNutricionalRequest $request, $id) {
         InformacaoNutricional::find($id)->update($request->all());
-        return redirect()->route('informacoesNutricionais');
+        $informacaoNutricional = InformacaoNutricional::find($id);
+        return redirect()->route('informacoesNutricionais', ['alimento_id'=>$informacaoNutricional->alimento_id]);
     }
 }

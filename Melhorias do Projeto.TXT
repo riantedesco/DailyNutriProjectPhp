@@ -1,17 +1,12 @@
 GERAL:
 > Estilizar a tela home
-> Estilizar a tela de list de refeições
-> Incluir lógica de gráficos na tela home (gráficos para cada refeição, gráfico para refeição diária, gráfico para refeição semanal, gráfico para refeição mensal)
+> Inserir gráfico das informações nutricionais por refeição, dentro da listagem de itens
+> Inserir gráfico das informações nutricionais das refeições diárias, refeições semanais e refeições mensais, dentro da tela home
 
 
 ADMINISTRADOR:
-> Adicionar CRUD de informacaoNutricional dentro da CRUD de alimento
-> Inserir informativo da unidadeMedida da legendaNutricional dentro da CRUD de informaçãoNutricional (que estará dentro da CRUD de alimento, inserir próximo ao campo quantidade)
+> Inserir informativo da unidadeMedida e referencialMedida da legendaNutricional dentro da CRUD de informaçãoNutricional, próximo ao campo quantidade
 > Problema no relatório de alimento ao listar informacaoNutricional
 > Estilizar relatório de legendaNutricional
 > Estilizar relatório de alimento
-> Problema na listagem de "descricao" da legendaNutricional dentro de informacaoNutricional
-
-
-USUARIO:
-> Adicionar CRUD de itens dentro da CRUD de refeição
+> Problema na listagem dos atributos de legendaNutricional dentro de informacaoNutricional

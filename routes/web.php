@@ -21,6 +21,18 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('{id}/edit',    ['as' => 'alimentos.edit',    'uses' => 'App\Http\Controllers\AlimentoController@edit']);
         Route::put('{id}/update',  ['as' => 'alimentos.update',  'uses' => 'App\Http\Controllers\AlimentoController@update']);
         Route::post('store',       ['as' => 'alimentos.store',   'uses' => 'App\Http\Controllers\AlimentoController@store']);
+
+        Route::group(['prefix' => '{alimento_id}/informacoesNutricionais', 'where' => ['id' => '[0-9]+']], function () {
+            Route::get('',             ['as' => 'informacoesNutricionais',         'uses' => 'App\Http\Controllers\InformacaoNutricionalController@index']);
+            Route::get('create',       ['as' => 'informacoesNutricionais.create',  'uses' => 'App\Http\Controllers\InformacaoNutricionalController@create']);
+        });
+    });
+
+    Route::group(['prefix' => 'informacoesNutricionais', 'where' => ['id' => '[0-9]+']], function () {
+        Route::get('{id}/destroy', ['as' => 'informacoesNutricionais.destroy', 'uses' => 'App\Http\Controllers\InformacaoNutricionalController@destroy']);
+        Route::get('{id}/edit',    ['as' => 'informacoesNutricionais.edit',    'uses' => 'App\Http\Controllers\InformacaoNutricionalController@edit']);
+        Route::put('{id}/update',  ['as' => 'informacoesNutricionais.update',  'uses' => 'App\Http\Controllers\InformacaoNutricionalController@update']);
+        Route::post('store',       ['as' => 'informacoesNutricionais.store',   'uses' => 'App\Http\Controllers\InformacaoNutricionalController@store']);
     });
 
     Route::group(['prefix' => 'refeicoes', 'where' => ['id' => '[0-9]+']], function () {
@@ -42,15 +54,6 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('{id}/edit',    ['as' => 'itens.edit',    'uses' => 'App\Http\Controllers\ItemController@edit']);
         Route::put('{id}/update',  ['as' => 'itens.update',  'uses' => 'App\Http\Controllers\ItemController@update']);
         Route::post('store',       ['as' => 'itens.store',   'uses' => 'App\Http\Controllers\ItemController@store']);
-    });
-
-    Route::group(['prefix' => 'informacoesNutricionais', 'where' => ['id' => '[0-9]+']], function () {
-        Route::get('',             ['as' => 'informacoesNutricionais',         'uses' => 'App\Http\Controllers\InformacaoNutricionalController@index']);
-        Route::get('create',       ['as' => 'informacoesNutricionais.create',  'uses' => 'App\Http\Controllers\InformacaoNutricionalController@create']);
-        Route::get('{id}/destroy', ['as' => 'informacoesNutricionais.destroy', 'uses' => 'App\Http\Controllers\InformacaoNutricionalController@destroy']);
-        Route::get('{id}/edit',    ['as' => 'informacoesNutricionais.edit',    'uses' => 'App\Http\Controllers\InformacaoNutricionalController@edit']);
-        Route::put('{id}/update',  ['as' => 'informacoesNutricionais.update',  'uses' => 'App\Http\Controllers\InformacaoNutricionalController@update']);
-        Route::post('store',       ['as' => 'informacoesNutricionais.store',   'uses' => 'App\Http\Controllers\InformacaoNutricionalController@store']);
     });
 
     Route::group(['prefix' => 'legendasNutricionais', 'where' => ['id' => '[0-9]+']], function () {

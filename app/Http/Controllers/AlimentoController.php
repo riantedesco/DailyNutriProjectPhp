@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Alimento;
 use App\Http\Requests\AlimentoRequest;
+use App\Models\InformacaoNutricional;
 use Illuminate\Http\Request;
 
 class AlimentoController extends Controller
@@ -33,6 +34,7 @@ class AlimentoController extends Controller
 
     public function destroy($id) {
         try {
+            InformacaoNutricional::where('alimento_id', $id)->delete();
             Alimento::find($id)->delete();
             $ret = array('status'=>200, 'msg'=>"null");
         } catch (\Illuminate\Database\QueryException $e) {

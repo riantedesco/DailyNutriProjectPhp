@@ -8,7 +8,7 @@ use App\Http\Requests\LegendaNutricionalRequest;
 class LegendaNutricionalController extends Controller
 {
     public function index(){
-        $legendasNutricionais = LegendaNutricional::orderBy('descricao')->paginate(5);
+        $legendasNutricionais = LegendaNutricional::orderBy('descricao')->paginate(8);
         return view('legendasNutricionais.index', ['legendasNutricionais'=>$legendasNutricionais]);
     }
 
