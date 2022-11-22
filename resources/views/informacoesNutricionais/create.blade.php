@@ -3,8 +3,8 @@
 @section('content')
     <div>
         <br>
-        <h3>Nova Informação Nutricional</h3>
-        <br>
+        <h2 style="font-family: serif;">Nova informação nutricional</h2>
+        <hr size="2">
     </div>
 
     @if ($errors->any())
@@ -18,7 +18,7 @@
     {!! Form::open(['route' => 'informacoesNutricionais.store']) !!}
 
     <div>
-        <input type="hidden" name="alimento_id" value="{{$alimento->id}}">
+        <input type="hidden" name="alimento_id" value="{{ $alimento->id }}">
     </div>
 
     <div class="form-group">
@@ -50,7 +50,8 @@
     <div class="form-group">
         {!! Form::submit('Criar Informação Nutricional', ['class' => 'btn btn-outline-success']) !!}
         {!! Form::reset('Limpar', ['class' => 'btn btn-outline-secondary']) !!}
-        <a class="btn btn-outline-danger" href="{{ route('informacoesNutricionais', ['alimento_id' => $alimento->id]) }}">Voltar</a>
+        <a class="btn btn-outline-danger"
+            href="{{ route('informacoesNutricionais', ['alimento_id' => $alimento->id]) }}">Voltar</a>
     </div>
 
     {!! Form::close() !!}

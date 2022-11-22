@@ -9,8 +9,9 @@ use App\Models\Refeicao;
 class ItemController extends Controller
 {
     public function index($refeicao_id){
-        $itens = Item::where('refeicao_id', $refeicao_id)->orderBy('id')->paginate(5);
-        return view('itens.index', ['itens'=>$itens, 'refeicao_id'=>$refeicao_id]);
+        $itens = Item::where('refeicao_id', $refeicao_id)->orderBy('id')->paginate(6);
+        $refeicao = Refeicao::find($refeicao_id);
+        return view('itens.index', ['itens'=>$itens, 'refeicao'=>$refeicao]);
     }
 
     public function create($refeicao_id) {

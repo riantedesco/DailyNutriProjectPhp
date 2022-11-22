@@ -12,11 +12,11 @@ class AlimentoController extends Controller
     public function index(Request $filtro){
         $filtragem = $filtro->get('desc_filtro');
         if ($filtragem == null)
-            $alimentos = Alimento::orderBy('nome')->paginate(5);
+            $alimentos = Alimento::orderBy('nome')->paginate(7);
         else
             $alimentos = Alimento::where('nome', 'like', '%'.$filtragem.'%')
                                     ->orderBy('nome')
-                                    ->paginate(5)
+                                    ->paginate(7)
                                     ->setpath('alimentos?desc_filtro='.$filtragem);
         return view('alimentos.index', ['alimentos'=>$alimentos]);
     }

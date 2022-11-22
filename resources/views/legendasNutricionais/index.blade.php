@@ -1,9 +1,9 @@
 @extends('layouts.default')
 
 @section('content')
-    <div>
+    <div style="text-align: center">
         <br>
-        <h1>Legendas Nutricionais</h1>
+        <h1 style="font-family: serif;">LEGENDAS NUTRICIONAIS</h1>
         <br>
     </div>
 

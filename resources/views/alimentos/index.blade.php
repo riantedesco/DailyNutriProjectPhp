@@ -2,9 +2,9 @@
 
 @section('content')
     @can('administrador')
-        <div>
+        <div style="text-align: center">
             <br>
-            <h1>Alimentos</h1>
+            <h1 style="font-family: serif;">ALIMENTOS CADASTRADOS</h1>
             <br>
         </div>
 
@@ -25,7 +25,6 @@
         <table class="table table-stripe table-bordered table-hover">
             <thead>
                 <th>Nome</th>
-                <th>Quantidade por Porção</th>
                 <th>Unidade de Medida</th>
                 <th>Referencial da Medida</th>
                 <th>Ações</th>
@@ -34,11 +33,11 @@
                 @foreach ($alimentos as $alimento)
                     <tr>
                         <td>{{ $alimento->nome }}</td>
-                        <td>{{ $alimento->quantidadePorcao }}</td>
-                        <td>{{ $alimento->unidadeMedida }}</td>
+                        <td>{{ $alimento->quantidadePorcao }} {{ $alimento->unidadeMedida }}</td>
                         <td>{{ $alimento->referencialMedida }}</td>
                         <td>
-                            <a href="{{ route('informacoesNutricionais', ['alimento_id' => $alimento->id]) }}" class="btn-sm btn-warning">Ver inf. nutr.</a>
+                            <a href="{{ route('informacoesNutricionais', ['alimento_id' => $alimento->id]) }}"
+                                class="btn-sm btn-warning">Ver tabela nutricional</a>
                             <a href="{{ route('alimentos.edit', ['id' => $alimento->id]) }}"
                                 class="btn-sm btn-success">Editar</a>
                             <a href="#" onclick="return ConfirmaExclusao({{ $alimento->id }})"
@@ -53,9 +52,9 @@
     @endcan
 
     @can('usuario')
-        <div>
+        <div style="text-align: center">
             <br>
-            <h1>Alimentos</h1>
+            <h1 style="font-family: serif;">ALIMENTOS CADASTRADOS</h1>
             <br>
         </div>
 
@@ -72,11 +71,10 @@
         </div>
         {!! Form::close() !!}
         <br>
-        
+
         <table class="table table-stripe table-bordered table-hover">
             <thead>
                 <th>Nome</th>
-                <th>Quantidade por Porção</th>
                 <th>Unidade de Medida</th>
                 <th>Referencial da Medida</th>
                 <th>Ações</th>
@@ -85,11 +83,11 @@
                 @foreach ($alimentos as $alimento)
                     <tr>
                         <td>{{ $alimento->nome }}</td>
-                        <td>{{ $alimento->quantidadePorcao }}</td>
-                        <td>{{ $alimento->unidadeMedida }}</td>
+                        <td>{{ $alimento->quantidadePorcao }} {{ $alimento->unidadeMedida }}</td>
                         <td>{{ $alimento->referencialMedida }}</td>
                         <td>
-                            <a href="{{ route('informacoesNutricionais', ['alimento_id' => $alimento->id]) }}" class="btn-sm btn-warning">Ver inf. nutr.</a>
+                            <a href="{{ route('informacoesNutricionais', ['alimento_id' => $alimento->id]) }}"
+                                class="btn-sm btn-warning">Ver tabela nutricional</a>
                         </td>
                     </tr>
                 @endforeach

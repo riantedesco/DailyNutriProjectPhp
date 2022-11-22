@@ -3,8 +3,8 @@
 @section('content')
     <div>
         <br>
-        <h3>Nova Legenda Nutricional</h3>
-        <br>
+        <h2 style="font-family: serif;">Nova legenda nutricional</h2>
+        <hr size="2">
     </div>
 
     @if ($errors->any())
@@ -19,11 +19,13 @@
 
     <div class="form-group">
         {!! Form::label('descricao', 'Descrição:') !!}
+        <i style="font-size: 15px">(Ex: Sódio)</i>
         {!! Form::text('descricao', null, ['class' => 'form-control', 'required']) !!}
     </div>
 
     <div class="form-group">
         {!! Form::label('unidadeMedida', 'Unidade de Medida:') !!}
+        <i style="font-size: 15px">(Ex: gramas)</i>
         {!! Form::text('unidadeMedida', null, ['class' => 'form-control', 'required']) !!}
     </div>
 

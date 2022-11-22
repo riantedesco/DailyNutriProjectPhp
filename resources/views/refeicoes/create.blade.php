@@ -3,8 +3,8 @@
 @section('content')
     <div>
         <br>
-        <h3>Nova Refeição</h3>
-        <br>
+        <h2 style="font-family: serif;">Nova refeição</h2>
+        <hr size="2">
     </div>
 
     @if ($errors->any())

@@ -4,13 +4,15 @@
     @can('administrador')
         <div>
             <br>
-            <h1>Informações Nutricionais</h1>
+            <h1 style="font-family: serif; text-align: center">TABELA NUTRICIONAL</h1>
             <br>
+            <h2>{{ $alimento->nome }}</h2>
+            <p>Informações nutricionais referentes a {{ $alimento->quantidadePorcao }} {{ $alimento->unidadeMedida }} ou
+                {{ $alimento->referencialMedida }}.</p>
         </div>
 
         <table class="table table-stripe table-bordered table-hover">
             <thead>
-                <th>Alimento</th>
                 <th>Legenda</th>
                 <th>Quantidade</th>
                 <th>Valor Diário (%)</th>
@@ -19,15 +21,15 @@
             <tbody>
                 @foreach ($informacoesNutricionais as $informacaoNutricional)
                     <tr>
-                        <td>{{ isset($informacaoNutricional->alimento->nome) ? $informacaoNutricional->alimento->nome : 'Alimento não informado' }}
-                        </td>
                         <td>{{ isset($informacaoNutricional->legendaNutricional->descricao) ? $informacaoNutricional->legendaNutricional->descricao : 'Legenda nutricional não informada' }}
                         </td>
                         <td>{{ $informacaoNutricional->quantidade }} {{ isset($informacaoNutricional->legendaNutricional->unidadeMedida) }}</td>
                         <td>{{ $informacaoNutricional->valorDiario }}</td>
                         <td>
-                            <a href="{{ route('informacoesNutricionais.edit', ['id' => $informacaoNutricional->id]) }}" class="btn-sm btn-success">Editar</a>
-                            <a href="#" onclick="return ConfirmaExclusao({{ $informacaoNutricional->id }})" class="btn-sm btn-danger">Remover</a>
+                            <a href="{{ route('informacoesNutricionais.edit', ['id' => $informacaoNutricional->id]) }}"
+                                class="btn-sm btn-success">Editar</a>
+                            <a href="#" onclick="return ConfirmaExclusao({{ $informacaoNutricional->id }})"
+                                class="btn-sm btn-danger">Remover</a>
                         </td>
                     </tr>
                 @endforeach
@@ -43,7 +45,9 @@
         <br>
 
         <div>
-            <a class="btn btn-outline-primary" href="{{ route('informacoesNutricionais.create', ['alimento_id' => $alimento_id]) }}">Nova Informação Nutricional</a>
+            <a class="btn btn-outline-primary"
+                href="{{ route('informacoesNutricionais.create', ['alimento_id' => $alimento->id]) }}">Nova Informação
+                Nutricional</a>
             <a class="btn btn-outline-danger" href="{{ route('alimentos') }}">Voltar para alimentos</a>
         </div>
     @endcan
@@ -51,13 +55,15 @@
     @can('usuario')
         <div>
             <br>
-            <h1>Informações Nutricionais</h1>
+            <h1 style="font-family: serif; text-align: center">TABELA NUTRICIONAL</h1>
             <br>
+            <h2>{{ $alimento->nome }}</h2>
+            <p>Informações nutricionais referentes a {{ $alimento->quantidadePorcao }} {{ $alimento->unidadeMedida }} ou
+                {{ $alimento->referencialMedida }}.</p>
         </div>
 
         <table class="table table-stripe table-bordered table-hover">
             <thead>
-                <th>Alimento</th>
                 <th>Legenda</th>
                 <th>Quantidade</th>
                 <th>Valor Diário (%)</th>
@@ -65,11 +71,9 @@
             <tbody>
                 @foreach ($informacoesNutricionais as $informacaoNutricional)
                     <tr>
-                        <td>{{ isset($informacaoNutricional->alimento->nome) ? $informacaoNutricional->alimento->nome : 'Alimento não informado' }}
-                        </td>
                         <td>{{ isset($informacaoNutricional->legendaNutricional->descricao) ? $informacaoNutricional->legendaNutricional->descricao : 'Legenda nutricional não informada' }}
                         </td>
-                        <td>{{ $informacaoNutricional->quantidade }}</td>
+                        <td>{{ $informacaoNutricional->quantidade }} {{ isset($informacaoNutricional->legendaNutricional->unidadeMedida) }}</td>
                         <td>{{ $informacaoNutricional->valorDiario }}</td>
                     </tr>
                 @endforeach

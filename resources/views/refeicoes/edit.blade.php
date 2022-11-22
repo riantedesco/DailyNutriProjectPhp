@@ -1,7 +1,11 @@
 @extends('adminlte::page')
 
 @section('content')
-    <h3>Editando Refeição: {{ $refeicao->titulo }} </h3>
+    <div>
+        <br>
+        <h2 style="font-family: serif;">Editando refeicao: {{ $refeicao->titulo }} </h2>
+        <hr size="2">
+    </div>
 
     @if($errors->any())
         <ul class="alert alert-danger">

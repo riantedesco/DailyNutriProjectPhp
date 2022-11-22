@@ -1,12 +1,23 @@
-GERAL:
+HOME:
 > Estilizar a tela home
+
+GRÁFICOS:
 > Inserir gráfico das informações nutricionais por refeição, dentro da listagem de itens
 > Inserir gráfico das informações nutricionais das refeições diárias, refeições semanais e refeições mensais, dentro da tela home
 
+REFEIÇÕES:
+> Centralizar paginação no list de refeicoes
 
-ADMINISTRADOR:
-> Inserir informativo da unidadeMedida e referencialMedida da legendaNutricional dentro da CRUD de informaçãoNutricional, próximo ao campo quantidade
+INFORMAÇÃO NUTRICIONAL:
+> Create de informacaoNutricional: setar o informativo de "legendaNutricional->unidadeMedida" próximo à quantidade conforme a legenda nutricional for selecionada
+> Problema no edit de informacaoNutricional: puxando nenhum valor ao invés de "legendaNutricional->unidadeMedida"
+> Problema no list de informacaoNutricional: puxando nenhum valor ao invés de "legendaNutricional->unidadeMedida"
+
+ITEM:
+> Create de item: setar o informativo de "alimento->unidadeMedida + alimento->referencialMedida" próximo à quantidade conforme o alimento for selecionado
+> Problema no edit de item: puxando valor 1 ao invés de "alimento->nome"
+> Problema no edit de item: puxando valor 1 ao invés de "alimento->unidadeMedida"
+> Problema no list de item: puxando valor 1 ao invés da "alimento->unidadeMedida"
+
+RELATÓRIOS:
 > Problema no relatório de alimento ao listar informacaoNutricional
-> Estilizar relatório de legendaNutricional
-> Estilizar relatório de alimento
-> Problema na listagem dos atributos de legendaNutricional dentro de informacaoNutricional

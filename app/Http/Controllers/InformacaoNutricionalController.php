@@ -9,8 +9,9 @@ use App\Models\Alimento;
 class InformacaoNutricionalController extends Controller
 {
     public function index($alimento_id){
-        $informacoesNutricionais = InformacaoNutricional::where('alimento_id', $alimento_id)->orderBy('id')->paginate(5);
-        return view('informacoesNutricionais.index', ['informacoesNutricionais'=>$informacoesNutricionais, 'alimento_id'=>$alimento_id]);
+        $informacoesNutricionais = InformacaoNutricional::where('alimento_id', $alimento_id)->orderBy('id')->paginate(6);
+        $alimento = Alimento::find($alimento_id);
+        return view('informacoesNutricionais.index', ['informacoesNutricionais'=>$informacoesNutricionais, 'alimento'=>$alimento]);
     }
 
     public function create($alimento_id) {

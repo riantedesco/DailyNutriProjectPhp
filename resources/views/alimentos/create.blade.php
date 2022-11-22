@@ -3,8 +3,8 @@
 @section('content')
     <div>
         <br>
-        <h3>Novo Alimento</h3>
-        <br>
+        <h2 style="font-family: serif;">Novo alimento</h2>
+        <hr size="2">
     </div>
 
     @if ($errors->any())
@@ -19,21 +19,25 @@
 
     <div class="form-group">
         {!! Form::label('nome', 'Nome:') !!}
+        <i style="font-size: 15px">(Ex: Arroz branco)</i>
         {!! Form::text('nome', null, ['class' => 'form-control', 'required']) !!}
     </div>
 
     <div class="form-group">
         {!! Form::label('quantidadePorcao', 'Quantidade por Porção:') !!}
+        <i style="font-size: 15px">(Quantidade a ser baseada para tabela nutricional. Ex: 50)</i>
         {!! Form::number('quantidadePorcao', null, ['class' => 'form-control', 'required', 'step' => 'any']) !!}
     </div>
 
     <div class="form-group">
         {!! Form::label('unidadeMedida', 'Unidade de Medida:') !!}
+        <i style="font-size: 15px">(Unidade de medida referente à quantidade. Ex: gramas)</i>
         {!! Form::text('unidadeMedida', null, ['class' => 'form-control', 'required']) !!}
     </div>
 
     <div class="form-group">
         {!! Form::label('referencialMedida', 'Referencial de Medida:') !!}
+        <i style="font-size: 15px">(Medida referencial que equivale à quantidade informada. Ex: 1/4 xícara)</i>
         {!! Form::text('referencialMedida', null, ['class' => 'form-control', 'required']) !!}
     </div>
 
