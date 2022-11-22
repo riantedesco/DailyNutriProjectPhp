@@ -7,15 +7,17 @@
 </head>
 
 <body>
-    <h1 style="text-align:center">Legendas Nutricionais</h1>
+    <h1 style="text-align:center; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Relatório de legendas nutricionais</h1>
+    <hr size="2.25" noshade>
+
     <table class="table table-striped table-bordered" style="width:100%">
-        <thead>
+        <thead style="background-color: grey;">
             <th>Descrição</th>
             <th>Unidade de Medida</th>
         </thead>
         <tbody>
             @forelse ($legendasNutricionais as $legendaNutricional)
-                <tr style="text-align:center">
+                <tr style="text-align:center; font-size: 14px">
                     <td>{{ $legendaNutricional->descricao }}</td>
                     <td>{{ $legendaNutricional->unidadeMedida }}</td>
                 </tr>

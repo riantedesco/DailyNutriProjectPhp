@@ -14,24 +14,24 @@ class LegendaNutricionalSeeder extends Seeder
      */
     public function run()
     {
-        LegendaNutricional::create(['descricao' => 'Valor Energético', 'unidadeMedida' => 'Quilocaloria (kcal)']);
-        LegendaNutricional::create(['descricao' => 'Carboidratos', 'unidadeMedida' => 'Grama (g)']);
-        LegendaNutricional::create(['descricao' => 'Proteínas', 'unidadeMedida' => 'Grama (g)']);
-        LegendaNutricional::create(['descricao' => 'Gorduras Totais', 'unidadeMedida' => 'Grama (g)']);
-        LegendaNutricional::create(['descricao' => 'Gorduras Saturadas', 'unidadeMedida' => 'Grama (g)']);
-        LegendaNutricional::create(['descricao' => 'Gorduras Trans', 'unidadeMedida' => 'Grama (g)']);
-        LegendaNutricional::create(['descricao' => 'Gorduras Instauradas', 'unidadeMedida' => 'Grama (g)']);
-        LegendaNutricional::create(['descricao' => 'Colesterol', 'unidadeMedida' => 'Grama (g)']);
-        LegendaNutricional::create(['descricao' => 'Fibra Alimentar', 'unidadeMedida' => 'Grama (g)']);
-        LegendaNutricional::create(['descricao' => 'Sódio', 'unidadeMedida' => 'Grama (g)']);
-        LegendaNutricional::create(['descricao' => 'Cálcio', 'unidadeMedida' => 'Grama (g)']);
-        LegendaNutricional::create(['descricao' => 'Ferro', 'unidadeMedida' => 'Grama (g)']);
-        LegendaNutricional::create(['descricao' => 'Zinco', 'unidadeMedida' => 'Grama (g)']);
-        LegendaNutricional::create(['descricao' => 'Vitamina A', 'unidadeMedida' => 'Grama (g)']);
-        LegendaNutricional::create(['descricao' => 'Vitamina B', 'unidadeMedida' => 'Grama (g)']);
-        LegendaNutricional::create(['descricao' => 'Vitamina C', 'unidadeMedida' => 'Grama (g)']);
-        LegendaNutricional::create(['descricao' => 'Vitamina D', 'unidadeMedida' => 'Grama (g)']);
-        LegendaNutricional::create(['descricao' => 'Vitamina K', 'unidadeMedida' => 'Grama (g)']);
+        LegendaNutricional::create(['descricao' => 'Valor Energético', 'unidadeMedida' => 'quilocalorias (kcal)']);
+        LegendaNutricional::create(['descricao' => 'Carboidratos', 'unidadeMedida' => 'gramas (g)']);
+        LegendaNutricional::create(['descricao' => 'Proteínas', 'unidadeMedida' => 'gramas (g)']);
+        LegendaNutricional::create(['descricao' => 'Gorduras Totais', 'unidadeMedida' => 'gramas (g)']);
+        LegendaNutricional::create(['descricao' => 'Gorduras Saturadas', 'unidadeMedida' => 'gramas (g)']);
+        LegendaNutricional::create(['descricao' => 'Gorduras Trans', 'unidadeMedida' => 'gramas (g)']);
+        LegendaNutricional::create(['descricao' => 'Gorduras Instauradas', 'unidadeMedida' => 'gramas (g)']);
+        LegendaNutricional::create(['descricao' => 'Colesterol', 'unidadeMedida' => 'gramas (g)']);
+        LegendaNutricional::create(['descricao' => 'Fibra Alimentar', 'unidadeMedida' => 'gramas (g)']);
+        LegendaNutricional::create(['descricao' => 'Sódio', 'unidadeMedida' => 'gramas (g)']);
+        LegendaNutricional::create(['descricao' => 'Cálcio', 'unidadeMedida' => 'gramas (g)']);
+        LegendaNutricional::create(['descricao' => 'Ferro', 'unidadeMedida' => 'gramas (g)']);
+        LegendaNutricional::create(['descricao' => 'Zinco', 'unidadeMedida' => 'gramas (g)']);
+        LegendaNutricional::create(['descricao' => 'Vitamina A', 'unidadeMedida' => 'gramas (g)']);
+        LegendaNutricional::create(['descricao' => 'Vitamina B', 'unidadeMedida' => 'gramas (g)']);
+        LegendaNutricional::create(['descricao' => 'Vitamina C', 'unidadeMedida' => 'gramas (g)']);
+        LegendaNutricional::create(['descricao' => 'Vitamina D', 'unidadeMedida' => 'gramas (g)']);
+        LegendaNutricional::create(['descricao' => 'Vitamina K', 'unidadeMedida' => 'gramas (g)']);
         
     }
 }

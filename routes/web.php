@@ -36,7 +36,7 @@ Route::group(['middleware' => 'auth'], function () {
     });
 
     Route::group(['prefix' => 'refeicoes', 'where' => ['id' => '[0-9]+']], function () {
-        Route::get('',             ['as' => 'refeicoes',         'uses' => 'App\Http\Controllers\RefeicaoController@index']);
+        Route::any('',             ['as' => 'refeicoes',         'uses' => 'App\Http\Controllers\RefeicaoController@index']);
         Route::get('create',       ['as' => 'refeicoes.create',  'uses' => 'App\Http\Controllers\RefeicaoController@create']);
         Route::get('{id}/destroy', ['as' => 'refeicoes.destroy', 'uses' => 'App\Http\Controllers\RefeicaoController@destroy']);
         Route::get('{id}/edit',    ['as' => 'refeicoes.edit',    'uses' => 'App\Http\Controllers\RefeicaoController@edit']);

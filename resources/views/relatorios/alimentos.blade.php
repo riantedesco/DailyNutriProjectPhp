@@ -7,22 +7,28 @@
 </head>
 
 <body>
-    <h1 style="text-align:center">Alimentos</h1>
-    <table class="table table-striped table-bordered" style="width:100%">
-        @forelse ($alimentos as $alimento)
-            <h3>{{ $alimento->nome }} / {{ $alimento->quantidadePorcao }} {{ $alimento->unidadeMedida }} ({{ $alimento->referencialMedida }})</h3>
+    <h1 style="text-align:center; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Relatório de alimentos</h1>
+    <hr size="2.25" noshade>
 
+    @forelse ($alimentos as $alimento)
+        <div style="text-align: center">
+            <h3 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">{{ $alimento->nome }}
+            </h3>
+            <p><i> {{ $alimento->quantidadePorcao }} {{ $alimento->unidadeMedida }} -
+                    {{ $alimento->referencialMedida }}</i></p>
+        </div>
+        <table class="table table-striped table-bordered" style="width:100%;">
             @forelse ($informacoesNutricionais as $informacaoNutricional)
-                <thead>
+                <thead style="background-color: grey;">
                     <th>Legenda</th>
                     <th>Quantidade</th>
-                    <th>Valor Diário</th>
+                    <th>Valor Diário (%)</th>
                 </thead>
                 <tbody>
-                    <tr style="text-align:center">
+                    <tr style="text-align:center; font-size: 14px">
                         <td>{{ isset($informacaoNutricional->legendaNutricional->descricao) ? $informacaoNutricional->legendaNutricional->descricao : 'Legenda nutricional não informada' }}
                         </td>
-                        <td>{{ $informacaoNutricional->quantidade }}</td>
+                        <td>{{ $informacaoNutricional->quantidade }} {{ isset($informacaoNutricional->legendaNutricional->unidadeMedida) }}</td>
                         <td>{{ $informacaoNutricional->valorDiario }}</td>
                     </tr>
 
@@ -31,11 +37,12 @@
             @empty
                 <li style="text-align:center">Nenhuma informação nutricional cadastrada</li>
             @endforelse
+        </table>
+        <hr size="2.25" noshade>
+    @empty
+        <li style="text-align:center">Nenhum alimento cadastrado</li>
+    @endforelse
 
-        @empty
-            <li style="text-align:center">Nenhum alimento cadastrado</li>
-        @endforelse
-    </table>
 </body>
 
 </html>

@@ -21,6 +21,7 @@
         </div>
         {!! Form::close() !!}
         <br>
+
         <table class="table table-stripe table-bordered table-hover">
             <thead>
                 <th>Nome</th>
@@ -70,8 +71,8 @@
             </div>
         </div>
         {!! Form::close() !!}
-
         <br>
+        
         <table class="table table-stripe table-bordered table-hover">
             <thead>
                 <th>Nome</th>

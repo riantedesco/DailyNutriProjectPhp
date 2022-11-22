@@ -5,12 +5,21 @@ namespace App\Http\Controllers;
 use App\Models\Refeicao;
 use App\Http\Requests\RefeicaoRequest;
 use App\Models\Item;
+use Illuminate\Http\Request;
 
 class RefeicaoController extends Controller
 {
-    public function index(){
-        $refeicoes = Refeicao::orderBy('dataHora', 'DESC')->paginate(4);
-        return view('refeicoes.index', ['refeicoes'=>$refeicoes]);
+    public function index(Request $filtro){
+        $filtragem = $filtro->get('dataHora_filtro');
+        if ($filtragem == null)
+            $refeicoes = Refeicao::orderBy('dataHora', 'DESC')->paginate(3);
+        else
+            $refeicoes = Refeicao::where('dataHora', 'like', '%'.$filtragem.'%')
+                                    ->orderBy('dataHora', 'DESC')
+                                    ->paginate(3)
+                                    ->setpath('refeicoes?dataHora_filtro='.$filtragem);
+            return view('refeicoes.index', ['refeicoes'=>$refeicoes]);
+
     }
 
     public function create() {
