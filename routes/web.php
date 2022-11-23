@@ -66,8 +66,11 @@ Route::group(['middleware' => 'auth'], function () {
     });
 
     Route::group(['prefix' => 'relatorios', 'where' => ['id' => '[0-9]+']], function () {
-        Route::get('legendasNutricionais', ['as' => 'relatorios.legendasNutricionais',  'uses' => 'App\Http\Controllers\RelatorioController@legendaNutricional']);
-        Route::get('alimentos', ['as' => 'relatorios.alimentos',  'uses' => 'App\Http\Controllers\RelatorioController@alimento']);
+        Route::get('',                                          ['as' => 'relatorios.index',                                      'uses' => 'App\Http\Controllers\RelatorioController@index']);
+        Route::get('legendasNutricionais',                      ['as' => 'relatorios.legendasNutricionais',                       'uses' => 'App\Http\Controllers\LegendaNutricionalController@relatorio']);
+        Route::get('legendasNutricionais/filtrarDescricao',     ['as' => 'relatorios.legendasNutricionais.filtrarDescricao',      'uses' => 'App\Http\Controllers\LegendaNutricionalController@relatorioFiltroDescricao']);
+        Route::get('informacoesNutricionais',                   ['as' => 'relatorios.informacoesNutricionais',                    'uses' => 'App\Http\Controllers\InformacaoNutricionalController@relatorio']);
+        Route::get('informacoesNutricionais/filtrarQuantidade', ['as' => 'relatorios.informacoesNutricionais.filtrarQuantidade',  'uses' => 'App\Http\Controllers\InformacaoNutricionalController@relatorioFiltroQuantidade']);
     });
 });
 

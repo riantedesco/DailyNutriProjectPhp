@@ -43,7 +43,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::jSoJoa1I7c7d3fFZ',
+            '_route' => 'generated::v9IpT5W9MLZv5Q6I',
           ),
           1 => NULL,
           2 => 
@@ -63,7 +63,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::eDqrrQejixaFDk5w',
+            '_route' => 'generated::lDU4bEkbTLXQO0Tn',
           ),
           1 => NULL,
           2 => 
@@ -302,6 +302,26 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
+      '/relatorios' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'relatorios.index',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
       '/relatorios/legendasNutricionais' => 
       array (
         0 => 
@@ -322,13 +342,53 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/relatorios/alimentos' => 
+      '/relatorios/legendasNutricionais/filtrarDescricao' => 
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'relatorios.alimentos',
+            '_route' => 'relatorios.legendasNutricionais.filtrarDescricao',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/relatorios/informacoesNutricionais' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'relatorios.informacoesNutricionais',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/relatorios/informacoesNutricionais/filtrarQuantidade' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'relatorios.informacoesNutricionais.filtrarQuantidade',
           ),
           1 => NULL,
           2 => 
@@ -348,7 +408,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::5pl0XKL81P7Jjdfh',
+            '_route' => 'generated::KY2rNbVPU4G4kU8I',
           ),
           1 => NULL,
           2 => 
@@ -385,7 +445,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::KVfDsc0lYCtdHk6e',
+            '_route' => 'generated::TQnNarAbdbgW8FsQ',
           ),
           1 => NULL,
           2 => 
@@ -440,7 +500,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::DCrbWET71noom63y',
+            '_route' => 'generated::ghNE79tltVnSU4Oa',
           ),
           1 => NULL,
           2 => 
@@ -531,7 +591,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::eslFkBS6JwjE3BtC',
+            '_route' => 'generated::ZkZmnmJPZ3RMjtmZ',
           ),
           1 => NULL,
           2 => 
@@ -1077,7 +1137,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::jSoJoa1I7c7d3fFZ' => 
+    'generated::v9IpT5W9MLZv5Q6I' => 
     array (
       'methods' => 
       array (
@@ -1098,7 +1158,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 'web',
         ),
-        'as' => 'generated::jSoJoa1I7c7d3fFZ',
+        'as' => 'generated::v9IpT5W9MLZv5Q6I',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1114,7 +1174,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::eDqrrQejixaFDk5w' => 
+    'generated::lDU4bEkbTLXQO0Tn' => 
     array (
       'methods' => 
       array (
@@ -1131,13 +1191,13 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:295:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:77:"function (\\Illuminate\\Http\\Request $request) {
     return $request->user();
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000003a921aeb00000000006f88e8";}";s:4:"hash";s:44:"O3cwDZ2QDD+ZKHsJvDR8L0fuXjqEkFQ08tDuY0G8q9c=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000005e9786d40000000014e1c17b";}";s:4:"hash";s:44:"8IjfjZh1SQOoAekdc6fASGiITbeguDAIu9xdqn4X0bI=";}}',
         'namespace' => NULL,
         'prefix' => 'api',
         'where' => 
         array (
         ),
-        'as' => 'generated::eDqrrQejixaFDk5w',
+        'as' => 'generated::lDU4bEkbTLXQO0Tn',
       ),
       'fallback' => false,
       'defaults' => 
@@ -2353,6 +2413,46 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
+    'relatorios.index' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'relatorios',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'as' => 'relatorios.index',
+        'uses' => 'App\\Http\\Controllers\\RelatorioController@index',
+        'controller' => 'App\\Http\\Controllers\\RelatorioController@index',
+        'namespace' => NULL,
+        'prefix' => '/relatorios',
+        'where' => 
+        array (
+          'id' => '[0-9]+',
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+        'id' => '[0-9]+',
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
     'relatorios.legendasNutricionais' => 
     array (
       'methods' => 
@@ -2369,8 +2469,8 @@ app('router')->setCompiledRoutes(
           1 => 'auth',
         ),
         'as' => 'relatorios.legendasNutricionais',
-        'uses' => 'App\\Http\\Controllers\\RelatorioController@legendaNutricional',
-        'controller' => 'App\\Http\\Controllers\\RelatorioController@legendaNutricional',
+        'uses' => 'App\\Http\\Controllers\\LegendaNutricionalController@relatorio',
+        'controller' => 'App\\Http\\Controllers\\LegendaNutricionalController@relatorio',
         'namespace' => NULL,
         'prefix' => '/relatorios',
         'where' => 
@@ -2393,14 +2493,14 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'relatorios.alimentos' => 
+    'relatorios.legendasNutricionais.filtrarDescricao' => 
     array (
       'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
-      'uri' => 'relatorios/alimentos',
+      'uri' => 'relatorios/legendasNutricionais/filtrarDescricao',
       'action' => 
       array (
         'middleware' => 
@@ -2408,9 +2508,9 @@ app('router')->setCompiledRoutes(
           0 => 'web',
           1 => 'auth',
         ),
-        'as' => 'relatorios.alimentos',
-        'uses' => 'App\\Http\\Controllers\\RelatorioController@alimento',
-        'controller' => 'App\\Http\\Controllers\\RelatorioController@alimento',
+        'as' => 'relatorios.legendasNutricionais.filtrarDescricao',
+        'uses' => 'App\\Http\\Controllers\\LegendaNutricionalController@relatorioFiltroDescricao',
+        'controller' => 'App\\Http\\Controllers\\LegendaNutricionalController@relatorioFiltroDescricao',
         'namespace' => NULL,
         'prefix' => '/relatorios',
         'where' => 
@@ -2433,7 +2533,87 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::5pl0XKL81P7Jjdfh' => 
+    'relatorios.informacoesNutricionais' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'relatorios/informacoesNutricionais',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'as' => 'relatorios.informacoesNutricionais',
+        'uses' => 'App\\Http\\Controllers\\InformacaoNutricionalController@relatorio',
+        'controller' => 'App\\Http\\Controllers\\InformacaoNutricionalController@relatorio',
+        'namespace' => NULL,
+        'prefix' => '/relatorios',
+        'where' => 
+        array (
+          'id' => '[0-9]+',
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+        'id' => '[0-9]+',
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'relatorios.informacoesNutricionais.filtrarQuantidade' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'relatorios/informacoesNutricionais/filtrarQuantidade',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'as' => 'relatorios.informacoesNutricionais.filtrarQuantidade',
+        'uses' => 'App\\Http\\Controllers\\InformacaoNutricionalController@relatorioFiltroQuantidade',
+        'controller' => 'App\\Http\\Controllers\\InformacaoNutricionalController@relatorioFiltroQuantidade',
+        'namespace' => NULL,
+        'prefix' => '/relatorios',
+        'where' => 
+        array (
+          'id' => '[0-9]+',
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+        'id' => '[0-9]+',
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'generated::KY2rNbVPU4G4kU8I' => 
     array (
       'methods' => 
       array (
@@ -2449,13 +2629,13 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:262:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:44:"function () {
     return \\view(\'welcome\');
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000003a921ae900000000006f88e8";}";s:4:"hash";s:44:"aOnErgk3oQjobSk57vRVjRigUrX2nMJbUF0/9KInZxs=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000005e9786d60000000014e1c17b";}";s:4:"hash";s:44:"tAr4Zb+6ZicevQtQaMhQZMctwGQvtF9OpgJJX7I5sQo=";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
         array (
         ),
-        'as' => 'generated::5pl0XKL81P7Jjdfh',
+        'as' => 'generated::KY2rNbVPU4G4kU8I',
       ),
       'fallback' => false,
       'defaults' => 
@@ -2508,7 +2688,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::KVfDsc0lYCtdHk6e' => 
+    'generated::TQnNarAbdbgW8FsQ' => 
     array (
       'methods' => 
       array (
@@ -2528,7 +2708,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::KVfDsc0lYCtdHk6e',
+        'as' => 'generated::TQnNarAbdbgW8FsQ',
       ),
       'fallback' => false,
       'defaults' => 
@@ -2617,7 +2797,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::DCrbWET71noom63y' => 
+    'generated::ghNE79tltVnSU4Oa' => 
     array (
       'methods' => 
       array (
@@ -2637,7 +2817,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::DCrbWET71noom63y',
+        'as' => 'generated::ghNE79tltVnSU4Oa',
       ),
       'fallback' => false,
       'defaults' => 
@@ -2836,7 +3016,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::eslFkBS6JwjE3BtC' => 
+    'generated::ZkZmnmJPZ3RMjtmZ' => 
     array (
       'methods' => 
       array (
@@ -2856,7 +3036,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::eslFkBS6JwjE3BtC',
+        'as' => 'generated::ZkZmnmJPZ3RMjtmZ',
       ),
       'fallback' => false,
       'defaults' => 

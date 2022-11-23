@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\LegendaNutricional;
 use App\Http\Requests\LegendaNutricionalRequest;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class LegendaNutricionalController extends Controller
 {
@@ -43,5 +44,19 @@ class LegendaNutricionalController extends Controller
     public function update(LegendaNutricionalRequest $request, $id) {
         LegendaNutricional::find($id)->update($request->all());
         return redirect()->route('legendasNutricionais');
+    }
+
+    public function relatorio()
+    {
+        $legendasNutricionais = LegendaNutricional::all();
+        $pdf = PDF::loadView('relatorios.legendasNutricionais', compact('legendasNutricionais'));
+        return $pdf->stream();
+    }
+
+    public function relatorioFiltroDescricao()
+    {
+        $legendasNutricionais = LegendaNutricional::orderBy('descricao')->get();
+        $pdf = PDF::loadView('relatorios.legendasNutricionais', compact('legendasNutricionais'));
+        return $pdf->stream();
     }
 }

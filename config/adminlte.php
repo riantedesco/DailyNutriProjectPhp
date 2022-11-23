@@ -335,18 +335,25 @@ return [
             ],
 
             [
-                'text' => 'Relatório de alimentos',
-                'url' => 'relatorios/alimentos',
+                'text' => 'Relatórios administrativos',
+                'url' => 'relatorios',
                 'icon' => 'fas fa-fw fa-clipboard',
                 'can' => 'administrador',
             ],
 
-            [
-                'text' => 'Relatório de legendas nutricionais',
-                'url' => 'relatorios/legendasNutricionais',
-                'icon' => 'fas fa-fw fa-clipboard',
-                'can' => 'administrador',
-            ],
+            // [
+            //     'text' => 'Relatório de alimentos',
+            //     'url' => 'relatorios/alimentos',
+            //     'icon' => 'fas fa-fw fa-clipboard',
+            //     'can' => 'administrador',
+            // ],
+
+            // [
+            //     'text' => 'Relatório de legendas nutricionais',
+            //     'url' => 'relatorios/legendasNutricionais',
+            //     'icon' => 'fas fa-fw fa-clipboard',
+            //     'can' => 'administrador',
+            // ],
 
         // // Navbar items:
         // [

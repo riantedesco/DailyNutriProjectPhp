@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\InformacaoNutricional;
 use App\Http\Requests\InformacaoNutricionalRequest;
 use App\Models\Alimento;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class InformacaoNutricionalController extends Controller
 {
@@ -47,5 +48,21 @@ class InformacaoNutricionalController extends Controller
         InformacaoNutricional::find($id)->update($request->all());
         $informacaoNutricional = InformacaoNutricional::find($id);
         return redirect()->route('informacoesNutricionais', ['alimento_id'=>$informacaoNutricional->alimento_id]);
+    }
+
+    public function relatorio()
+    {
+        $alimentos = Alimento::orderBy('nome')->get();
+        $informacoesNutricionais = InformacaoNutricional::all();
+        $pdf = PDF::loadView('relatorios.alimentos', compact('alimentos', 'informacoesNutricionais'));
+        return $pdf->stream();
+    }
+
+    public function relatorioFiltroQuantidade()
+    {
+        $alimentos = Alimento::orderBy('nome')->get();
+        $informacoesNutricionais = InformacaoNutricional::orderBy('quantidade', 'DESC')->get();
+        $pdf = PDF::loadView('relatorios.alimentos', compact('alimentos', 'informacoesNutricionais'));
+        return $pdf->stream();
     }
 }

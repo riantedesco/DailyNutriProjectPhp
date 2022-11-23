@@ -163,15 +163,8 @@
       ),
       7 => 
       array (
-        'text' => 'Relatório de alimentos',
-        'url' => 'relatorios/alimentos',
-        'icon' => 'fas fa-fw fa-clipboard',
-        'can' => 'administrador',
-      ),
-      8 => 
-      array (
-        'text' => 'Relatório de legendas nutricionais',
-        'url' => 'relatorios/legendasNutricionais',
+        'text' => 'Relatórios administrativos',
+        'url' => 'relatorios',
         'icon' => 'fas fa-fw fa-clipboard',
         'can' => 'administrador',
       ),
