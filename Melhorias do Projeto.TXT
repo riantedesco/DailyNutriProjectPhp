@@ -1,3 +1,6 @@
+TABELAS:
+> Povoar todas as tabelas com seeders
+
 HOME:
 > Estilizar a tela home
 

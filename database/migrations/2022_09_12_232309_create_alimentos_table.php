@@ -15,7 +15,7 @@ class CreateAlimentosTable extends Migration
     {
         Schema::create('alimentos', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('nome', 50);
+            $table->string('nome', 50)->unique();
             $table->double('quantidadePorcao');
             $table->string('unidadeMedida', 30);
             $table->string('referencialMedida', 30);
