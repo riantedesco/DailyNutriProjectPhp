@@ -6,9 +6,9 @@
             <br>
             <h1 style="font-family: serif; text-align: center">TABELA NUTRICIONAL</h1>
             <br>
-            <h2>{{ $alimento->nome }}</h2>
-            <p>Informações nutricionais referentes a {{ $alimento->quantidadePorcao }} {{ $alimento->unidadeMedida }} ou
-                {{ $alimento->referencialMedida }}.</p>
+            <h2 style="text-transform: uppercase">{{ $alimento->nome }}</h2>
+            <p style="font-size: 20px">Informações nutricionais referentes a {{ $alimento->quantidadePorcao }} {{ $alimento->unidadeMedida }} ou
+                {{ $alimento->referencialMedida }}:</p>
         </div>
 
         <table class="table table-stripe table-bordered table-hover">

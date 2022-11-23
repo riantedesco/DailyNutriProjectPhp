@@ -5,8 +5,8 @@
         <br>
         <h1 style="font-family: serif; text-align: center">RELAÇÃO DE ITENS</h1>
         <br>
-        <h2>{{ $refeicao->titulo }}</h2>
-        <p>{{ Carbon\Carbon::parse($refeicao->dataHora)->format('d/m/Y - H:i') }}</p>
+        <h2 style="text-transform: uppercase">{{ $refeicao->titulo }}</h2>
+        <p style="font-size: 18px"><i>{{ Carbon\Carbon::parse($refeicao->dataHora)->format('d/m/Y - H:i') }}</i></p>
     </div>
 
     <table class="table table-stripe table-bordered table-hover">
