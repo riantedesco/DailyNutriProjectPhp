@@ -23,7 +23,7 @@
 
     @foreach ($refeicoes as $refeicao)
         @if ($refeicao->user_id == Auth::user()->id)
-            <div style="text-align: center">
+            <div>
                 <h3 style="font-family: system-ui;">{{ $refeicao->titulo }}</h3>
                 <h6 style="font-family: system-ui;">{{ Carbon\Carbon::parse($refeicao->dataHora)->format('d/m/Y - H:i') }}</h6>
                 <h6><i>{{ $refeicao->descricao }}</i></h6>
@@ -35,9 +35,8 @@
         @endif
     @endforeach
 
-    <div>
-        {{ $refeicoes->links('pagination::bootstrap-4') }}
-    </div>
+
+    {{ $refeicoes->links('pagination::bootstrap-4') }}
 
 @stop
 
