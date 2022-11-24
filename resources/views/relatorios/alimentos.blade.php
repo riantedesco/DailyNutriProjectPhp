@@ -18,6 +18,7 @@
             <p><i> {{ $alimento->quantidadePorcao }} {{ $alimento->unidadeMedida }} -
                     {{ $alimento->referencialMedida }}</i></p>
         </div>
+
         <table class="table table-striped table-bordered" style="width:100%;">
             <thead style="background-color: grey;">
                 <th>Legenda</th>
@@ -26,7 +27,7 @@
             </thead>
             <tbody>
                 @forelse ($informacoesNutricionais as $informacaoNutricional)
-                    @if($informacaoNutricional->alimento_id == $alimento->id)
+                    @if ($informacaoNutricional->alimento_id == $alimento->id)
                         <tr style="text-align:center; font-size: 14px">
                             <td>{{ isset($informacaoNutricional->legendaNutricional->descricao) ? $informacaoNutricional->legendaNutricional->descricao : 'Legenda nutricional não informada' }}
                             </td>
@@ -36,13 +37,22 @@
                         </tr>
                     @endif
                 @empty
-                    <li style="text-align:center">Nenhuma informação nutricional cadastrada</li>
+                    <div>
+                        <h4 style="font-family: system-ui; text-align: center">Nenhuma informação nutricional cadastrada
+                        </h4>
+                    </div>
+                    <hr size="2.25">
                 @endforelse
             </tbody>
         </table>
+
         <hr size="2.25" noshade>
+
     @empty
-        <li style="text-align:center">Nenhum alimento cadastrado</li>
+        <div>
+            <h4 style="font-family: system-ui; text-align: center">Nenhum alimento cadastrado</h4>
+        </div>
+        <hr size="2.25">
     @endforelse
 
 </body>

@@ -18,6 +18,6 @@ class AlimentoSeeder extends Seeder
         Alimento::create(['nome' => 'Steak empanado de frango', 'quantidadePorcao' => 100, 'unidadeMedida' => 'gramas', 'referencialMedida' => '1 unidade']);
         Alimento::create(['nome' => 'Feijão preto', 'quantidadePorcao' => 60, 'unidadeMedida' => 'gramas', 'referencialMedida' => '1/2 xícara']);
         Alimento::create(['nome' => 'Suco de uva', 'quantidadePorcao' => 200, 'unidadeMedida' => 'mililitros', 'referencialMedida' => '1 copo']);
-        Alimento::create(['nome' => 'Alface americana', 'quantidadePorcao' => 100, 'unidadeMedida' => 'gramas', 'referencialMedida' => ' ']);
+        Alimento::create(['nome' => 'Alface americana', 'quantidadePorcao' => 100, 'unidadeMedida' => 'gramas', 'referencialMedida' => '1 folha']);
     }
 }

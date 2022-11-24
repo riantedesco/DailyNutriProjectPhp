@@ -7,7 +7,8 @@
 </head>
 
 <body>
-    <h1 style="text-align:center; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Relatório de legendas nutricionais</h1>
+    <h1 style="text-align:center; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Relatório de
+        legendas nutricionais</h1>
     <hr size="2.25" noshade>
 
     <table class="table table-striped table-bordered" style="width:100%">
@@ -22,7 +23,10 @@
                     <td>{{ $legendaNutricional->unidadeMedida }}</td>
                 </tr>
             @empty
-                <li style="text-align:center">Nenhuma Legenda Nutricional Cadastrado.</li>
+                <div>
+                    <h4 style="font-family: system-ui; text-align: center">Nenhuma legenda nutricional cadastrada</h4>
+                </div>
+                <hr size="2.25">
             @endforelse
         </tbody>
     </table>

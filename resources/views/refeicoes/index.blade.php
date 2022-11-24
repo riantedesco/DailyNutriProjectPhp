@@ -25,16 +25,25 @@
         @if ($refeicao->user_id == Auth::user()->id)
             <div>
                 <h3 style="font-family: system-ui;">{{ $refeicao->titulo }}</h3>
-                <h6 style="font-family: system-ui;">{{ Carbon\Carbon::parse($refeicao->dataHora)->format('d/m/Y - H:i') }}</h6>
+                <h6 style="font-family: system-ui;">{{ Carbon\Carbon::parse($refeicao->dataHora)->format('d/m/Y - H:i') }}
+                </h6>
                 <h6><i>{{ $refeicao->descricao }}</i></h6>
                 <a href="{{ route('itens', ['refeicao_id' => $refeicao->id]) }}" class="btn-sm btn-warning">Ver itens</a>
                 <a href="{{ route('refeicoes.edit', ['id' => $refeicao->id]) }}" class="btn-sm btn-success">Editar</a>
-                <a href="#" onclick="return ConfirmaExclusao({{ $refeicao->id }})" class="btn-sm btn-danger">Remover</a>
+                <a href="#" onclick="return ConfirmaExclusao({{ $refeicao->id }})"
+                    class="btn-sm btn-danger">Remover</a>
             </div>
             <hr size="2">
         @endif
     @endforeach
 
+    @if ($refeicoes->isEmpty())
+        <hr size="2">
+        <div>
+            <h4 style="font-family: system-ui; text-align: center">Nenhuma refeição cadastrada.</h4>
+        </div>
+        <hr size="2">
+    @endif
 
     {{ $refeicoes->links('pagination::bootstrap-4') }}
 

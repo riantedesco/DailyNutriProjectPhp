@@ -22,33 +22,43 @@
         {!! Form::close() !!}
         <br>
 
-        <table class="table table-stripe table-bordered table-hover">
-            <thead>
-                <th>Nome</th>
-                <th>Unidade de Medida</th>
-                <th>Referencial da Medida</th>
-                <th>Ações</th>
-            </thead>
-            <tbody>
-                @foreach ($alimentos as $alimento)
-                    <tr>
-                        <td>{{ $alimento->nome }}</td>
-                        <td>{{ $alimento->quantidadePorcao }} {{ $alimento->unidadeMedida }}</td>
-                        <td>{{ $alimento->referencialMedida }}</td>
-                        <td>
-                            <a href="{{ route('informacoesNutricionais', ['alimento_id' => $alimento->id]) }}"
-                                class="btn-sm btn-warning">Ver tabela nutricional</a>
-                            <a href="{{ route('alimentos.edit', ['id' => $alimento->id]) }}"
-                                class="btn-sm btn-success">Editar</a>
-                            <a href="#" onclick="return ConfirmaExclusao({{ $alimento->id }})"
-                                class="btn-sm btn-danger">Remover</a>
-                        </td>
-                    </tr>
-                @endforeach
-            </tbody>
-        </table>
+        @if ($alimentos->isEmpty())
+            <hr size="2">
+            <div>
+                <h4 style="font-family: system-ui; text-align: center">Nenhum alimento cadastrado.</h4>
+            </div>
+            <hr size="2">
+            <br>
+        @else
+            <table class="table table-stripe table-bordered table-hover">
+                <thead>
+                    <th>Nome</th>
+                    <th>Unidade de Medida</th>
+                    <th>Referencial da Medida</th>
+                    <th>Ações</th>
+                </thead>
+                <tbody>
+                    @foreach ($alimentos as $alimento)
+                        <tr>
+                            <td>{{ $alimento->nome }}</td>
+                            <td>{{ $alimento->quantidadePorcao }} {{ $alimento->unidadeMedida }}</td>
+                            <td>{{ $alimento->referencialMedida }}</td>
+                            <td>
+                                <a href="{{ route('informacoesNutricionais', ['alimento_id' => $alimento->id]) }}"
+                                    class="btn-sm btn-warning">Ver tabela nutricional</a>
+                                <a href="{{ route('alimentos.edit', ['id' => $alimento->id]) }}"
+                                    class="btn-sm btn-success">Editar</a>
+                                <a href="#" onclick="return ConfirmaExclusao({{ $alimento->id }})"
+                                    class="btn-sm btn-danger">Remover</a>
+                            </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        @endif
 
         {{ $alimentos->links('pagination::bootstrap-4') }}
+
     @endcan
 
     @can('usuario')
@@ -72,29 +82,39 @@
         {!! Form::close() !!}
         <br>
 
-        <table class="table table-stripe table-bordered table-hover">
-            <thead>
-                <th>Nome</th>
-                <th>Unidade de Medida</th>
-                <th>Referencial da Medida</th>
-                <th>Ações</th>
-            </thead>
-            <tbody>
-                @foreach ($alimentos as $alimento)
-                    <tr>
-                        <td>{{ $alimento->nome }}</td>
-                        <td>{{ $alimento->quantidadePorcao }} {{ $alimento->unidadeMedida }}</td>
-                        <td>{{ $alimento->referencialMedida }}</td>
-                        <td>
-                            <a href="{{ route('informacoesNutricionais', ['alimento_id' => $alimento->id]) }}"
-                                class="btn-sm btn-warning">Ver tabela nutricional</a>
-                        </td>
-                    </tr>
-                @endforeach
-            </tbody>
-        </table>
+        @if ($alimentos->isEmpty())
+            <hr size="2">
+            <div>
+                <h4 style="font-family: system-ui; text-align: center">Nenhum alimento cadastrado.</h4>
+            </div>
+            <hr size="2">
+            <br>
+        @else
+            <table class="table table-stripe table-bordered table-hover">
+                <thead>
+                    <th>Nome</th>
+                    <th>Unidade de Medida</th>
+                    <th>Referencial da Medida</th>
+                    <th>Ações</th>
+                </thead>
+                <tbody>
+                    @foreach ($alimentos as $alimento)
+                        <tr>
+                            <td>{{ $alimento->nome }}</td>
+                            <td>{{ $alimento->quantidadePorcao }} {{ $alimento->unidadeMedida }}</td>
+                            <td>{{ $alimento->referencialMedida }}</td>
+                            <td>
+                                <a href="{{ route('informacoesNutricionais', ['alimento_id' => $alimento->id]) }}"
+                                    class="btn-sm btn-warning">Ver tabela nutricional</a>
+                            </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        @endif
 
         {{ $alimentos->links('pagination::bootstrap-4') }}
+
     @endcan
 @stop
 
