@@ -27,12 +27,13 @@
             'alimento_id',
             \App\Models\Alimento::orderBy('nome')->pluck('nome', 'id')->toArray(),
             null,
-            ['class' => 'form-control', 'required'],
+            ['class' => 'form-control', 'required', 'onchange' => 'document.getElementById("quantidade").innerHTML = "Quantidade"'],
         ) !!}
     </div>
 
     <div class="form-group">
         {!! Form::label('quantidade', 'Quantidade:') !!}
+        <i style="font-size: 15px" id="quantidade"></i>
         {!! Form::number('quantidade', null, ['class' => 'form-control', 'required', 'step' => 'any']) !!}
     </div>
 

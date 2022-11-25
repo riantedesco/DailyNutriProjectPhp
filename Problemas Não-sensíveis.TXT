@@ -1,0 +1,2 @@
+GERAIS:
+> No index de "refeicao" a paginação buga quando carrega os registros inseridos por seeder

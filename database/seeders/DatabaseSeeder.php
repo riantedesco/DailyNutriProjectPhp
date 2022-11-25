@@ -17,5 +17,7 @@ class DatabaseSeeder extends Seeder
         $this->call(LegendaNutricionalSeeder::class);
         $this->call(AlimentoSeeder::class);
         $this->call(InformacaoNutricionalSeeder::class);
+        $this->call(RefeicaoSeeder::class);
+        $this->call(ItemSeeder::class);
     }
 }

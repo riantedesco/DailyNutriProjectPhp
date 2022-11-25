@@ -29,11 +29,16 @@ class LegendaNutricionalSeeder extends Seeder
         LegendaNutricional::create(['descricao' => 'Zinco', 'unidadeMedida' => 'gramas (g)']); //13
         LegendaNutricional::create(['descricao' => 'Tiamina', 'unidadeMedida' => 'gramas (g)']); //14
         LegendaNutricional::create(['descricao' => 'Niacina', 'unidadeMedida' => 'gramas (g)']); //15
-        LegendaNutricional::create(['descricao' => 'Vitamina A', 'unidadeMedida' => 'gramas (g)']); //16
-        LegendaNutricional::create(['descricao' => 'Vitamina B', 'unidadeMedida' => 'gramas (g)']); //17
-        LegendaNutricional::create(['descricao' => 'Vitamina C', 'unidadeMedida' => 'gramas (g)']); //18
-        LegendaNutricional::create(['descricao' => 'Vitamina D', 'unidadeMedida' => 'gramas (g)']); //19
-        LegendaNutricional::create(['descricao' => 'Vitamina K', 'unidadeMedida' => 'gramas (g)']); //20
-        
+        LegendaNutricional::create(['descricao' => 'Magnésio', 'unidadeMedida' => 'gramas (g)']); //16
+        LegendaNutricional::create(['descricao' => 'Cobre', 'unidadeMedida' => 'gramas (g)']); //17
+        LegendaNutricional::create(['descricao' => 'Vitamina A', 'unidadeMedida' => 'miligramas (mg)']); //18
+        LegendaNutricional::create(['descricao' => 'Vitamina B3', 'unidadeMedida' => 'miligramas (mg)']); //19
+        LegendaNutricional::create(['descricao' => 'Vitamina B6', 'unidadeMedida' => 'miligramas (mg)']); //20
+        LegendaNutricional::create(['descricao' => 'Vitamina B12', 'unidadeMedida' => 'miligramas (mg)']); //21
+        LegendaNutricional::create(['descricao' => 'Vitamina C', 'unidadeMedida' => 'miligramas (mg)']); //22
+        LegendaNutricional::create(['descricao' => 'Vitamina D', 'unidadeMedida' => 'miligramas (mg)']); //23
+        LegendaNutricional::create(['descricao' => 'Vitamina E', 'unidadeMedida' => 'miligramas (mg)']); //24
+        LegendaNutricional::create(['descricao' => 'Vitamina K', 'unidadeMedida' => 'miligramas (mg)']); //25
+        LegendaNutricional::create(['descricao' => 'Manganês', 'unidadeMedida' => 'gramas (g)']); //26
     }
 }
