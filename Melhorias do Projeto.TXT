@@ -7,13 +7,6 @@ GRÁFICOS:
 
 INFORMAÇÃO NUTRICIONAL:
 > Create de informacaoNutricional: setar o informativo de "legendaNutricional->unidadeMedida" próximo à quantidade conforme a legenda nutricional for selecionada
-> Problema no edit de informacaoNutricional: puxando nenhum valor ao invés de "legendaNutricional->unidadeMedida"
-> Problema no list de informacaoNutricional: puxando nenhum valor ao invés de "legendaNutricional->unidadeMedida"
-> Problema no list de informacaoNutricional: puxando nenhum valor ao invés de "legendaNutricional-descricao
 
 ITEM:
 > Create de item: setar o informativo de "alimento->unidadeMedida + alimento->referencialMedida" próximo à quantidade conforme o alimento for selecionado
-> Problema no edit de item: puxando valor 1 ao invés de "alimento->nome"
-> Problema no edit de item: puxando valor 1 ao invés de "alimento->unidadeMedida"
-> Problema no list de item: puxando valor 1 ao invés da "alimento->unidadeMedida"
-

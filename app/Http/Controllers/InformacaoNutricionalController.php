@@ -5,14 +5,21 @@ namespace App\Http\Controllers;
 use App\Models\InformacaoNutricional;
 use App\Http\Requests\InformacaoNutricionalRequest;
 use App\Models\Alimento;
+use App\Models\LegendaNutricional;
 use Barryvdh\DomPDF\Facade\Pdf;
 
 class InformacaoNutricionalController extends Controller
 {
+    // public function index($alimento_id){
+    //     $informacoesNutricionais = InformacaoNutricional::where('alimento_id', $alimento_id)->orderBy('id')->paginate(5);
+    //     $alimento = Alimento::find($alimento_id);
+    //     return view('informacoesNutricionais.index', ['informacoesNutricionais'=>$informacoesNutricionais, 'alimento'=>$alimento]);
+    // }
     public function index($alimento_id){
         $informacoesNutricionais = InformacaoNutricional::where('alimento_id', $alimento_id)->orderBy('id')->paginate(5);
         $alimento = Alimento::find($alimento_id);
-        return view('informacoesNutricionais.index', ['informacoesNutricionais'=>$informacoesNutricionais, 'alimento'=>$alimento]);
+        $legendasNutricionais = LegendaNutricional::all();
+        return view('informacoesNutricionais.index', ['informacoesNutricionais'=>$informacoesNutricionais, 'alimento'=>$alimento, 'legendasNutricionais'=>$legendasNutricionais]);
     }
 
     public function create($alimento_id) {
@@ -39,9 +46,14 @@ class InformacaoNutricionalController extends Controller
         return $ret;
     }
 
+    // public function edit($id) {
+    //     $informacaoNutricional = InformacaoNutricional::find($id);
+    //     return view('informacoesNutricionais.edit', compact('informacaoNutricional'));
+    // }
     public function edit($id) {
         $informacaoNutricional = InformacaoNutricional::find($id);
-        return view('informacoesNutricionais.edit', compact('informacaoNutricional'));
+        $legendasNutricionais = LegendaNutricional::all();
+        return view('informacoesNutricionais.edit', compact('informacaoNutricional'), ['legendasNutricionais'=>$legendasNutricionais]);
     }
 
     public function update(InformacaoNutricionalRequest $request, $id) {
@@ -54,7 +66,8 @@ class InformacaoNutricionalController extends Controller
     {
         $alimentos = Alimento::orderBy('nome')->get();
         $informacoesNutricionais = InformacaoNutricional::all();
-        $pdf = PDF::loadView('relatorios.alimentos', compact('alimentos', 'informacoesNutricionais'));
+        $legendasNutricionais = LegendaNutricional::all();
+        $pdf = PDF::loadView('relatorios.alimentos', compact('alimentos', 'informacoesNutricionais'), ['legendasNutricionais'=>$legendasNutricionais]);
         return $pdf->stream();
     }
 
@@ -62,7 +75,8 @@ class InformacaoNutricionalController extends Controller
     {
         $alimentos = Alimento::orderBy('nome')->get();
         $informacoesNutricionais = InformacaoNutricional::orderBy('quantidade', 'DESC')->get();
-        $pdf = PDF::loadView('relatorios.alimentos', compact('alimentos', 'informacoesNutricionais'));
+        $legendasNutricionais = LegendaNutricional::all();
+        $pdf = PDF::loadView('relatorios.alimentos', compact('alimentos', 'informacoesNutricionais'), ['legendasNutricionais'=>$legendasNutricionais]);
         return $pdf->stream();
     }
 }

@@ -16,6 +16,7 @@ class CreateInformacaoNutricionalsTable extends Migration
         Schema::create('informacoesNutricionais', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('alimento');
+            $table->integer('legendaNutricional');
             $table->double('quantidade');
             $table->double('valorDiario');
             $table->timestamps();

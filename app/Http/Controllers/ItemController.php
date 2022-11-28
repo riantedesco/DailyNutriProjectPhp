@@ -4,14 +4,21 @@ namespace App\Http\Controllers;
 
 use App\Models\Item;
 use App\Http\Requests\ItemRequest;
+use App\Models\Alimento;
 use App\Models\Refeicao;
 
 class ItemController extends Controller
 {
+    // public function index($refeicao_id){
+    //     $itens = Item::where('refeicao_id', $refeicao_id)->orderBy('id')->paginate(6);
+    //     $refeicao = Refeicao::find($refeicao_id);
+    //     return view('itens.index', ['itens'=>$itens, 'refeicao'=>$refeicao]);
+    // }
     public function index($refeicao_id){
         $itens = Item::where('refeicao_id', $refeicao_id)->orderBy('id')->paginate(6);
         $refeicao = Refeicao::find($refeicao_id);
-        return view('itens.index', ['itens'=>$itens, 'refeicao'=>$refeicao]);
+        $alimentos = Alimento::all();
+        return view('itens.index', ['itens'=>$itens, 'refeicao'=>$refeicao, 'alimentos'=>$alimentos]);
     }
 
     public function create($refeicao_id) {
@@ -38,9 +45,14 @@ class ItemController extends Controller
         return $ret;
     }
 
+    // public function edit($id) {
+    //     $item = Item::find($id);
+    //     return view('itens.edit', compact('item'));
+    // }
     public function edit($id) {
         $item = Item::find($id);
-        return view('itens.edit', compact('item'));
+        $alimentos = Alimento::all();
+        return view('itens.edit', compact('item'), ['alimentos'=>$alimentos]);
     }
 
     public function update(ItemRequest $request, $id) {

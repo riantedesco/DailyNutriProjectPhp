@@ -29,7 +29,7 @@
                 </thead>
                 <tbody>
                     @foreach ($informacoesNutricionais as $informacaoNutricional)
-                        <tr>
+                        {{-- <tr>
                             <td>{{ isset($informacaoNutricional->legendaNutricional->descricao) ? $informacaoNutricional->legendaNutricional->descricao : 'Legenda nutricional não informada' }}
                             </td>
                             <td>{{ $informacaoNutricional->quantidade }}
@@ -41,7 +41,24 @@
                                 <a href="#" onclick="return ConfirmaExclusao({{ $informacaoNutricional->id }})"
                                     class="btn-sm btn-danger">Remover</a>
                             </td>
-                        </tr>
+                        </tr> --}}
+                        @foreach ($legendasNutricionais as $legendaNutricional)
+                            @if ($informacaoNutricional->legendaNutricional_id == $legendaNutricional->id)
+                                <tr>
+                                    <td>{{ isset($legendaNutricional->descricao) ? $legendaNutricional->descricao : 'Legenda nutricional não informada' }}
+                                    </td>
+                                    <td>{{ $informacaoNutricional->quantidade }}
+                                        {{ $legendaNutricional->unidadeMedida }}</td>
+                                    <td>{{ $informacaoNutricional->valorDiario }}%</td>
+                                    <td>
+                                        <a href="{{ route('informacoesNutricionais.edit', ['id' => $informacaoNutricional->id]) }}"
+                                            class="btn-sm btn-success">Editar</a>
+                                        <a href="#" onclick="return ConfirmaExclusao({{ $informacaoNutricional->id }})"
+                                            class="btn-sm btn-danger">Remover</a>
+                                    </td>
+                                </tr>
+                            @endif
+                        @endforeach
                     @endforeach
                 </tbody>
             </table>
