@@ -428,7 +428,8 @@
             </div>
 
             <div class="ml-4 text-center text-sm text-gray-500 sm:ml-0">
-                Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
+                {{-- Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }}) --}}
+                Por: Rian Carlinski Tedesco
             </div>
         </div>
     </div>

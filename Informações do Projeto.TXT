@@ -1,6 +1,7 @@
 Como executar projeto:
 > Abrir o prompt de comando na pasta raíz do projeto (/DailyNutriProjectPhp)
 > Executar comando "php artisan serve" para rodar o projeto
+> Executar comando "php artisan migrate" no primeiro acesso, para executar as migrations
 > "php artisan db:seed" para executar as seeders e povoar o banco de dados
 > Acessar "http://127.0.0.1:8000" para usar o sistema
 > "Ctrl + C" no terminal para parar a execução
