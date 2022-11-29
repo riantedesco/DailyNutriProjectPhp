@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Refeicao;
 use App\Http\Requests\RefeicaoRequest;
+use App\Models\Alimento;
 use App\Models\Item;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class RefeicaoController extends Controller
 {
@@ -29,8 +31,12 @@ class RefeicaoController extends Controller
     public function store(RefeicaoRequest $request) {
         $nova_refeicao = $request->all();
         Refeicao::create($nova_refeicao);
+
+        $refeicao = Refeicao::orderBy('id', 'desc')->first();
+        $itens = Item::where('refeicao_id', $refeicao->id)->orderBy('id')->paginate(6);
+        $alimentos = Alimento::all();
     
-        return redirect()->route('refeicoes');
+        return view('itens.index', ['itens'=>$itens, 'refeicao'=>$refeicao, 'alimentos'=>$alimentos]);
     }
 
     public function destroy($id) {

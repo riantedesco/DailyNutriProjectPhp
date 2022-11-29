@@ -7,7 +7,7 @@
 </head>
 
 <body>
-    <h1 style="text-align:center; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Relatório de
+    <h1 style="text-align:center; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; text-transform: uppercase">Relatório de
         legendas nutricionais</h1>
     <hr size="2.25" noshade>
 

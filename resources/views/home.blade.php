@@ -42,7 +42,9 @@
                             <div class="icon">
                                 <i class="ion ion-android-people"></i>
                             </div>
-                            <p class="small-box-footer"><br></p>
+                            {{-- <p class="small-box-footer"><br></p> --}}
+                            <a href="{{ route('relatorios.users') }}" target="_blank" class="small-box-footer">Ver Relatório de Usuários <i
+                                class="fas fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
 

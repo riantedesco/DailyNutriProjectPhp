@@ -320,23 +320,23 @@ return [
 
             [
                 'text'    => 'Gráficos',
-                'icon'    => 'fas fa-file-chart-line',
+                'icon'    => 'fas fa-fw fa-signal',
                 'can' => ['administrador', 'usuario'],
                 'submenu' => [
                     [
-                        'text' => 'Gráficos do dia',
+                        'text' => '- Gráficos do dia',
                         'url'  => '#',
                         'icon'    => 'fas fa-file-chart-line',
                         'can' => ['administrador', 'usuario'],
                     ],
                     [
-                        'text' => 'Gráficos da semana',
+                        'text' => '- Gráficos da semana',
                         'url'  => '#',
                         'icon'    => 'fas fa-file-chart-line',
                         'can' => ['administrador', 'usuario'],
                     ],
                     [
-                        'text' => 'Gráficos do mês',
+                        'text' => '- Gráficos do mês',
                         'url'  => '#',
                         'icon'    => 'fas fa-file-chart-line',
                         'can' => ['administrador', 'usuario'],

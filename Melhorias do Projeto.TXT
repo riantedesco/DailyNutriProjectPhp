@@ -2,8 +2,5 @@ GRÁFICOS:
 > Inserir gráfico das informações nutricionais por refeição, dentro da listagem de itens
 > Inserir gráfico das informações nutricionais das refeições diárias, refeições semanais e refeições mensais, dentro da tela home
 
-CREATE DE REFEIÇÃO:
-> Fazer com que o botão de criar refeição redirecione para a listagem de itens
-
 PROBLEMAS NÃO-SENSÍVEIS:
 > No index de "refeicao" a paginação buga quando carrega os registros inseridos por seeder

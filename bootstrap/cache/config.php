@@ -145,7 +145,7 @@
       4 => 
       array (
         'text' => 'Gráficos',
-        'icon' => 'fas fa-file-chart-line',
+        'icon' => 'fas fa-fw fa-signal',
         'can' => 
         array (
           0 => 'administrador',
@@ -155,7 +155,7 @@
         array (
           0 => 
           array (
-            'text' => 'Gráficos do dia',
+            'text' => '- Gráficos do dia',
             'url' => '#',
             'icon' => 'fas fa-file-chart-line',
             'can' => 
@@ -166,7 +166,7 @@
           ),
           1 => 
           array (
-            'text' => 'Gráficos da semana',
+            'text' => '- Gráficos da semana',
             'url' => '#',
             'icon' => 'fas fa-file-chart-line',
             'can' => 
@@ -177,7 +177,7 @@
           ),
           2 => 
           array (
-            'text' => 'Gráficos do mês',
+            'text' => '- Gráficos do mês',
             'url' => '#',
             'icon' => 'fas fa-file-chart-line',
             'can' => 

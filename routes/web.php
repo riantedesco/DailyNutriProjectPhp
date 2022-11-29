@@ -71,6 +71,7 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('legendasNutricionais/filtrarDescricao',     ['as' => 'relatorios.legendasNutricionais.filtrarDescricao',      'uses' => 'App\Http\Controllers\LegendaNutricionalController@relatorioFiltroDescricao']);
         Route::get('informacoesNutricionais',                   ['as' => 'relatorios.informacoesNutricionais',                    'uses' => 'App\Http\Controllers\InformacaoNutricionalController@relatorio']);
         Route::get('informacoesNutricionais/filtrarQuantidade', ['as' => 'relatorios.informacoesNutricionais.filtrarQuantidade',  'uses' => 'App\Http\Controllers\InformacaoNutricionalController@relatorioFiltroQuantidade']);
+        Route::get('users',                                     ['as' => 'relatorios.users',                                      'uses' => 'App\Http\Controllers\UserController@relatorio']);
     });
 });
 
