@@ -27,7 +27,7 @@
             'alimento_id',
             \App\Models\Alimento::select(DB::raw("CONCAT(nome, ' - ', unidade, ' (cada ', quantidade, ' ', unidade, ' equivalem a ', referencial, ')') AS name"), 'id')->pluck('name', 'id')->toArray(),
             null,
-            ['class' => 'form-control', 'required', 'onchange' => 'document.getElementById("quantidade").innerHTML = "Informe de acordo com a unidade de medida e o referencial do alimento selecionado!"'],
+            ['class' => 'form-control', 'required', 'onchange' => 'document.getElementById("quantidade").innerHTML = "Informe de acordo com a unidade de medida, levando em consideração o referencial do alimento selecionado!"'],
         ) !!}
     </div>
 
