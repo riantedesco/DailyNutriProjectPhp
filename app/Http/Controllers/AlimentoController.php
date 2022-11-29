@@ -6,6 +6,7 @@ use App\Models\Alimento;
 use App\Http\Requests\AlimentoRequest;
 use App\Models\InformacaoNutricional;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class AlimentoController extends Controller
 {
@@ -14,7 +15,7 @@ class AlimentoController extends Controller
         if ($filtragem == null)
             $alimentos = Alimento::orderBy('nome')->paginate(7);
         else
-            $alimentos = Alimento::where('nome', 'like', '%'.$filtragem.'%')
+            $alimentos = Alimento::where(DB::raw('lower(nome)'), 'like', strtolower('%'.$filtragem.'%'))
                                     ->orderBy('nome')
                                     ->paginate(7)
                                     ->setpath('alimentos?desc_filtro='.$filtragem);
