@@ -27,7 +27,7 @@
                 @foreach ($itens as $item)
                     {{-- <tr>
                         <td>{{ isset($item->alimento->nome) ? $item->alimento->nome : 'Alimento não informado' }}</td>
-                        <td>{{ $item->quantidade }} {{ isset($item->alimento->unidadeMedida) }}</td>
+                        <td>{{ $item->quantidade }} {{ isset($item->alimento->unidade) }}</td>
                         <td>
                             <a href="{{ route('itens.edit', ['id' => $item->id]) }}" class="btn-sm btn-success">Editar</a>
                             <a href="#" onclick="return ConfirmaExclusao({{ $item->id }})"
@@ -38,7 +38,7 @@
                         @if ($item->alimento_id == $alimento->id)
                             <tr>
                                 <td>{{ isset($alimento->nome) ? $item->alimento->nome : 'Alimento não informado' }}</td>
-                                <td>{{ $item->quantidade }} {{ $alimento->unidadeMedida }}</td>
+                                <td>{{ $item->quantidade }} {{ $alimento->unidade }}</td>
                                 <td>
                                     <a href="{{ route('itens.edit', ['id' => $item->id]) }}"
                                         class="btn-sm btn-success">Editar</a>

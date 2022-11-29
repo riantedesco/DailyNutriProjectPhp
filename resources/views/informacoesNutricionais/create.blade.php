@@ -25,14 +25,15 @@
         {!! Form::label('legendaNutricional_id', 'Legenda:') !!}
         {!! Form::select(
             'legendaNutricional_id',
-            \App\Models\LegendaNutricional::orderBy('descricao')->pluck('descricao', 'id')->toArray(),
+            \App\Models\LegendaNutricional::select(DB::raw("CONCAT(descricao, ' - ', unidade) AS name"), 'id')->pluck('name', 'id')->toArray(),
             null,
-            ['class' => 'form-control', 'required'],
+            ['class' => 'form-control', 'required', 'onchange' => 'document.getElementById("quantidade").innerHTML = "Informe de acordo com a unidade de medida da legenda nutricional selecionada!"'],
         ) !!}
     </div>
 
     <div class="form-group">
         {!! Form::label('quantidade', 'Quantidade:') !!}
+        <i style="font-size: 15px; color: brown" id="quantidade"></i>
         {!! Form::number('quantidade', null, ['class' => 'form-control', 'required', 'step' => 'any']) !!}
     </div>
 

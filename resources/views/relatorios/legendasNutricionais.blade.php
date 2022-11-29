@@ -20,7 +20,7 @@
             @forelse ($legendasNutricionais as $legendaNutricional)
                 <tr style="text-align:center; font-size: 14px">
                     <td>{{ $legendaNutricional->descricao }}</td>
-                    <td>{{ $legendaNutricional->unidadeMedida }}</td>
+                    <td>{{ $legendaNutricional->unidade }}</td>
                 </tr>
             @empty
                 <div>

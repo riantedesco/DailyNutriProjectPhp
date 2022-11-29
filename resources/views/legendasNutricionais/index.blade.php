@@ -25,7 +25,7 @@
                 @foreach ($legendasNutricionais as $legendaNutricional)
                     <tr>
                         <td>{{ $legendaNutricional->descricao }}</td>
-                        <td>{{ $legendaNutricional->unidadeMedida }}</td>
+                        <td>{{ $legendaNutricional->unidade }}</td>
                         <td>
                             <a href="{{ route('legendasNutricionais.edit', ['id' => $legendaNutricional->id]) }}"
                                 class="btn-sm btn-success">Editar</a>

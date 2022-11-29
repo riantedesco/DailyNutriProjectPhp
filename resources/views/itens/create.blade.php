@@ -25,15 +25,15 @@
         {!! Form::label('alimento_id', 'Alimento:') !!}
         {!! Form::select(
             'alimento_id',
-            \App\Models\Alimento::orderBy('nome')->pluck('nome', 'id')->toArray(),
+            \App\Models\Alimento::select(DB::raw("CONCAT(nome, ' - ', unidade, ' (cada ', quantidade, ' ', unidade, ' equivalem a ', referencial, ')') AS name"), 'id')->pluck('name', 'id')->toArray(),
             null,
-            ['class' => 'form-control', 'required', 'onchange' => 'document.getElementById("quantidade").innerHTML = "Quantidade"'],
+            ['class' => 'form-control', 'required', 'onchange' => 'document.getElementById("quantidade").innerHTML = "Informe de acordo com a unidade de medida e o referencial do alimento selecionado!"'],
         ) !!}
     </div>
 
     <div class="form-group">
         {!! Form::label('quantidade', 'Quantidade:') !!}
-        <i style="font-size: 15px" id="quantidade"></i>
+        <i style="font-size: 15px; color: brown" id="quantidade"></i>
         {!! Form::number('quantidade', null, ['class' => 'form-control', 'required', 'step' => 'any']) !!}
     </div>
 

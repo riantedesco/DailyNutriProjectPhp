@@ -41,8 +41,8 @@
                     @foreach ($alimentos as $alimento)
                         <tr>
                             <td>{{ $alimento->nome }}</td>
-                            <td>{{ $alimento->quantidadePorcao }} {{ $alimento->unidadeMedida }}</td>
-                            <td>{{ $alimento->referencialMedida }}</td>
+                            <td>{{ $alimento->quantidade }} {{ $alimento->unidade }}</td>
+                            <td>{{ $alimento->referencial }}</td>
                             <td>
                                 <a href="{{ route('informacoesNutricionais', ['alimento_id' => $alimento->id]) }}"
                                     class="btn-sm btn-warning">Ver tabela nutricional</a>
@@ -101,8 +101,8 @@
                     @foreach ($alimentos as $alimento)
                         <tr>
                             <td>{{ $alimento->nome }}</td>
-                            <td>{{ $alimento->quantidadePorcao }} {{ $alimento->unidadeMedida }}</td>
-                            <td>{{ $alimento->referencialMedida }}</td>
+                            <td>{{ $alimento->quantidade }} {{ $alimento->unidade }}</td>
+                            <td>{{ $alimento->referencial }}</td>
                             <td>
                                 <a href="{{ route('informacoesNutricionais', ['alimento_id' => $alimento->id]) }}"
                                     class="btn-sm btn-warning">Ver tabela nutricional</a>

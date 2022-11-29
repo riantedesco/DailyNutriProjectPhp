@@ -24,9 +24,9 @@
     </div>
 
     <div class="form-group">
-        {!! Form::label('unidadeMedida', 'Unidade de Medida:') !!}
+        {!! Form::label('unidade', 'Unidade de Medida:') !!}
         <i style="font-size: 15px">(Ex: gramas)</i>
-        {!! Form::text('unidadeMedida', null, ['class' => 'form-control', 'required']) !!}
+        {!! Form::text('unidade', null, ['class' => 'form-control', 'required']) !!}
     </div>
 
     <div class="form-group">

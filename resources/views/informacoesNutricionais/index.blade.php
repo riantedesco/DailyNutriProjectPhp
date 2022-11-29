@@ -7,9 +7,9 @@
             <h1 style="font-family: serif; text-align: center">TABELA NUTRICIONAL</h1>
             <br>
             <h2 style="text-transform: uppercase">{{ $alimento->nome }}</h2>
-            <p style="font-size: 20px">Informações nutricionais referentes a {{ $alimento->quantidadePorcao }}
-                {{ $alimento->unidadeMedida }} ou
-                {{ $alimento->referencialMedida }}:</p>
+            <p style="font-size: 20px">Informações nutricionais referentes a {{ $alimento->quantidade }}
+                {{ $alimento->unidade }} ou
+                {{ $alimento->referencial }}:</p>
         </div>
 
         @if ($informacoesNutricionais->isEmpty())
@@ -33,7 +33,7 @@
                             <td>{{ isset($informacaoNutricional->legendaNutricional->descricao) ? $informacaoNutricional->legendaNutricional->descricao : 'Legenda nutricional não informada' }}
                             </td>
                             <td>{{ $informacaoNutricional->quantidade }}
-                                {{ isset($informacaoNutricional->legendaNutricional->unidadeMedida) }}</td>
+                                {{ isset($informacaoNutricional->legendaNutricional->unidade) }}</td>
                             <td>{{ $informacaoNutricional->valorDiario }}%</td>
                             <td>
                                 <a href="{{ route('informacoesNutricionais.edit', ['id' => $informacaoNutricional->id]) }}"
@@ -48,7 +48,7 @@
                                     <td>{{ isset($legendaNutricional->descricao) ? $legendaNutricional->descricao : 'Legenda nutricional não informada' }}
                                     </td>
                                     <td>{{ $informacaoNutricional->quantidade }}
-                                        {{ $legendaNutricional->unidadeMedida }}</td>
+                                        {{ $legendaNutricional->unidade }}</td>
                                     <td>{{ $informacaoNutricional->valorDiario }}%</td>
                                     <td>
                                         <a href="{{ route('informacoesNutricionais.edit', ['id' => $informacaoNutricional->id]) }}"
@@ -87,8 +87,8 @@
             <h1 style="font-family: serif; text-align: center">TABELA NUTRICIONAL</h1>
             <br>
             <h2>{{ $alimento->nome }}</h2>
-            <p>Informações nutricionais referentes a {{ $alimento->quantidadePorcao }} {{ $alimento->unidadeMedida }} ou
-                {{ $alimento->referencialMedida }}.</p>
+            <p>Informações nutricionais referentes a {{ $alimento->quantidade }} {{ $alimento->unidade }} ou
+                {{ $alimento->referencial }}.</p>
         </div>
 
         <table class="table table-stripe table-bordered table-hover">
@@ -103,7 +103,7 @@
                         <td>{{ isset($informacaoNutricional->legendaNutricional->descricao) ? $informacaoNutricional->legendaNutricional->descricao : 'Legenda nutricional não informada' }}
                         </td>
                         <td>{{ $informacaoNutricional->quantidade }}
-                            {{ isset($informacaoNutricional->legendaNutricional->unidadeMedida) }}</td>
+                            {{ isset($informacaoNutricional->legendaNutricional->unidade) }}</td>
                         <td>{{ $informacaoNutricional->valorDiario }}</td>
                     </tr>
                 @endforeach

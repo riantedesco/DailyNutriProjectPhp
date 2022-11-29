@@ -1,13 +1,9 @@
-HOME:
-> Estilizar a tela home
-
 GRÁFICOS:
 > Inserir gráfico das informações nutricionais por refeição, dentro da listagem de itens
 > Inserir gráfico das informações nutricionais das refeições diárias, refeições semanais e refeições mensais, dentro da tela home
 
-CREATE DE ITEM E INFORMAÇÃO NUTRICIONAL:
-> Setar o informativo de "legendaNutricional->unidadeMedida" próximo à quantidade conforme a legenda nutricional for selecionada
-> Setar o informativo de "alimento->unidadeMedida + alimento->referencialMedida" próximo à quantidade conforme o alimento for selecionado
-
 CREATE DE REFEIÇÃO:
 > Fazer com que o botão de criar refeição redirecione para a listagem de itens
+
+PROBLEMAS NÃO-SENSÍVEIS:
+> No index de "refeicao" a paginação buga quando carrega os registros inseridos por seeder

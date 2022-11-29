@@ -15,8 +15,8 @@
         <div style="text-align: center">
             <h3 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">{{ $alimento->nome }}
             </h3>
-            <p><i> {{ $alimento->quantidadePorcao }} {{ $alimento->unidadeMedida }} -
-                    {{ $alimento->referencialMedida }}</i></p>
+            <p><i> {{ $alimento->quantidade }} {{ $alimento->unidade }} -
+                    {{ $alimento->referencial }}</i></p>
         </div>
 
         <table class="table table-striped table-bordered" style="width:100%;">
@@ -32,7 +32,7 @@
                             <td>{{ isset($informacaoNutricional->legendaNutricional->descricao) ? $informacaoNutricional->legendaNutricional->descricao : 'Legenda nutricional não informada' }}
                             </td>
                             <td>{{ $informacaoNutricional->quantidade }}
-                                {{ isset($informacaoNutricional->legendaNutricional->unidadeMedida) }}</td>
+                                {{ isset($informacaoNutricional->legendaNutricional->unidade) }}</td>
                             <td>{{ $informacaoNutricional->valorDiario }}</td>
                         </tr> --}}
                         @foreach ($legendasNutricionais as $legendaNutricional)
@@ -41,7 +41,7 @@
                                     <td>{{ isset($legendaNutricional->descricao) ? $legendaNutricional->descricao : 'Legenda nutricional não informada' }}
                                     </td>
                                     <td>{{ $informacaoNutricional->quantidade }}
-                                        {{ $legendaNutricional->unidadeMedida }}</td>
+                                        {{ $legendaNutricional->unidade }}</td>
                                     <td>{{ $informacaoNutricional->valorDiario }}%</td>
                                 </tr>
                             @endif

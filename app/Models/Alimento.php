@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Alimento extends Model
 {
     protected $table = "alimentos";
-    protected $fillable = ['nome', 'quantidadePorcao', 'unidadeMedida', 'referencialMedida'];
+    protected $fillable = ['nome', 'quantidade', 'unidade', 'referencial'];
 
     public function informacoesNutricionais() {
         return $this->hasMany("App\Models\InformacaoNutricional");

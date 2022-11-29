@@ -24,21 +24,21 @@
     </div>
 
     <div class="form-group">
-        {!! Form::label('quantidadePorcao', 'Quantidade por Porção:') !!}
+        {!! Form::label('quantidade', 'Quantidade por Porção:') !!}
         <i style="font-size: 15px">(Quantidade a ser baseada para tabela nutricional. Ex: 50)</i>
-        {!! Form::number('quantidadePorcao', null, ['class' => 'form-control', 'required', 'step' => 'any']) !!}
+        {!! Form::number('quantidade', null, ['class' => 'form-control', 'required', 'step' => 'any']) !!}
     </div>
 
     <div class="form-group">
-        {!! Form::label('unidadeMedida', 'Unidade de Medida:') !!}
+        {!! Form::label('unidade', 'Unidade de Medida:') !!}
         <i style="font-size: 15px">(Unidade de medida referente à quantidade. Ex: gramas)</i>
-        {!! Form::text('unidadeMedida', null, ['class' => 'form-control', 'required']) !!}
+        {!! Form::text('unidade', null, ['class' => 'form-control', 'required']) !!}
     </div>
 
     <div class="form-group">
-        {!! Form::label('referencialMedida', 'Referencial de Medida:') !!}
+        {!! Form::label('referencial', 'Referencial de Medida:') !!}
         <i style="font-size: 15px">(Medida referencial que equivale à quantidade informada. Ex: 1/4 xícara)</i>
-        {!! Form::text('referencialMedida', null, ['class' => 'form-control', 'required']) !!}
+        {!! Form::text('referencial', null, ['class' => 'form-control', 'required']) !!}
     </div>
 
     <div class="form-group">

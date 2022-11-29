@@ -144,24 +144,70 @@
       ),
       4 => 
       array (
+        'text' => 'Gráficos',
+        'icon' => 'fas fa-file-chart-line',
+        'can' => 
+        array (
+          0 => 'administrador',
+          1 => 'usuario',
+        ),
+        'submenu' => 
+        array (
+          0 => 
+          array (
+            'text' => 'Gráficos do dia',
+            'url' => '#',
+            'icon' => 'fas fa-file-chart-line',
+            'can' => 
+            array (
+              0 => 'administrador',
+              1 => 'usuario',
+            ),
+          ),
+          1 => 
+          array (
+            'text' => 'Gráficos da semana',
+            'url' => '#',
+            'icon' => 'fas fa-file-chart-line',
+            'can' => 
+            array (
+              0 => 'administrador',
+              1 => 'usuario',
+            ),
+          ),
+          2 => 
+          array (
+            'text' => 'Gráficos do mês',
+            'url' => '#',
+            'icon' => 'fas fa-file-chart-line',
+            'can' => 
+            array (
+              0 => 'administrador',
+              1 => 'usuario',
+            ),
+          ),
+        ),
+      ),
+      5 => 
+      array (
         'header' => 'TELAS DO ADMINISTRADOR',
         'can' => 'administrador',
       ),
-      5 => 
+      6 => 
       array (
         'text' => 'Criar alimento',
         'url' => 'alimentos/create',
         'icon' => 'fas fa-fw fa-shopping-cart',
         'can' => 'administrador',
       ),
-      6 => 
+      7 => 
       array (
         'text' => 'Legendas nutricionais',
         'url' => 'legendasNutricionais',
         'icon' => 'fas fa-fw fa-th',
         'can' => 'administrador',
       ),
-      7 => 
+      8 => 
       array (
         'text' => 'Relatórios administrativos',
         'url' => 'relatorios',

@@ -16,7 +16,7 @@ class CreateLegendaNutricionalsTable extends Migration
         Schema::create('legendasNutricionais', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('descricao', 30);
-            $table->string('unidadeMedida', 30);
+            $table->string('unidade', 30);
             $table->timestamps();
         });
     }

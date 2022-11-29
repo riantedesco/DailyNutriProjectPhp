@@ -26,7 +26,7 @@
             <div class="form-group">
                 {!! Form::label('quantidade', 'Quantidade:') !!}
                 <i style="font-size: 15px">Medida em
-                    {{ $legendaNutricional->unidadeMedida }}</i>
+                    {{ $legendaNutricional->unidade }}</i>
                 {!! Form::number('quantidade', $informacaoNutricional->quantidade, [
                     'class' => 'form-control',
                     'required',
