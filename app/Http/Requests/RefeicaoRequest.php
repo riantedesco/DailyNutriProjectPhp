@@ -27,7 +27,7 @@ class RefeicaoRequest extends FormRequest
         return [
             'titulo' => 'required|min:3|max:50',
             'descricao' => 'required|min:3|max:100',
-            'dataHora' => 'required|date',
+            'dataHora' => 'required|date|before:tomorrow',
         ];
     }
 }

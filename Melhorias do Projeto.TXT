@@ -1,2 +1,3 @@
 PROBLEMAS NÃO-SENSÍVEIS:
 > No index de "refeicao" a paginação buga quando carrega os registros inseridos por seeder
+> Lógica de gráficos entra em controvérsia com lógica de inserção de novas legendas nutricionais
