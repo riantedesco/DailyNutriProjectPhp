@@ -73,6 +73,10 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('informacoesNutricionais/filtrarQuantidade', ['as' => 'relatorios.informacoesNutricionais.filtrarQuantidade',  'uses' => 'App\Http\Controllers\InformacaoNutricionalController@relatorioFiltroQuantidade']);
         Route::get('users',                                     ['as' => 'relatorios.users',                                      'uses' => 'App\Http\Controllers\UserController@relatorio']);
     });
+
+    Route::group(['prefix' => 'graficos', 'where' => ['id' => '[0-9]+']], function () {
+        Route::get('{refeicao_id}',              ['as' => 'graficos.graficosRefeicao',             'uses' => 'App\Http\Controllers\GraficoController@graficosRefeicao']);
+    });
 });
 
 Route::get('/', function () {

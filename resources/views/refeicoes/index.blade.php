@@ -29,7 +29,7 @@
                 </h6>
                 <h6><i>{{ $refeicao->descricao }}</i></h6>
                 <a href="{{ route('itens', ['refeicao_id' => $refeicao->id]) }}" class="btn-sm btn-warning">Ver itens</a>
-                <a href="#" class="btn-sm btn-info">Ver média nutricional</a>
+                <a href="{{ route('graficos.graficosRefeicao', ['refeicao_id' => $refeicao->id]) }}" class="btn-sm btn-info">Ver média nutricional</a>
                 <a href="{{ route('refeicoes.edit', ['id' => $refeicao->id]) }}" class="btn-sm btn-success">Editar</a>
                 <a href="#" onclick="return ConfirmaExclusao({{ $refeicao->id }})"
                     class="btn-sm btn-danger">Remover</a>

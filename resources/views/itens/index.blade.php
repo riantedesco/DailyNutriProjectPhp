@@ -58,7 +58,7 @@
     <div>
         <a class="btn btn-outline-primary" href="{{ route('itens.create', ['refeicao_id' => $refeicao->id]) }}">Novo
             Item</a>
-        <a class="btn btn-outline-info" href="#">Ver média nutricional</a>
+        <a class="btn btn-outline-info" href="{{ route('graficos.graficosRefeicao', ['refeicao_id' => $refeicao->id]) }}">Ver média nutricional</a>
         <a class="btn btn-outline-danger" href="{{ route('refeicoes') }}">Voltar para refeições</a>
     </div>
 @stop

@@ -23,3 +23,4 @@ Comandos auxiliares de desenvolvimento:
 Frameworks auxiliares do projeto:
 > Relatórios com DomPDF: https://blog.especializati.com.br/gerar-pdf-no-laravel-com-dompdf/
 > Recuperação de senha: https://meirimrafael.wixsite.com/meusite/forum/curso-laravel-em-5-min/5-envio-do-e-mail-de-recuperacao-com-gmail
+> Gráficos com chart.js: "npm install chart.js" - https://www.chartjs.org/docs/latest/

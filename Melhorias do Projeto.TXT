@@ -1,6 +1,6 @@
 GRÁFICOS:
-> Inserir gráfico das informações nutricionais por refeição, dentro da listagem de itens
-> Inserir gráfico das informações nutricionais das refeições diárias, refeições semanais e refeições mensais, dentro da tela home
+> Solucionar problemas nos gráficos de informações nutricionais por refeição
+> Criar telas de gráficos de informações nutricionais por refeições diárias, refeições semanais e refeições mensais
 
 PROBLEMAS NÃO-SENSÍVEIS:
 > No index de "refeicao" a paginação buga quando carrega os registros inseridos por seeder
