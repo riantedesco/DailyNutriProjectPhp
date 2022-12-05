@@ -7,6 +7,7 @@ use App\Models\LegendaNutricional;
 use App\Models\Refeicao;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -30,16 +31,29 @@ class HomeController extends Controller
         $alimentos = Alimento::all();
 
         $dataHoje = date('Y/m/d');
-        $refeicoesDiarias = Refeicao::where([
-            ['user_id', '=', Auth::user()->id],
-            ['dataHora', '=', $dataHoje],
-        ]);
+        $refeicoesDiarias = DB::table('refeicoes')
+            ->select('id', 'titulo', 'dataHora', 'user_id')
+            ->where('user_id', '=', Auth::user()->id)
+            ->whereDate('dataHora', '=', $dataHoje)
+            ->get();
 
+        $dataHoje = date('Y/m/d');
         $seteDias = date('Y/m/d', strtotime(date('Y-m-d') . '-7days'));
-        $refeicoesSemanais = Refeicao::where('user_id', '=', Auth::user()->id)->whereBetween('dataHora', [$seteDias, $dataHoje]);
+        $refeicoesSemanais = DB::table('refeicoes')
+            ->select('id', 'titulo', 'dataHora', 'user_id')
+            ->where('user_id', '=', Auth::user()->id)
+            ->whereDate('dataHora', '<=', $dataHoje)
+            ->whereDate('dataHora', '>=', $seteDias)
+            ->get();
 
+        $dataHoje = date('Y/m/d');
         $trintaDias = date('Y/m/d', strtotime(date('Y-m-d') . '-30days'));
-        $refeicoesMensais = Refeicao::where('user_id', '=', Auth::user()->id)->whereBetween('dataHora', [$trintaDias, $dataHoje]);
+        $refeicoesMensais = DB::table('refeicoes')
+            ->select('id', 'titulo', 'dataHora', 'user_id')
+            ->where('user_id', '=', Auth::user()->id)
+            ->whereDate('dataHora', '<=', $dataHoje)
+            ->whereDate('dataHora', '>=', $trintaDias)
+            ->get();
 
         $legendasNutricionais = LegendaNutricional::all();
         $users = User::all();

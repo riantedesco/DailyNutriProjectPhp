@@ -156,7 +156,7 @@
           0 => 
           array (
             'text' => '- Gráficos do dia',
-            'url' => '#',
+            'url' => 'graficos/graficosDia',
             'icon' => 'fas fa-file-chart-line',
             'can' => 
             array (
@@ -167,7 +167,7 @@
           1 => 
           array (
             'text' => '- Gráficos da semana',
-            'url' => '#',
+            'url' => 'graficos/graficosSemana',
             'icon' => 'fas fa-file-chart-line',
             'can' => 
             array (
@@ -178,7 +178,7 @@
           2 => 
           array (
             'text' => '- Gráficos do mês',
-            'url' => '#',
+            'url' => 'graficos/graficosMes',
             'icon' => 'fas fa-file-chart-line',
             'can' => 
             array (

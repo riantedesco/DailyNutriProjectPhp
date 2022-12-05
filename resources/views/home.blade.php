@@ -80,12 +80,12 @@
                         <div class="small-box bg-success">
                             <div class="inner">
                                 <h2>{{ $refeicoesDiarias->count() }}</h2>
-                                <p>Refeições no dia de hoje</p>
+                                <p>Refeições de hoje</p>
                             </div>
                             <div class="icon">
                                 <i class="ion ion-ios-pint"></i>
                             </div>
-                            <a href="{{ route('refeicoes') }}" class="small-box-footer">Ir Para Suas Refeições <i
+                            <a href="{{ route('graficos.graficosDia') }}" class="small-box-footer">Ir Para Gráficos do Dia <i
                                     class="fas fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
@@ -94,12 +94,12 @@
                         <div class="small-box bg-info">
                             <div class="inner">
                                 <h2>{{ $refeicoesSemanais->count() }}</h2>
-                                <p>Refeições cadastradas na última semana</p>
+                                <p>Refeições da última semana</p>
                             </div>
                             <div class="icon">
                                 <i class="ion ion-android-calendar"></i>
                             </div>
-                            <a href="{{ route('refeicoes') }}" class="small-box-footer">Ir Para Suas Refeições <i
+                            <a href="{{ route('graficos.graficosSemana') }}" class="small-box-footer">Ir Para Gráficos da Semana <i
                                 class="fas fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
@@ -108,12 +108,12 @@
                         <div class="small-box bg-danger">
                             <div class="inner">
                                 <h2>{{ $refeicoesMensais->count() }}</h2>
-                                <p>Refeições cadastradas no último mês</p>
+                                <p>Refeições do último mês</p>
                             </div>
                             <div class="icon">
                                 <i class="ion ion-ios-calendar"></i>
                             </div>
-                            <a href="{{ route('refeicoes') }}" class="small-box-footer">Ir Para Suas Refeições <i
+                            <a href="{{ route('graficos.graficosMes') }}" class="small-box-footer">Ir Para Gráficos do Mês <i
                                 class="fas fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
@@ -143,12 +143,12 @@
                         <div class="small-box bg-success">
                             <div class="inner">
                                 <h2>{{ $refeicoesDiarias->count() }}</h2>
-                                <p>Refeições no dia de hoje</p>
+                                <p>Refeições de hoje</p>
                             </div>
                             <div class="icon">
                                 <i class="ion ion-ios-pint"></i>
                             </div>
-                            <a href="{{ route('refeicoes') }}" class="small-box-footer">Ir Para Suas Refeições <i
+                            <a href="{{ route('graficos.graficosDia') }}" class="small-box-footer">Ir Para Gráficos do Dia <i
                                     class="fas fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
@@ -157,12 +157,12 @@
                         <div class="small-box bg-info">
                             <div class="inner">
                                 <h2>{{ $refeicoesSemanais->count() }}</h2>
-                                <p>Refeições cadastradas na última semana</p>
+                                <p>Refeições da última semana</p>
                             </div>
                             <div class="icon">
                                 <i class="ion ion-android-calendar"></i>
                             </div>
-                            <a href="{{ route('refeicoes') }}" class="small-box-footer">Ir Para Suas Refeições <i
+                            <a href="{{ route('graficos.graficosSemana') }}" class="small-box-footer">Ir Para Gráficos da Semana <i
                                 class="fas fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
@@ -171,15 +171,21 @@
                         <div class="small-box bg-danger">
                             <div class="inner">
                                 <h2>{{ $refeicoesMensais->count() }}</h2>
-                                <p>Refeições cadastradas no último mês</p>
+                                <p>Refeições do último mês</p>
                             </div>
                             <div class="icon">
                                 <i class="ion ion-ios-calendar"></i>
                             </div>
-                            <a href="{{ route('refeicoes') }}" class="small-box-footer">Ir Para Suas Refeições <i
+                            <a href="{{ route('graficos.graficosMes') }}" class="small-box-footer">Ir Para Gráficos do Mês <i
                                 class="fas fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
+                </div>
+
+                <div style="text-align: center">
+                    <br>
+                    <a class="btn btn-outline-success" href="{{ route('refeicoes.create', []) }}" style="font-size: 24px">Cadastre Sua
+                        Refeição!</a>
                 </div>
         </section>
     @endcan

@@ -325,19 +325,19 @@ return [
                 'submenu' => [
                     [
                         'text' => '- Gráficos do dia',
-                        'url'  => '#',
+                        'url'  => 'graficos/graficosDia',
                         'icon'    => 'fas fa-file-chart-line',
                         'can' => ['administrador', 'usuario'],
                     ],
                     [
                         'text' => '- Gráficos da semana',
-                        'url'  => '#',
+                        'url'  => 'graficos/graficosSemana',
                         'icon'    => 'fas fa-file-chart-line',
                         'can' => ['administrador', 'usuario'],
                     ],
                     [
                         'text' => '- Gráficos do mês',
-                        'url'  => '#',
+                        'url'  => 'graficos/graficosMes',
                         'icon'    => 'fas fa-file-chart-line',
                         'can' => ['administrador', 'usuario'],
                     ],

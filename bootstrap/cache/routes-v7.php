@@ -43,7 +43,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::w0FO64jE9r0FYnL6',
+            '_route' => 'generated::7tDG8yDiPE8OjVCg',
           ),
           1 => NULL,
           2 => 
@@ -63,7 +63,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::EdswWMkcDLMzSHFh',
+            '_route' => 'generated::6WsXx19QYM8AzF59',
           ),
           1 => NULL,
           2 => 
@@ -422,13 +422,73 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
+      '/graficos/graficosDia' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'graficos.graficosDia',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/graficos/graficosSemana' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'graficos.graficosSemana',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/graficos/graficosMes' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'graficos.graficosMes',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
       '/' => 
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'generated::Y50PL8vcDyXPFxq8',
+            '_route' => 'generated::fxR9RO3E5w2WSS75',
           ),
           1 => NULL,
           2 => 
@@ -465,7 +525,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::MxVc5EUrGOkYxiGo',
+            '_route' => 'generated::USGtRsw42omZGP5l',
           ),
           1 => NULL,
           2 => 
@@ -520,7 +580,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::o6ZalqRCM9yNYsZO',
+            '_route' => 'generated::QPLoGTSBS1iscxNZ',
           ),
           1 => NULL,
           2 => 
@@ -611,7 +671,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::zAemPLaoqjv1AvH8',
+            '_route' => 'generated::eFIQIaCqKejib9FT',
           ),
           1 => NULL,
           2 => 
@@ -647,7 +707,7 @@ app('router')->setCompiledRoutes(
     ),
     2 => 
     array (
-      0 => '{^(?|/alimentos/(?|([0-9]+)/destroy(*:37)|([0-9]+)/edit(*:57)|([0-9]+)/update(*:79)|([^/]++)/informacoesNutricionais(?|(*:121)|/create(*:136)))|/i(?|nformacoesNutricionais/(?|([0-9]+)/destroy(*:193)|([0-9]+)/edit(*:214)|([0-9]+)/update(*:237))|tens/(?|([0-9]+)/destroy(*:270)|([0-9]+)/edit(*:291)|([0-9]+)/update(*:314)))|/refeicoes/(?|([0-9]+)/destroy(*:354)|([0-9]+)/edit(*:375)|([0-9]+)/update(*:398)|([^/]++)/itens(?|(*:423)|/create(*:438)))|/legendasNutricionais/(?|([0-9]+)/destroy(*:489)|([0-9]+)/edit(*:510)|([0-9]+)/update(*:533))|/graficos/([^/]++)(*:560)|/password/reset/([^/]++)(*:592))/?$}sDu',
+      0 => '{^(?|/alimentos/(?|([0-9]+)/destroy(*:37)|([0-9]+)/edit(*:57)|([0-9]+)/update(*:79)|([^/]++)/informacoesNutricionais(?|(*:121)|/create(*:136)))|/i(?|nformacoesNutricionais/(?|([0-9]+)/destroy(*:193)|([0-9]+)/edit(*:214)|([0-9]+)/update(*:237))|tens/(?|([0-9]+)/destroy(*:270)|([0-9]+)/edit(*:291)|([0-9]+)/update(*:314)))|/refeicoes/(?|([0-9]+)/destroy(*:354)|([0-9]+)/edit(*:375)|([0-9]+)/update(*:398)|([^/]++)/(?|itens(?|(*:426)|/create(*:441))|graficos(*:458)))|/legendasNutricionais/(?|([0-9]+)/destroy(*:509)|([0-9]+)/edit(*:530)|([0-9]+)/update(*:553))|/password/reset/([^/]++)(*:586))/?$}sDu',
     ),
     3 => 
     array (
@@ -969,7 +1029,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      423 => 
+      426 => 
       array (
         0 => 
         array (
@@ -992,7 +1052,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      438 => 
+      441 => 
       array (
         0 => 
         array (
@@ -1015,7 +1075,30 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      489 => 
+      458 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'graficos.graficosRefeicao',
+          ),
+          1 => 
+          array (
+            0 => 'refeicao_id',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      509 => 
       array (
         0 => 
         array (
@@ -1038,7 +1121,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      510 => 
+      530 => 
       array (
         0 => 
         array (
@@ -1061,7 +1144,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      533 => 
+      553 => 
       array (
         0 => 
         array (
@@ -1083,30 +1166,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      560 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'graficos.graficosRefeicao',
-          ),
-          1 => 
-          array (
-            0 => 'refeicao_id',
-          ),
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
-          6 => NULL,
-        ),
-      ),
-      592 => 
+      586 => 
       array (
         0 => 
         array (
@@ -1180,7 +1240,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::w0FO64jE9r0FYnL6' => 
+    'generated::7tDG8yDiPE8OjVCg' => 
     array (
       'methods' => 
       array (
@@ -1201,7 +1261,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 'web',
         ),
-        'as' => 'generated::w0FO64jE9r0FYnL6',
+        'as' => 'generated::7tDG8yDiPE8OjVCg',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1217,7 +1277,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::EdswWMkcDLMzSHFh' => 
+    'generated::6WsXx19QYM8AzF59' => 
     array (
       'methods' => 
       array (
@@ -1234,13 +1294,13 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:295:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:77:"function (\\Illuminate\\Http\\Request $request) {
     return $request->user();
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000634152be000000003068b2b9";}";s:4:"hash";s:44:"fk7Ds766yuP2e32qpTEroZeKNm+0ZX4ExrLxdRiBHns=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000003f48c9c500000000370e17f2";}";s:4:"hash";s:44:"98QhX8esV+kgaijjuC14xv3ZqhxUuQpaFTVAR2XdW5E=";}}',
         'namespace' => NULL,
         'prefix' => 'api',
         'where' => 
         array (
         ),
-        'as' => 'generated::EdswWMkcDLMzSHFh',
+        'as' => 'generated::6WsXx19QYM8AzF59',
       ),
       'fallback' => false,
       'defaults' => 
@@ -2060,6 +2120,46 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
+    'graficos.graficosRefeicao' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'refeicoes/{refeicao_id}/graficos',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'as' => 'graficos.graficosRefeicao',
+        'uses' => 'App\\Http\\Controllers\\GraficoController@graficosRefeicao',
+        'controller' => 'App\\Http\\Controllers\\GraficoController@graficosRefeicao',
+        'namespace' => NULL,
+        'prefix' => 'refeicoes/{refeicao_id}/graficos',
+        'where' => 
+        array (
+          'id' => '[0-9]+',
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+        'id' => '[0-9]+',
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
     'itens.destroy' => 
     array (
       'methods' => 
@@ -2696,14 +2796,14 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'graficos.graficosRefeicao' => 
+    'graficos.graficosDia' => 
     array (
       'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
-      'uri' => 'graficos/{refeicao_id}',
+      'uri' => 'graficos/graficosDia',
       'action' => 
       array (
         'middleware' => 
@@ -2711,9 +2811,9 @@ app('router')->setCompiledRoutes(
           0 => 'web',
           1 => 'auth',
         ),
-        'as' => 'graficos.graficosRefeicao',
-        'uses' => 'App\\Http\\Controllers\\GraficoController@graficosRefeicao',
-        'controller' => 'App\\Http\\Controllers\\GraficoController@graficosRefeicao',
+        'as' => 'graficos.graficosDia',
+        'uses' => 'App\\Http\\Controllers\\GraficoController@graficosDia',
+        'controller' => 'App\\Http\\Controllers\\GraficoController@graficosDia',
         'namespace' => NULL,
         'prefix' => '/graficos',
         'where' => 
@@ -2736,7 +2836,87 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::Y50PL8vcDyXPFxq8' => 
+    'graficos.graficosSemana' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'graficos/graficosSemana',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'as' => 'graficos.graficosSemana',
+        'uses' => 'App\\Http\\Controllers\\GraficoController@graficosSemana',
+        'controller' => 'App\\Http\\Controllers\\GraficoController@graficosSemana',
+        'namespace' => NULL,
+        'prefix' => '/graficos',
+        'where' => 
+        array (
+          'id' => '[0-9]+',
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+        'id' => '[0-9]+',
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'graficos.graficosMes' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'graficos/graficosMes',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'as' => 'graficos.graficosMes',
+        'uses' => 'App\\Http\\Controllers\\GraficoController@graficosMes',
+        'controller' => 'App\\Http\\Controllers\\GraficoController@graficosMes',
+        'namespace' => NULL,
+        'prefix' => '/graficos',
+        'where' => 
+        array (
+          'id' => '[0-9]+',
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+        'id' => '[0-9]+',
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'generated::fxR9RO3E5w2WSS75' => 
     array (
       'methods' => 
       array (
@@ -2752,13 +2932,13 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:262:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:44:"function () {
     return \\view(\'welcome\');
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000634152bc000000003068b2b9";}";s:4:"hash";s:44:"KnUDDZvogSA26BBVQf/0GKUb6jHEoU12lv5C9qBIvj0=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000003f48c9c700000000370e17f2";}";s:4:"hash";s:44:"vRwiHKD+QDg4M/2reQniHMI9uaL+QApOtTXXVFy/w4o=";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
         array (
         ),
-        'as' => 'generated::Y50PL8vcDyXPFxq8',
+        'as' => 'generated::fxR9RO3E5w2WSS75',
       ),
       'fallback' => false,
       'defaults' => 
@@ -2811,7 +2991,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::MxVc5EUrGOkYxiGo' => 
+    'generated::USGtRsw42omZGP5l' => 
     array (
       'methods' => 
       array (
@@ -2831,7 +3011,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::MxVc5EUrGOkYxiGo',
+        'as' => 'generated::USGtRsw42omZGP5l',
       ),
       'fallback' => false,
       'defaults' => 
@@ -2920,7 +3100,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::o6ZalqRCM9yNYsZO' => 
+    'generated::QPLoGTSBS1iscxNZ' => 
     array (
       'methods' => 
       array (
@@ -2940,7 +3120,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::o6ZalqRCM9yNYsZO',
+        'as' => 'generated::QPLoGTSBS1iscxNZ',
       ),
       'fallback' => false,
       'defaults' => 
@@ -3139,7 +3319,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::zAemPLaoqjv1AvH8' => 
+    'generated::eFIQIaCqKejib9FT' => 
     array (
       'methods' => 
       array (
@@ -3159,7 +3339,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::zAemPLaoqjv1AvH8',
+        'as' => 'generated::eFIQIaCqKejib9FT',
       ),
       'fallback' => false,
       'defaults' => 

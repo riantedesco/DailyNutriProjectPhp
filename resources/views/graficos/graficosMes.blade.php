@@ -2,20 +2,20 @@
 
 @section('content')
     <br>
-    
+
     <div class="card m-b-20">
         <div class="card-body">
-            <h3 class="mt-0 header-title mb-3" style="text-transform: uppercase; text-align: center">{{ $refeicao->titulo }}
+            <h3 class="mt-0 header-title mb-3" style="text-transform: uppercase; text-align: center">Média nutricional mensal
             </h3>
             <p style="font-size: 18px; text-align: center">
-                <i>{{ Carbon\Carbon::parse($refeicao->dataHora)->format('d/m/Y - H:i') }}</i>
+                <i>{{ Carbon\Carbon::parse($trintaDias)->format('d/m/Y') }} até {{ Carbon\Carbon::parse($dataHoje)->format('d/m/Y') }}</i>
             </p>
             <hr>
 
-            @if ($itens->isEmpty())
+            @if ($refeicoesMensais->isEmpty())
                 <br>
                 <div>
-                    <h4 style="font-family: system-ui; text-align: center">Nenhum item cadastrado.</h4>
+                    <h4 style="font-family: system-ui; text-align: center">Nenhuma refeição cadastrada no último mês.</h4>
                 </div>
                 <br>
             @else
@@ -37,8 +37,7 @@
     </div>
 
     <div>
-        <a class="btn btn-outline-warning" href="{{ route('itens', ['refeicao_id' => $refeicao->id]) }}">Voltar para itens</a>
-        <a class="btn btn-outline-danger" href="{{ route('refeicoes') }}">Voltar para refeições</a>
+        <a class="btn btn-outline-danger" href="{{ route('refeicoes') }}">Ir para refeições</a>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

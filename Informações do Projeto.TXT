@@ -6,10 +6,13 @@ Como executar projeto:
 > Acessar "http://127.0.0.1:8000" para usar o sistema
 > "Ctrl + C" no terminal para parar a execução
 
+Acesso:
+> Acesso pelo Google Chrome, com 80% de zoom de tela
+
 Banco de dados:
 > PostgreSQL
 > Banco "dbdailynutriprojectphp"
-> Credenciais de conexão no arqui ".env"
+> Credenciais de conexão no arquivo ".env.example"
 
 IDE de desenvolvimento:
 > VSCode

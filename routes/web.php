@@ -47,6 +47,10 @@ Route::group(['middleware' => 'auth'], function () {
             Route::get('',             ['as' => 'itens',         'uses' => 'App\Http\Controllers\ItemController@index']);
             Route::get('create',       ['as' => 'itens.create',  'uses' => 'App\Http\Controllers\ItemController@create']);
         });
+
+        Route::group(['prefix' => '{refeicao_id}/graficos', 'where' => ['id' => '[0-9]+']], function () {
+            Route::get('',    ['as' => 'graficos.graficosRefeicao',    'uses' => 'App\Http\Controllers\GraficoController@graficosRefeicao']);
+        });
     });
 
     Route::group(['prefix' => 'itens', 'where' => ['id' => '[0-9]+']], function () {
@@ -75,7 +79,9 @@ Route::group(['middleware' => 'auth'], function () {
     });
 
     Route::group(['prefix' => 'graficos', 'where' => ['id' => '[0-9]+']], function () {
-        Route::get('{refeicao_id}',              ['as' => 'graficos.graficosRefeicao',             'uses' => 'App\Http\Controllers\GraficoController@graficosRefeicao']);
+        Route::get('graficosDia',           ['as' => 'graficos.graficosDia',             'uses' => 'App\Http\Controllers\GraficoController@graficosDia']);
+        Route::get('graficosSemana',        ['as' => 'graficos.graficosSemana',          'uses' => 'App\Http\Controllers\GraficoController@graficosSemana']);
+        Route::get('graficosMes',           ['as' => 'graficos.graficosMes',             'uses' => 'App\Http\Controllers\GraficoController@graficosMes']);
     });
 });
 
