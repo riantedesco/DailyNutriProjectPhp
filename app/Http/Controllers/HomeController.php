@@ -58,7 +58,6 @@ class HomeController extends Controller
         $legendasNutricionais = LegendaNutricional::all();
         $users = User::all();
 
-        // return view('home');
         return view('home', ['alimentos' => $alimentos, 'refeicoesDiarias' => $refeicoesDiarias, 'refeicoesSemanais' => $refeicoesSemanais, 'refeicoesMensais' => $refeicoesMensais, 'legendasNutricionais' => $legendasNutricionais, 'users' => $users]);
     }
 }

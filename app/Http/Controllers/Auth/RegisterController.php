@@ -53,7 +53,7 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'name' => ['required', 'string', 'min:3', 'max:255'],
             'cpf' => ['required', 'string', 'min:14', 'max:14'], 
-            'dataNascimento' => ['required', 'date'],
+            'dataNascimento' => ['required', 'date', 'before:today'],
             'genero' => [Rule::in(['Masculino', 'Feminino'])],
             'peso' => ['required', 'numeric'], 
             'altura' => ['required', 'numeric'], 

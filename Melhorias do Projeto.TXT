@@ -1,3 +1,7 @@
 PROBLEMAS NÃO-SENSÍVEIS:
 > No index de "refeicao" a paginação buga quando carrega os registros inseridos por seeder
 > Lógica de gráficos entra em controvérsia com lógica de inserção de novas legendas nutricionais
+> Filtro de alimentos falha ao digitar nome do alimento com acentuação
+> No gráfico de nutrientes consumidos, as vitaminas praticamente não aparecem por ter unidade de medida muito baixa. Ideal seria ter um gráfico a parte para as vitaminas (medidas em miligramas)
+> Peso e altura do user são dados não utilizados. A ideia é que o sistema pudesse oferecer uma nota para cada refeição, utilizando o peso e a altura do usuário como variáveis para definir o cálculo que geraria essa nota
+> No cadastro, ao inserir data de nascimento inválida não aparece mensagem nenhuma

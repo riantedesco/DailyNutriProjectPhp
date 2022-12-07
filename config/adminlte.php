@@ -367,20 +367,6 @@ return [
                 'can' => 'administrador',
             ],
 
-            // [
-            //     'text' => 'Relatório de alimentos',
-            //     'url' => 'relatorios/alimentos',
-            //     'icon' => 'fas fa-fw fa-clipboard',
-            //     'can' => 'administrador',
-            // ],
-
-            // [
-            //     'text' => 'Relatório de legendas nutricionais',
-            //     'url' => 'relatorios/legendasNutricionais',
-            //     'icon' => 'fas fa-fw fa-clipboard',
-            //     'can' => 'administrador',
-            // ],
-
         // // Navbar items:
         // [
         //     'type'         => 'navbar-search',

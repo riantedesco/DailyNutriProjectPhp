@@ -10,11 +10,6 @@ use Barryvdh\DomPDF\Facade\Pdf;
 
 class InformacaoNutricionalController extends Controller
 {
-    // public function index($alimento_id){
-    //     $informacoesNutricionais = InformacaoNutricional::where('alimento_id', $alimento_id)->orderBy('id')->paginate(5);
-    //     $alimento = Alimento::find($alimento_id);
-    //     return view('informacoesNutricionais.index', ['informacoesNutricionais'=>$informacoesNutricionais, 'alimento'=>$alimento]);
-    // }
     public function index($alimento_id){
         $informacoesNutricionais = InformacaoNutricional::where('alimento_id', $alimento_id)->orderBy('id')->paginate(5);
         $alimento = Alimento::find($alimento_id);
@@ -46,10 +41,6 @@ class InformacaoNutricionalController extends Controller
         return $ret;
     }
 
-    // public function edit($id) {
-    //     $informacaoNutricional = InformacaoNutricional::find($id);
-    //     return view('informacoesNutricionais.edit', compact('informacaoNutricional'));
-    // }
     public function edit($id) {
         $informacaoNutricional = InformacaoNutricional::find($id);
         $legendasNutricionais = LegendaNutricional::all();

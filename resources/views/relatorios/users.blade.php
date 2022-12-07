@@ -19,7 +19,6 @@
     <table class="table table-striped table-bordered" style="width:100%;">
         <thead style="background-color: grey;">
             <th>Nome</th>
-            <th>Cpf</th>
             <th>Data de Nascimento</th>
             <th>Gênero</th>
             <th>E-mail</th>
@@ -30,16 +29,14 @@
                     @if ($user->id == Auth::user()->id)
                         <tr style="text-align:center; font-size: 14px; color: green">
                             <td>{{ $user->name }}</td>
-                            <td>{{ $user->cpf }}</td>
-                            <td>{{ $user->dataNascimento }}</td>
+                            <td>{{ Carbon\Carbon::parse($user->dataNascimento)->format('d/m/Y') }}</td>
                             <td>{{ $user->genero }}</td>
                             <td>{{ $user->email }}</td>
                         </tr>
                     @else
                     <tr style="text-align:center; font-size: 14px;">
                         <td>{{ $user->name }}</td>
-                        <td>{{ $user->cpf }}</td>
-                        <td>{{ $user->dataNascimento }}</td>
+                        <td>{{ Carbon\Carbon::parse($user->dataNascimento)->format('d/m/Y') }}</td>
                         <td>{{ $user->genero }}</td>
                         <td>{{ $user->email }}</td>
                     </tr>
@@ -56,7 +53,6 @@
     <table class="table table-striped table-bordered" style="width:100%;">
         <thead style="background-color: grey;">
             <th>Nome</th>
-            <th>Cpf</th>
             <th>Data de Nascimento</th>
             <th>Gênero</th>
             <th>E-mail</th>
@@ -66,8 +62,7 @@
                 @if ($user->tipoCadastro == 'Usuario')
                     <tr style="text-align:center; font-size: 14px;">
                         <td>{{ $user->name }}</td>
-                        <td>{{ $user->cpf }}</td>
-                        <td>{{ $user->dataNascimento }}</td>
+                        <td>{{ Carbon\Carbon::parse($user->dataNascimento)->format('d/m/Y') }}</td>
                         <td>{{ $user->genero }}</td>
                         <td>{{ $user->email }}</td>
                     </tr>

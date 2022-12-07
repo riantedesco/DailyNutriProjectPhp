@@ -9,11 +9,6 @@ use App\Models\Refeicao;
 
 class ItemController extends Controller
 {
-    // public function index($refeicao_id){
-    //     $itens = Item::where('refeicao_id', $refeicao_id)->orderBy('id')->paginate(6);
-    //     $refeicao = Refeicao::find($refeicao_id);
-    //     return view('itens.index', ['itens'=>$itens, 'refeicao'=>$refeicao]);
-    // }
     public function index($refeicao_id){
         $itens = Item::where('refeicao_id', $refeicao_id)->orderBy('id')->paginate(6);
         $refeicao = Refeicao::find($refeicao_id);
@@ -45,10 +40,6 @@ class ItemController extends Controller
         return $ret;
     }
 
-    // public function edit($id) {
-    //     $item = Item::find($id);
-    //     return view('itens.edit', compact('item'));
-    // }
     public function edit($id) {
         $item = Item::find($id);
         $alimentos = Alimento::all();

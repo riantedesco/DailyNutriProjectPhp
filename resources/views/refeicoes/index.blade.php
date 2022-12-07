@@ -25,8 +25,7 @@
         @if ($refeicao->user_id == Auth::user()->id)
             <div>
                 <h3 style="font-family: system-ui;">{{ $refeicao->titulo }}</h3>
-                <h6 style="font-family: system-ui;">{{ Carbon\Carbon::parse($refeicao->dataHora)->format('d/m/Y - H:i') }}
-                </h6>
+                <h6 style="font-family: system-ui;">{{ Carbon\Carbon::parse($refeicao->dataHora)->format('d/m/Y - H:i') }}h</h6>
                 <h6><i>{{ $refeicao->descricao }}</i></h6>
                 <a href="{{ route('itens', ['refeicao_id' => $refeicao->id]) }}" class="btn-sm btn-warning">Ver itens</a>
                 <a href="{{ route('graficos.graficosRefeicao', ['refeicao_id' => $refeicao->id]) }}" class="btn-sm btn-info">Ver média nutricional</a>

@@ -6,7 +6,7 @@
         <h1 style="font-family: serif; text-align: center">RELAÇÃO DE ITENS</h1>
         <br>
         <h2 style="text-transform: uppercase">{{ $refeicao->titulo }}</h2>
-        <p style="font-size: 18px"><i>{{ Carbon\Carbon::parse($refeicao->dataHora)->format('d/m/Y - H:i') }}</i></p>
+        <p style="font-size: 18px"><i>{{ Carbon\Carbon::parse($refeicao->dataHora)->format('d/m/Y - H:i') }}h</i></p>
     </div>
 
     @if ($itens->isEmpty())
@@ -25,15 +25,6 @@
             </thead>
             <tbody>
                 @foreach ($itens as $item)
-                    {{-- <tr>
-                        <td>{{ isset($item->alimento->nome) ? $item->alimento->nome : 'Alimento não informado' }}</td>
-                        <td>{{ $item->quantidade }} {{ isset($item->alimento->unidade) }}</td>
-                        <td>
-                            <a href="{{ route('itens.edit', ['id' => $item->id]) }}" class="btn-sm btn-success">Editar</a>
-                            <a href="#" onclick="return ConfirmaExclusao({{ $item->id }})"
-                                class="btn-sm btn-danger">Remover</a>
-                        </td>
-                    </tr> --}}
                     @foreach ($alimentos as $alimento)
                         @if ($item->alimento_id == $alimento->id)
                             <tr>

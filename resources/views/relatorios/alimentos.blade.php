@@ -28,13 +28,6 @@
             <tbody>
                 @forelse ($informacoesNutricionais as $informacaoNutricional)
                     @if ($informacaoNutricional->alimento_id == $alimento->id)
-                        {{-- <tr style="text-align:center; font-size: 14px">
-                            <td>{{ isset($informacaoNutricional->legendaNutricional->descricao) ? $informacaoNutricional->legendaNutricional->descricao : 'Legenda nutricional não informada' }}
-                            </td>
-                            <td>{{ $informacaoNutricional->quantidade }}
-                                {{ isset($informacaoNutricional->legendaNutricional->unidade) }}</td>
-                            <td>{{ $informacaoNutricional->valorDiario }}</td>
-                        </tr> --}}
                         @foreach ($legendasNutricionais as $legendaNutricional)
                             @if ($informacaoNutricional->legendaNutricional_id == $legendaNutricional->id)
                                 <tr style="text-align:center; font-size: 14px">
